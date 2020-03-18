@@ -1,0 +1,34 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym16" name="Inserisci menu fisso" gr:x="1275" gr:y="65">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym16#icu18" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym16#icu18#icp84" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym16#icu18#oln84" name="OKFlow38" to="mov3#hym16#cru6">
+        <LinkParameter id="mov3#hym16#icu18#oln84#par513" name="antipasto_antipasto" source="mov3#hym16#icu18#icp96" target="mov3#hym16#cru6.ent1#att8"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par514" name="bevanda_bevanda" source="mov3#hym16#icu18#icp91" target="mov3#hym16#cru6.ent1#att3"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par515" name="contorno_contorno" source="mov3#hym16#icu18#icp93" target="mov3#hym16#cru6.ent1#att5"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par516" name="costo_costo" source="mov3#hym16#icu18#icp90" target="mov3#hym16#cru6.ent1#att2"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par517" name="datainserimento_dataInserimento" source="mov3#hym16#icu18#icp97" target="mov3#hym16#cru6.ent1#att9"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par518" name="dessert_dessert" source="mov3#hym16#icu18#icp92" target="mov3#hym16#cru6.ent1#att4"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par519" name="nome_nome" source="mov3#hym16#icu18#icp89" target="mov3#hym16#cru6.ent1#att1"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par520" name="primo_primo" source="mov3#hym16#icu18#icp94" target="mov3#hym16#cru6.ent1#att7"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par521" name="secondo_secondo" source="mov3#hym16#icu18#icp95" target="mov3#hym16#cru6.ent1#att6"/>
+        <LinkParameter id="mov3#hym16#icu18#oln84#par571" name="Key Condition [oid]_Amristorazione.oid_user(MenufissoToAmristorazione)" source="mov3#hym16#icu18#icp84" target="mov3#hym16#cru6.rel2#role4.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp97" name="datainserimento"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp96" name="antipasto"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp95" name="secondo"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp94" name="primo"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp93" name="contorno"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp92" name="dessert"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp91" name="bevanda"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp90" name="costo"/>
+      <InputCollectorParameter id="mov3#hym16#icu18#icp89" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym16#kocu18" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym16#okcu18" name="OK Port22" gr:x="550" gr:y="105"/>
+    <CreateUnit id="mov3#hym16#cru6" name="Create4" gr:x="370" gr:y="185" entity="ent1">
+      <OKLink id="mov3#hym16#cru6#oln85" name="OKFlow36" to="mov3#hym16#okcu18" automaticCoupling="true"/>
+      <KOLink id="mov3#hym16#cru6#kln58" name="KOFlow24" to="mov3#hym16#kocu18" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

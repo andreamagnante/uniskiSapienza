@@ -1,0 +1,26 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page85" name="Error (username esistente)" gr:x="805" gr:y="205" ajaxEnabled="false" layout:pageLayout="WebRatio/Basic" linkOrder="sv2#page85#ln210">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#page85#mssu48" name="Attenzione" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Username gia' in uso</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page85#mssu48"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page85#ln210" name="Torna alla Home" to="sv2#page1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-158,-76,382,54"/>
+</Page>

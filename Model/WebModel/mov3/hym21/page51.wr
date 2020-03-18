@@ -1,0 +1,59 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym21#page51" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym21#page51#enu35" name="Modifica lo sconto" linkOrder="mov3#hym21#page51#enu35#ln140" gr:x="0" gr:y="0" fieldOrder="mov3#hym21#page51#enu35#fld138 mov3#hym21#page51#enu35#fld139 mov3#hym21#page51#enu35#fld140 mov3#hym21#page51#enu35#fld141 mov3#hym21#page51#enu35#fld142" entity="ent35">
+      <Link id="mov3#hym21#page51#enu35#ln140" name="Conferma" to="mov3#hym21#mfu14" type="normal" validate="true">
+        <LinkParameter id="mov3#hym21#page51#enu35#ln140#par660" name="Data Fine_dataFine" source="mov3#hym21#page51#enu35#fld140" target="mov3#hym21#mfu14.ent35#att47"/>
+        <LinkParameter id="mov3#hym21#page51#enu35#ln140#par661" name="Data Inizio_dataInizio" source="mov3#hym21#page51#enu35#fld139" target="mov3#hym21#mfu14.ent35#att46"/>
+        <LinkParameter id="mov3#hym21#page51#enu35#ln140#par662" name="Descrizione_descrizione" source="mov3#hym21#page51#enu35#fld142" target="mov3#hym21#mfu14.ent35#att49"/>
+        <LinkParameter id="mov3#hym21#page51#enu35#ln140#par663" name="Nome_KeyCondition15 [nome]" source="mov3#hym21#page51#enu35#fld138" target="mov3#hym21#mfu14#su44#kcond37.ent35#att45"/>
+        <LinkParameter id="mov3#hym21#page51#enu35#ln140#par664" name="Percentuale_percentuale" source="mov3#hym21#page51#enu35#fld141" target="mov3#hym21#mfu14.ent35#att48"/>
+      </Link>
+      <Field id="mov3#hym21#page51#enu35#fld142" name="Descrizione" type="text" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym21#page51#enu35#fld142#mnd93" name="Mandatory93"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym21#page51#enu35#fld141" name="Percentuale" type="integer" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym21#page51#enu35#fld141#mnd94" name="Mandatory94"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym21#page51#enu35#fld140" name="Data Fine" type="date" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym21#page51#enu35#fld140#mnd91" name="Mandatory91"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym21#page51#enu35#fld139" name="Data Inizio" type="date" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym21#page51#enu35#fld139#mnd92" name="Mandatory92"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym21#page51#enu35#fld138" name="Nome" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym21#page51#enu35">
+          <layout:Link link="mov3#hym21#page51#enu35#ln140"/>
+          <layout:Field field="mov3#hym21#page51#enu35#fld138"/>
+          <layout:Field field="mov3#hym21#page51#enu35#fld139"/>
+          <layout:Field field="mov3#hym21#page51#enu35#fld140"/>
+          <layout:Field field="mov3#hym21#page51#enu35#fld141"/>
+          <layout:Field field="mov3#hym21#page51#enu35#fld142"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

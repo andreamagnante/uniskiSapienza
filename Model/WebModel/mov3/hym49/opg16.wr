@@ -1,0 +1,39 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym49#opg16" name="Operation Group 11" transaction="true" gr:x="810" gr:y="120">
+  <OperationUnits>
+    <SwitchUnit id="mov3#hym49#opg16#switch3" name="Switch1" gr:x="0" gr:y="205">
+      <Case value="3"/>
+      <Case value="4"/>
+      <Case value="5"/>
+      <OKLink id="mov3#hym49#opg16#switch3#oln231" name="OKFlow231" to="mov3#hym49#opg16#dlu17" code="5">
+        <LinkParameter id="mov3#hym49#opg16#switch3#oln231#par1169" name="oid_PASSING_KeyCondition58 [oid_user]" sourceLinkParameter="mov3#hym49#page67#enu45#ln206#par1166" target="mov3#hym49#opg16#dlu17#su101#kcond58.userOID"/>
+      </OKLink>
+      <OKLink id="mov3#hym49#opg16#switch3#oln232" name="OKFlow232" to="mov3#hym49#opg16#dlu16" code="4">
+        <LinkParameter id="mov3#hym49#opg16#switch3#oln232#par1168" name="oid_PASSING_KeyCondition57 [oid_user]" sourceLinkParameter="mov3#hym49#page67#enu45#ln206#par1166" target="mov3#hym49#opg16#dlu16#su100#kcond57.userOID"/>
+      </OKLink>
+      <OKLink id="mov3#hym49#opg16#switch3#oln233" name="OKFlow233" to="mov3#hym49#opg16#dlu15" code="3">
+        <LinkParameter id="mov3#hym49#opg16#switch3#oln233#par1167" name="oid_PASSING_KeyCondition48 [oid_user]" sourceLinkParameter="mov3#hym49#page67#enu45#ln206#par1166" target="mov3#hym49#opg16#dlu15#su99#kcond48.userOID"/>
+      </OKLink>
+    </SwitchUnit>
+    <DeleteUnit gr:x="165" gr:y="0" id="mov3#hym49#opg16#dlu15" name="Delete15" entity="ent29">
+      <Selector id="mov3#hym49#opg16#dlu15#su99" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym49#opg16#dlu15#su99#kcond48" name="KeyCondition48" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym49#opg16#dlu15#oln234" name="OKFlow234" to="mov3#hym49#okcu51" automaticCoupling="true"/>
+      <KOLink id="mov3#hym49#opg16#dlu15#kln152" name="KOFlow152" to="mov3#hym49#kocu51" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="170" gr:y="135" id="mov3#hym49#opg16#dlu16" name="Delete16" entity="ent36">
+      <Selector id="mov3#hym49#opg16#dlu16#su100" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym49#opg16#dlu16#su100#kcond57" name="KeyCondition57" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym49#opg16#dlu16#oln235" name="OKFlow235" to="mov3#hym49#okcu51" automaticCoupling="true"/>
+      <KOLink id="mov3#hym49#opg16#dlu16#kln153" name="KOFlow153" to="mov3#hym49#kocu51" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="175" gr:y="270" id="mov3#hym49#opg16#dlu17" name="Delete17" entity="ent32">
+      <Selector id="mov3#hym49#opg16#dlu17#su101" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym49#opg16#dlu17#su101#kcond58" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym49#opg16#dlu17#oln236" name="OKFlow236" to="mov3#hym49#okcu51" automaticCoupling="true"/>
+      <KOLink id="mov3#hym49#opg16#dlu17#kln154" name="KOFlow154" to="mov3#hym49#kocu51" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationGroup>

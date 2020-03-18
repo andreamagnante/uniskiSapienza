@@ -1,0 +1,57 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym6" name="Prenota skipass" gr:x="415" gr:y="135">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym6#icu4" gr:x="0" gr:y="145">
+      <InputCollectorParameter id="mov1#hym6#icu4#icp10" name="Key Condition [oid]"/>
+      <InputCollectorParameter id="mov1#hym6#icu4#icp18" name="Data attivazione"/>
+      <InputCollectorParameter id="mov1#hym6#icu4#icp19" name="Tipologia skipass"/>
+      <OKLink id="mov1#hym6#icu4#oln17" name="OKFlow26" to="mov1#hym6#qu2">
+        <LinkParameter id="mov1#hym6#icu4#oln17#par18" name="Data attivazione_PASSING" source="mov1#hym6#icu4#icp18" passing="true"/>
+        <LinkParameter id="mov1#hym6#icu4#oln17#par26" name="Tipologia skipass_PASSING" source="mov1#hym6#icu4#icp19" passing="true"/>
+        <LinkParameter id="mov1#hym6#icu4#oln17#par38" name="Tipologia skipass_abbonamento" source="mov1#hym6#icu4#icp19" target="mov1#hym6#qu2.mov1#hym6#qu2#qi1"/>
+        <LinkParameter id="mov1#hym6#icu4#oln17#par133" name="Ora attivazione_PASSING" source="mov1#hym6#icu4#icp26" passing="true"/>
+        <LinkParameter id="mov1#hym6#icu4#oln17#par163" name="Key Condition [oid]_PASSING" source="mov1#hym6#icu4#icp10" passing="true"/>
+      </OKLink>
+      <Link id="mov1#hym6#icu4#ln23" name="Flow25" to="mov1#hym6#page6#dau15" type="transport" validate="true">
+        <LinkParameter id="mov1#hym6#icu4#ln23#par39" name="Key Condition [oid]_KeyCondition9 [oid_user]" source="mov1#hym6#icu4#icp10" target="mov1#hym6#page6#dau15#su10#kcond9.userOID"/>
+        <LinkParameter id="mov1#hym6#icu4#ln23#par63" name="Data attivazione_PASSING" source="mov1#hym6#icu4#icp18" passing="true"/>
+      </Link>
+      <InputCollectorParameter id="mov1#hym6#icu4#icp26" name="Ora attivazione"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#hym6#okcu4" name="OK Port22" gr:x="1010" gr:y="70"/>
+    <KOCollectorUnit id="mov1#hym6#kocu4" name="KO Port20" gr:x="1010" gr:y="195"/>
+    <QueryUnit id="mov1#hym6#qu2" name="TipologiaSkipass" gr:x="320" gr:y="275" mode="select" language="SQL" db="db1" outputsOrder="mov1#hym6#qu2#qo13 mov1#hym6#qu2#qo62">
+      <QueryText xml:space="preserve">select skipass.prezzo,skipass.punti from skipass where skipass.tipologia = :abbonamento</QueryText>
+      <QueryOutput id="mov1#hym6#qu2#qo13" name="prezzo" type="integer"/>
+      <OKLink id="mov1#hym6#qu2#oln18" name="OKFlow28" to="mov1#hym6#page6#enu8">
+        <LinkParameter id="mov1#hym6#qu2#oln18#par69" name="Data attivazione_PASSING_Data Attivazione" sourceLinkParameter="mov1#hym6#icu4#oln17#par18" target="mov1#hym6#page6#enu8#fld21_slot"/>
+        <LinkParameter id="mov1#hym6#qu2#oln18#par90" name="prezzo_Prezzo" source="data[].prezzo" target="mov1#hym6#page6#enu8#fld22_slot"/>
+        <LinkParameter id="mov1#hym6#qu2#oln18#par107" name="Tipologia skipass_PASSING_Tipologia skipass" sourceLinkParameter="mov1#hym6#icu4#oln17#par26" target="mov1#hym6#page6#enu8#fld23_slot"/>
+        <LinkParameter id="mov1#hym6#qu2#oln18#par147" name="Ora attivazione_PASSING_Ora Attivazione" sourceLinkParameter="mov1#hym6#icu4#oln17#par133" target="mov1#hym6#page6#enu8#fld35_slot"/>
+        <LinkParameter id="mov1#hym6#qu2#oln18#par164" name="Key Condition [oid]_PASSING" sourceLinkParameter="mov1#hym6#icu4#oln17#par163" passing="true"/>
+        <LinkParameter id="mov1#hym6#qu2#oln18#par322" name="punti_Punti accumulati" source="data[].punti" target="mov1#hym6#page6#enu8#fld44_slot"/>
+      </OKLink>
+      <QueryInput id="mov1#hym6#qu2#qi1" name="abbonamento" required="true" type="string"/>
+      <QueryOutput id="mov1#hym6#qu2#qo62" name="punti"/>
+    </QueryUnit>
+    <CreateUnit id="mov1#hym6#cru3" name="Create3" gr:x="720" gr:y="330" entity="ent30">
+      <OKLink id="mov1#hym6#cru3#oln19" name="OKFlow29" to="mov1#hym6#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#hym6#cru3#kln13" name="KOFlow13" to="mov1#hym6#kocu4" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModuleInstanceUnit id="mov1#hym6#miu28" gr:x="435" gr:y="460" action="false" moduleId="mov1#hym4">
+      <OKLink id="mov1#hym6#miu28#oln27" name="OKFlow27" to="mov1#hym6#page6#enu8" gr:bendpoints="-66,-213,34,212">
+        <LinkParameter id="mov1#hym6#miu28#oln27#par290" name="dataattivazione_Data Attivazione" source="mov1#hym4#okcu6#ocp18" target="mov1#hym6#page6#enu8#fld21_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#oln27#par291" name="oraattivazione_Ora Attivazione" source="mov1#hym4#okcu6#ocp19" target="mov1#hym6#page6#enu8#fld35_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#oln27#par292" name="prezzo_Prezzo" source="mov1#hym4#okcu6#ocp20" target="mov1#hym6#page6#enu8#fld22_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#oln27#par293" name="tipologiaskipass_Tipologia skipass" source="mov1#hym4#okcu6#ocp17" target="mov1#hym6#page6#enu8#fld23_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#oln27#par311" name="punti_Punti accumulati" source="mov1#hym4#okcu6#ocp26" target="mov1#hym6#page6#enu8#fld44_slot"/>
+      </OKLink>
+      <KOLink id="mov1#hym6#miu28#kln20" name="KOFlow20" to="mov1#hym6#page6#enu8" gr:bendpoints="-46,-140,34,230">
+        <LinkParameter id="mov1#hym6#miu28#kln20#par314" name="datattivazione_Data Attivazione" source="mov1#hym4#kocu6#ocp21" target="mov1#hym6#page6#enu8#fld21_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#kln20#par315" name="oraattivazione_Ora Attivazione" source="mov1#hym4#kocu6#ocp22" target="mov1#hym6#page6#enu8#fld35_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#kln20#par316" name="prezzo_Prezzo" source="mov1#hym4#kocu6#ocp23" target="mov1#hym6#page6#enu8#fld22_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#kln20#par317" name="tipologiaskipass_Tipologia skipass" source="mov1#hym4#kocu6#ocp24" target="mov1#hym6#page6#enu8#fld23_slot"/>
+        <LinkParameter id="mov1#hym6#miu28#kln20#par310" name="punti_Punti accumulati" source="mov1#hym4#kocu6#ocp25" target="mov1#hym6#page6#enu8#fld44_slot"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

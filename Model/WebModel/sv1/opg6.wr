@@ -1,0 +1,30 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#opg6" name="Operation Group 3" transaction="true" gr:x="1550" gr:y="1080">
+  <OperationUnits>
+    <ScriptUnit id="sv1#opg6#scu6" name="Script3" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input  Date data,Time ora, Date[] datePrenotazioni, Time[] oraPrenotazioni
+#output String message
+
+
+if(datePrenotazioni!= null)
+{
+def int i = 0;  
+for (i=0;i&lt;datePrenotazioni.size() ;i++){
+		if((data.equals(datePrenotazioni[i])) &amp;&amp; (ora.equals(oraPrenotazioni[i]))){
+	 	    return ["resultCode":"error","message":"Attenzione! Hai gia effettuato una prenotazione all'orario del giorno selezionato!"]
+		}
+}
+}
+return ["resultCode":"success","message":"Effettuato con successo!"] 
+        </ScriptUnitText>
+      <OKLink id="sv1#opg6#scu6#oln149" name="OKFlow149" to="sv1#miu49">
+        <LinkParameter id="sv1#opg6#scu6#oln149#par781" name="Data prenotazione_PASSING_dataprenotazione" sourceLinkParameter="sv1#area4#page14#enu40#ln214#par776" target="sv1#miu49.mov1#hym38#icu39#icp132"/>
+        <LinkParameter id="sv1#opg6#scu6#oln149#par782" name="UserCtxParam.oid_user_PASSING_oiduser" sourceLinkParameter="sv1#area4#page14#enu40#ln214#par780" target="sv1#miu49.mov1#hym38#icu39#icp145"/>
+        <LinkParameter id="sv1#opg6#scu6#oln149#par783" name="Ora prenotazione_PASSING_oraprenotazione" sourceLinkParameter="sv1#area4#page14#enu40#ln214#par778" target="sv1#miu49.mov1#hym38#icu39#icp138"/>
+        <LinkParameter id="sv1#opg6#scu6#oln149#par784" name="Numero persone_PASSING_persone" sourceLinkParameter="sv1#area4#page14#enu40#ln214#par777" target="sv1#miu49.mov1#hym38#icu39#icp139"/>
+        <LinkParameter id="sv1#opg6#scu6#oln149#par785" name="Tipo menu_PASSING_tipomenu" sourceLinkParameter="sv1#area4#page14#enu40#ln214#par779" target="sv1#miu49.mov1#hym38#icu39#icp149"/>
+        <LinkParameter id="sv1#opg6#scu6#oln149#par692" name=" _coupon" sourceValue=" " blank="true" target="sv1#miu49.mov1#hym38#icu39#icp153"/>
+      </OKLink>
+      <KOLink id="sv1#opg6#scu6#kln106" name="KOFlow106" to="sv1#page58" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="150" ajaxWindowClosable="true"/>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

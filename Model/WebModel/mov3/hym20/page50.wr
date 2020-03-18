@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym20#page50" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym20#page50#enu34" name="Vuoi davvero eliminare questo sconto?" linkOrder="mov3#hym20#page50#enu34#ln138" gr:x="0" gr:y="0" entity="ent35" fieldOrder="mov3#hym20#page50#enu34#fld133 mov3#hym20#page50#enu34#fld134">
+      <Link id="mov3#hym20#page50#enu34#ln138" name="Conferma" to="mov3#hym20#dlu6" type="normal" validate="true">
+        <LinkParameter id="mov3#hym20#page50#enu34#ln138#par639" name="Nome_KeyCondition12 [nome]" source="mov3#hym20#page50#enu34#fld133" target="mov3#hym20#dlu6#su43#kcond36.ent35#att45"/>
+      </Link>
+      <Field id="mov3#hym20#page50#enu34#fld133" name="Nome" type="string" preloaded="true"/>
+      <Field id="mov3#hym20#page50#enu34#fld134" name="Percentuale" type="integer" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym20#page50#enu34">
+          <layout:Link link="mov3#hym20#page50#enu34#ln138"/>
+          <layout:Field field="mov3#hym20#page50#enu34#fld133"/>
+          <layout:Field field="mov3#hym20#page50#enu34#fld134"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

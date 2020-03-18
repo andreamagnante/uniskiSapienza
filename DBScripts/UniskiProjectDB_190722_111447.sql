@@ -1,0 +1,316 @@
+-- Group [Group]
+create table `group` (
+   `oid`  integer  not null,
+   `groupname`  varchar(255),
+  primary key (`oid`)
+);
+
+
+-- Module [Module]
+create table `module` (
+   `oid`  integer  not null,
+   `moduleid`  varchar(255),
+   `modulename`  varchar(255),
+  primary key (`oid`)
+);
+
+
+-- User [User]
+create table `user` (
+   `oid`  integer  not null,
+   `username`  varchar(255),
+   `password`  varchar(255),
+   `email`  varchar(255),
+   `codicefiscale`  varchar(255),
+   `cognome`  varchar(255),
+   `nome`  varchar(255),
+   `telefono`  integer,
+  primary key (`oid`)
+);
+
+
+-- Menufisso [ent1]
+create table `menufisso` (
+   `nome`  varchar(255)  not null,
+   `costo`  double precision,
+   `bevanda`  varchar(255),
+   `dessert`  varchar(255),
+   `contorno`  varchar(255),
+   `secondo`  varchar(255),
+   `primo`  varchar(255),
+   `antipasto`  varchar(255),
+   `datainserimento`  date,
+  primary key (`nome`)
+);
+
+
+-- Lezione [ent11]
+create table `lezione` (
+   `id`  integer not null auto_increment,
+   `data`  date,
+   `prenotazione`  date,
+  primary key (`id`)
+);
+
+
+-- Portafoglio [ent13]
+create table `portafoglio` (
+   `punti`  integer  not null,
+  primary key (`punti`)
+);
+
+
+-- Impianto [ent15]
+create table `impianto` (
+   `nome`  varchar(255)  not null,
+   `tipologia`  varchar(255),
+   `disponibilita`  bit,
+   `difficolta`  varchar(255),
+  primary key (`nome`)
+);
+
+
+-- Amministratore [ent20]
+create table `amministratore` (
+   `user_oid`  integer  not null,
+  primary key (`user_oid`)
+);
+
+
+-- Amimpianto [ent29]
+create table `amimpianto` (
+   `amministratore_oid`  integer  not null,
+  primary key (`amministratore_oid`)
+);
+
+
+-- Prenotazioneskipass [ent30]
+create table `prenotazioneskipass` (
+   `id`  integer not null auto_increment,
+   `data`  date,
+   `stato`  bit,
+  primary key (`id`)
+);
+
+
+-- Faq [ent31]
+create table `faq` (
+   `id`  integer not null auto_increment,
+   `domanda`  varchar(255),
+   `risposta`  varchar(255),
+  primary key (`id`)
+);
+
+
+-- Amristorazione [ent32]
+create table `amristorazione` (
+   `amministratore_oid`  integer  not null,
+  primary key (`amministratore_oid`)
+);
+
+
+-- Indisponibileistr [ent33]
+create table `indisponibileistr` (
+   `datainizio`  date,
+   `id`  integer not null auto_increment,
+   `datafine`  date,
+  primary key (`id`)
+);
+
+
+-- Attivazioneskipass [ent34]
+create table `attivazioneskipass` (
+   `id`  integer not null auto_increment,
+   `datascadenza`  date,
+  primary key (`id`)
+);
+
+
+-- Sconto [ent35]
+create table `sconto` (
+   `nome`  varchar(255)  not null,
+   `datainizio`  date,
+   `datafine`  date,
+   `percentuale`  integer,
+   `dataattivazione`  date,
+  primary key (`nome`)
+);
+
+
+-- Amstruttura [ent36]
+create table `amstruttura` (
+   `amministratore_oid`  integer  not null,
+  primary key (`amministratore_oid`)
+);
+
+
+-- Menucarta [ent37]
+create table `menucarta` (
+   `nome`  varchar(255)  not null,
+   `prezzo`  double precision,
+   `tipologia`  varchar(255),
+  primary key (`nome`)
+);
+
+
+-- Istruttore [ent38]
+create table `istruttore` (
+   `user_oid`  integer  not null,
+   `brevetto`  varchar(255),
+   `stipendio`  double precision,
+   `iban`  varchar(255),
+  primary key (`user_oid`)
+);
+
+
+-- Quotasocio [ent39]
+create table `quotasocio` (
+   `datascadenza`  date,
+   `dataacquisto`  date,
+   `costo`  double precision,
+   `idpagamento`  integer  not null,
+  primary key (`idpagamento`)
+);
+
+
+-- UserRegistrato [ent7]
+create table `userregistrato` (
+   `user_oid`  integer  not null,
+   `modalitapagamento`  varchar(255),
+   `socio`  bit,
+  primary key (`user_oid`)
+);
+
+
+-- Skipass [ent8]
+create table `skipass` (
+   `tipologia`  varchar(255)  not null,
+   `durata`  time,
+  primary key (`tipologia`)
+);
+
+
+-- Group_DefaultModule [Group2DefaultModule_DefaultModule2Group]
+alter table `group`  add column  `module_oid`  integer;
+alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`);
+
+
+-- Group_Module [Group2Module_Module2Group]
+create table `group_module` (
+   `group_oid`  integer not null,
+   `module_oid`  integer not null,
+  primary key (`group_oid`, `module_oid`)
+);
+alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`);
+alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`);
+
+
+-- User_DefaultGroup [User2DefaultGroup_DefaultGroup2User]
+alter table `user`  add column  `group_oid`  integer;
+alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`);
+
+
+-- User_Group [User2Group_Group2User]
+create table `user_group` (
+   `user_oid`  integer not null,
+   `group_oid`  integer not null,
+  primary key (`user_oid`, `group_oid`)
+);
+alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`);
+alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`);
+
+
+-- LezioneIstruttore [rel10]
+alter table `lezione`  add column  `istruttore_oid`  integer;
+alter table `lezione`   add index fk_lezione_istruttore (`istruttore_oid`), add constraint fk_lezione_istruttore foreign key (`istruttore_oid`) references `istruttore` (`user_oid`);
+
+
+-- IndisponibileistrIstruttore [rel11]
+alter table `indisponibileistr`  add column  `istruttore_oid`  integer;
+alter table `indisponibileistr`   add index fk_indisponibileistr_istruttor (`istruttore_oid`), add constraint fk_indisponibileistr_istruttor foreign key (`istruttore_oid`) references `istruttore` (`user_oid`);
+
+
+-- UserRegistrato_Prenotazioneskipass [rel12]
+alter table `prenotazioneskipass`  add column  `userregistrato_oid`  integer;
+alter table `prenotazioneskipass`   add index fk_prenotazioneskipass_userreg (`userregistrato_oid`), add constraint fk_prenotazioneskipass_userreg foreign key (`userregistrato_oid`) references `userregistrato` (`user_oid`);
+
+
+-- UserRegistrato_Attivazioneskipass [rel13]
+alter table `attivazioneskipass`  add column  `userregistrato_oid`  integer;
+alter table `attivazioneskipass`   add index fk_attivazioneskipass_userregi (`userregistrato_oid`), add constraint fk_attivazioneskipass_userregi foreign key (`userregistrato_oid`) references `userregistrato` (`user_oid`);
+
+
+-- UserRegistrato_Quotasocio [rel15]
+alter table `quotasocio`  add column  `userregistrato_oid`  integer;
+alter table `quotasocio`   add index fk_quotasocio_userregistrato (`userregistrato_oid`), add constraint fk_quotasocio_userregistrato foreign key (`userregistrato_oid`) references `userregistrato` (`user_oid`);
+
+
+-- Amristorazione_Sconto [rel19]
+alter table `sconto`  add column  `amristorazione_oid`  integer;
+alter table `sconto`   add index fk_sconto_amristorazione (`amristorazione_oid`), add constraint fk_sconto_amristorazione foreign key (`amristorazione_oid`) references `amristorazione` (`amministratore_oid`);
+
+
+-- Amristorazione_Menufisso [rel2]
+alter table `menufisso`  add column  `amristorazione_oid`  integer;
+alter table `menufisso`   add index fk_menufisso_amristorazione (`amristorazione_oid`), add constraint fk_menufisso_amristorazione foreign key (`amristorazione_oid`) references `amristorazione` (`amministratore_oid`);
+
+
+-- Amristorazione_Menucarta [rel23]
+alter table `menucarta`  add column  `amristorazione_oid`  integer;
+alter table `menucarta`   add index fk_menucarta_amristorazione (`amristorazione_oid`), add constraint fk_menucarta_amristorazione foreign key (`amristorazione_oid`) references `amristorazione` (`amministratore_oid`);
+
+
+-- UserRegistrato_Lezione [rel4]
+alter table `lezione`  add column  `userregistrato_oid`  integer;
+alter table `lezione`   add index fk_lezione_userregistrato (`userregistrato_oid`), add constraint fk_lezione_userregistrato foreign key (`userregistrato_oid`) references `userregistrato` (`user_oid`);
+
+
+-- Skipass_Attivazioneskipass [rel5]
+alter table `attivazioneskipass`  add column  `skipass_tipologia`  varchar(255);
+alter table `attivazioneskipass`   add index fk_attivazioneskipass_skipass (`skipass_tipologia`), add constraint fk_attivazioneskipass_skipass foreign key (`skipass_tipologia`) references `skipass` (`tipologia`);
+
+
+-- Skipass_Prenotazioneskipass [rel7]
+alter table `prenotazioneskipass`  add column  `skipass_tipologia`  varchar(255);
+alter table `prenotazioneskipass`   add index fk_prenotazioneskipass_skipass (`skipass_tipologia`), add constraint fk_prenotazioneskipass_skipass foreign key (`skipass_tipologia`) references `skipass` (`tipologia`);
+
+
+-- UserRegistrato_Portafoglio [rel8]
+alter table `portafoglio`  add column  `userregistrato_oid`  integer;
+alter table `portafoglio`   add index fk_portafoglio_userregistrato (`userregistrato_oid`), add constraint fk_portafoglio_userregistrato foreign key (`userregistrato_oid`) references `userregistrato` (`user_oid`);
+
+
+-- Amimpianto_Impianto [rel9]
+create table `amimpianto_impianto` (
+   `amimpianto_oid`  integer not null,
+   `impianto_nome`  varchar(255) not null,
+  primary key (`amimpianto_oid`, `impianto_nome`)
+);
+alter table `amimpianto_impianto`   add index fk_amimpianto_impianto_amimpia (`amimpianto_oid`), add constraint fk_amimpianto_impianto_amimpia foreign key (`amimpianto_oid`) references `amimpianto` (`amministratore_oid`);
+alter table `amimpianto_impianto`   add index fk_amimpianto_impianto_impiant (`impianto_nome`), add constraint fk_amimpianto_impianto_impiant foreign key (`impianto_nome`) references `impianto` (`nome`);
+
+
+-- GEN FK: Amministratore --> User
+alter table `amministratore`   add index fk_amministratore_user (`user_oid`), add constraint fk_amministratore_user foreign key (`user_oid`) references `user` (`oid`);
+
+
+-- GEN FK: Amimpianto --> Amministratore
+alter table `amimpianto`   add index fk_amimpianto_amministratore (`amministratore_oid`), add constraint fk_amimpianto_amministratore foreign key (`amministratore_oid`) references `amministratore` (`user_oid`);
+
+
+-- GEN FK: Amristorazione --> Amministratore
+alter table `amristorazione`   add index fk_amristorazione_amministrato (`amministratore_oid`), add constraint fk_amristorazione_amministrato foreign key (`amministratore_oid`) references `amministratore` (`user_oid`);
+
+
+-- GEN FK: Amstruttura --> Amministratore
+alter table `amstruttura`   add index fk_amstruttura_amministratore (`amministratore_oid`), add constraint fk_amstruttura_amministratore foreign key (`amministratore_oid`) references `amministratore` (`user_oid`);
+
+
+-- GEN FK: Istruttore --> User
+alter table `istruttore`   add index fk_istruttore_user (`user_oid`), add constraint fk_istruttore_user foreign key (`user_oid`) references `user` (`oid`);
+
+
+-- GEN FK: UserRegistrato --> User
+alter table `userregistrato`   add index fk_userregistrato_user (`user_oid`), add constraint fk_userregistrato_user foreign key (`user_oid`) references `user` (`oid`);
+
+

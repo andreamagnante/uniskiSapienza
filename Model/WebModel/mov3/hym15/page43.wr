@@ -1,0 +1,85 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym15#page43" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym15#page43#enu27" name="Modifica il menu fisso" linkOrder="mov3#hym15#page43#enu27#ln117" gr:x="0" gr:y="0" fieldOrder="mov3#hym15#page43#enu27#fld73 mov3#hym15#page43#enu27#fld80 mov3#hym15#page43#enu27#fld78 mov3#hym15#page43#enu27#fld79 mov3#hym15#page43#enu27#fld77 mov3#hym15#page43#enu27#fld76 mov3#hym15#page43#enu27#fld75 mov3#hym15#page43#enu27#fld74" entity="ent1">
+      <Link id="mov3#hym15#page43#enu27#ln117" name="Conferma" to="mov3#hym15#mfu8" type="normal" validate="true">
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par486" name="Antipasto_antipasto" source="mov3#hym15#page43#enu27#fld80" target="mov3#hym15#mfu8.ent1#att8"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par487" name="Bevanda_bevanda" source="mov3#hym15#page43#enu27#fld75" target="mov3#hym15#mfu8.ent1#att3"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par488" name="Contorno_contorno" source="mov3#hym15#page43#enu27#fld77" target="mov3#hym15#mfu8.ent1#att5"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par489" name="Costo_costo" source="mov3#hym15#page43#enu27#fld74" target="mov3#hym15#mfu8.ent1#att2"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par490" name="Dessert_dessert" source="mov3#hym15#page43#enu27#fld76" target="mov3#hym15#mfu8.ent1#att4"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par491" name="Primo_primo" source="mov3#hym15#page43#enu27#fld78" target="mov3#hym15#mfu8.ent1#att7"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par492" name="Secondo_secondo" source="mov3#hym15#page43#enu27#fld79" target="mov3#hym15#mfu8.ent1#att6"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par503" name="Nome_PASSING" source="mov3#hym15#page43#enu27#fld73" passing="true"/>
+        <LinkParameter id="mov3#hym15#page43#enu27#ln117#par504" name="Nome_KeyCondition15 [nome]" source="mov3#hym15#page43#enu27#fld73" target="mov3#hym15#mfu8#su40#kcond33.ent1#att1"/>
+      </Link>
+      <Field id="mov3#hym15#page43#enu27#fld74" name="Costo" type="integer" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld74#mnd36" name="Mandatory36"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld75" name="Bevanda" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld75#mnd34" name="Mandatory34"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld76" name="Dessert" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld76#mnd37" name="Mandatory37"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld77" name="Contorno" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld77#mnd35" name="Mandatory35"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld79" name="Secondo" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld79#mnd40" name="Mandatory40"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld78" name="Primo" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld78#mnd39" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld80" name="Antipasto" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld80#mnd33" name="Mandatory33"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym15#page43#enu27#fld73" name="Nome" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym15#page43#enu27#fld73#mnd38" name="Mandatory38"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym15#page43#enu27">
+          <layout:Link link="mov3#hym15#page43#enu27#ln117"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld73"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld80"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld78"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld79"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld77"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld76"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld75"/>
+          <layout:Field field="mov3#hym15#page43#enu27#fld74"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

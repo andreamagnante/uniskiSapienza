@@ -1,0 +1,40 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym8" name="Inserisci impianto salita" gr:x="380" gr:y="25">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym8#icu10" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym8#icu10#icp47" name="Key Condition [oid]"/>
+      <InputCollectorParameter id="mov3#hym8#icu10#icp49" name="disponibilita"/>
+      <InputCollectorParameter id="mov3#hym8#icu10#icp50" name="tipologia"/>
+      <InputCollectorParameter id="mov3#hym8#icu10#icp51" name="nome"/>
+      <OKLink id="mov3#hym8#icu10#oln71" name="OKFlow38" to="mov3#hym8#cru5">
+        <LinkParameter id="mov3#hym8#icu10#oln71#par407" name="nome_PASSING" source="mov3#hym8#icu10#icp51" passing="true"/>
+        <LinkParameter id="mov3#hym8#icu10#oln71#par860" name="discese_PASSING" source="mov3#hym8#icu10#icp41" passing="true"/>
+        <LinkParameter id="mov3#hym8#icu10#oln71#par871" name="disponibilita_disponibilita" source="mov3#hym8#icu10#icp49" target="mov3#hym8#cru5.ent4#att77"/>
+        <LinkParameter id="mov3#hym8#icu10#oln71#par872" name="nome_nome" source="mov3#hym8#icu10#icp51" target="mov3#hym8#cru5.ent4#att24"/>
+        <LinkParameter id="mov3#hym8#icu10#oln71#par874" name="tipologia_tipologia" source="mov3#hym8#icu10#icp50" target="mov3#hym8#cru5.ent4#att75"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym8#icu10#icp41" name="discese"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym8#kocu10" name="KO Port20" gr:x="980" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym8#okcu10" name="OK Port22" gr:x="980" gr:y="80"/>
+    <CreateUnit id="mov3#hym8#cru5" name="Create4" gr:x="395" gr:y="180" entity="ent4">
+      <OKLink id="mov3#hym8#cru5#oln204" name="OKFlow204" to="mov3#hym8#lpu1" gr:bendpoints="32,-96,67,54">
+        <LinkParameter id="mov3#hym8#cru5#oln204#par875" name="discese_PASSING_Input Array" sourceLinkParameter="mov3#hym8#icu10#oln71#par860" target="mov3#hym8#lpu1.array"/>
+        <LinkParameter id="mov3#hym8#cru5#oln204#par876" name="nome_PASSING" sourceLinkParameter="mov3#hym8#icu10#oln71#par407" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <LoopUnit gr:x="635" gr:y="165" id="mov3#hym8#lpu1" name="Loop1">
+      <OKLink id="mov3#hym8#lpu1#oln201" name="OKFlow201" to="mov3#hym8#okcu10" automaticCoupling="true" code="end"/>
+      <OKLink id="mov3#hym8#lpu1#oln206" name="OKFlow206" to="mov3#hym8#mfu28" code="next">
+        <LinkParameter id="mov3#hym8#lpu1#oln206#par877" name="Next Element_ImpiantoDiscesa.nome(ImpiantoSalitaToImpiantoDiscesa)" source="next" target="mov3#hym8#mfu28.rel24#role48.ent9#att78"/>
+        <LinkParameter id="mov3#hym8#lpu1#oln206#par878" name="nome_PASSING_KeyCondition61 [nome]" sourceLinkParameter="mov3#hym8#cru5#oln204#par876" target="mov3#hym8#mfu28#su70#kcond61.ent4#att24"/>
+      </OKLink>
+    </LoopUnit>
+    <ModifyUnit gr:x="645" gr:y="285" id="mov3#hym8#mfu28" name="Update28" entity="ent4">
+      <Selector id="mov3#hym8#mfu28#su70" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym8#mfu28#su70#kcond61" name="KeyCondition61" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym8#mfu28#oln207" name="OKFlow207" to="mov3#hym8#lpu1" gr:bendpoints="47,-91,87,49"/>
+      <KOLink id="mov3#hym8#mfu28#kln135" name="KOFlow135" to="mov3#hym8#kocu10" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

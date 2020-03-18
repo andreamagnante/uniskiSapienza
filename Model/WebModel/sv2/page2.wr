@@ -1,0 +1,46 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page2" name="User Details" protected="false" gr:x="1315" gr:y="5" linkOrder="sv2#page2#ln3">
+  <ContentUnits>
+    <DataUnit id="sv2#page2#dau1" name="Registered User Details" gr:x="0" gr:y="0" entity="ent7" displayAttributes="userName email password User#att61 User#att62 User#att63 User#att64 ent7#att20 ent7#att11 ent7#att29 ent7#att30 ent7#att31" linkOrder="sv2#page2#dau1#ln6">
+      <Selector id="sv2#page2#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page2#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page2#dau1#ln6" name="Login" to="sv2#miu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page2#dau1#ln6#par54" name="password_Password" source="data.password" target="sv2#miu2.mov2#opm2#icu1#icp16"/>
+        <LinkParameter id="sv2#page2#dau1#ln6#par55" name="username_Username" source="data.userName" target="sv2#miu2.mov2#opm2#icu1#icp17"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page2#dau1">
+          <layout:Link link="sv2#page2#dau1#ln6"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Attribute attribute="ent7#att11"/>
+          <layout:Attribute attribute="ent7#att29"/>
+          <layout:Attribute attribute="ent7#att30"/>
+          <layout:Attribute attribute="ent7#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page2#ln3" name="Home" to="sv2#page1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-271,-73,299,-118"/>
+</Page>

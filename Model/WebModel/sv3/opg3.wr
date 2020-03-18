@@ -1,0 +1,31 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1825" gr:y="1105" id="sv3#opg3" name="Operation Group 3" transaction="true">
+  <OperationUnits>
+    <ScriptUnit gr:x="0" gr:y="0" id="sv3#opg3#scu3" name="Script3">
+      <ScriptUnitText xml:space="preserve">#input int punti
+#output String message, String coupon
+
+def coupongenerato = "CP";
+def z = ["A", "B", "C", "D", "E","F","G","H","I","L","M","N","1","2","3","4","5","6","7","8","9"]
+Random rnd = new Random()
+ 
+for (i=0; i &lt; 10; i++) {
+   coupongenerato = coupongenerato + z[rnd.nextInt(z.size)]
+}
+
+if(punti &gt;= 5){
+   return ["resultCode":"success","message":"Effettuato con successo!","coupon":coupongenerato]  
+}else{
+   return ["resultCode":"error","message":"Mi dispiace, impossibile generare coupon! Punti a disposizione insufficienti!"]
+}</ScriptUnitText>
+      <KOLink id="sv3#opg3#scu3#kln99" name="KOFlow99" to="sv3#area16#page21#mssu14">
+        <LinkParameter id="sv3#opg3#scu3#kln99#par532" name="message_Shown Messages" source="result(message)" target="sv3#area16#page21#mssu14.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv3#opg3#scu3#oln148" name="OKFlow148" to="sv3#miu44">
+        <LinkParameter id="sv3#opg3#scu3#oln148#par706" name="bellaaaa_coupon" target="sv3#miu44.mov1#hym37#icu41#icp129" source="result(coupon)"/>
+        <LinkParameter id="sv3#opg3#scu3#oln148#par714" name="Result_PASSING_puntirimasti" sourceLinkParameter="sv3#area16#page21#enu13#ln157#par713" target="sv3#miu44.mov1#hym37#icu41#icp34"/>
+        <LinkParameter id="sv3#opg3#scu3#oln148#par722" name="Punti totali_PASSING_puntitotali" sourceLinkParameter="sv3#area16#page21#enu13#ln157#par721" target="sv3#miu44.mov1#hym37#icu41#icp130"/>
+        <LinkParameter id="sv3#opg3#scu3#oln148#par727" name="5_puntirichiesti" sourceValue="5" target="sv3#miu44.mov1#hym37#icu41#icp131"/>
+      </OKLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

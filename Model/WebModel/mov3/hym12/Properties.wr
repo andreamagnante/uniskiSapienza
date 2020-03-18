@@ -1,0 +1,12 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym12" name="Modifica Password Admin" gr:x="25" gr:y="110">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym12#icu14" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym12#icu14#oln56" name="OKFlow54" to="mov3#hym12#page31#seu12">
+        <LinkParameter id="mov3#hym12#icu14#oln56#par228" name="KeyCondition2 [oid]_KeyCondition2 [oid]" source="mov3#hym12#icu14#icp31" target="mov3#hym12#page31#seu12#su27#kcond24.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym12#icu14#icp31" name="KeyCondition2 [oid]"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov3#hym12#okcu15" name="OK Port21" gr:x="1155" gr:y="15"/>
+    <KOCollectorUnit id="mov3#hym12#kocu15" name="KO Port19" gr:x="1155" gr:y="280"/>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,20 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="465" gr:y="365" id="mov3#hym50#opg19" name="Operation Group 19" transaction="true">
+  <OperationUnits>
+    <ScriptUnit gr:x="0" gr:y="0" id="mov3#hym50#opg19#scu21" name="Script21">
+      <OKLink id="mov3#hym50#opg19#scu21#oln259" name="OKFlow259" to="mov3#hym50#page84#enu54">
+        <LinkParameter id="mov3#hym50#opg19#scu21#oln259#par1441" name="data_PASSING_Data prenotazione" sourceLinkParameter="mov3#hym50#icu52#oln251#par1436" target="mov3#hym50#page84#enu54#fld172_slot"/>
+        <LinkParameter id="mov3#hym50#opg19#scu21#oln259#par1442" name="ora_PASSING_Ora prenotazione" sourceLinkParameter="mov3#hym50#icu52#oln251#par1438" target="mov3#hym50#page84#enu54#fld171_slot"/>
+        <LinkParameter id="mov3#hym50#opg19#scu21#oln259#par1443" name="utente_PASSING_Utente" sourceLinkParameter="mov3#hym50#icu52#oln251#par1439" target="mov3#hym50#page84#enu54#fld170_slot"/>
+        <LinkParameter id="mov3#hym50#opg19#scu21#oln259#par1444" name="oiddata_PASSING" sourceLinkParameter="mov3#hym50#icu52#oln251#par1373" passing="true"/>
+      </OKLink>
+      <KOLink id="mov3#hym50#opg19#scu21#kln162" name="KOFlow162" to="mov3#hym50#page89#mssu45" automaticCoupling="true"/>
+      <ScriptUnitText xml:space="preserve">#input String tipo
+#output String message
+
+if(!tipo.compareToIgnoreCase("Lezione")){
+   return["resultCode":"success","message":"Lezione"] 
+}
+return["resultCode":"error","message":"Lezione annullata"] </ScriptUnitText>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

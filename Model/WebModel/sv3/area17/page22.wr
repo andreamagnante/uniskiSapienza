@@ -1,0 +1,136 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area17#page22" name="Skipass disponibili" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <QueryUnit id="sv3#area17#page22#qu14" name="Skipass" gr:x="20" gr:y="10" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">select * from skipass order by prezzo asc</QueryText>
+      <QueryOutput id="sv3#area17#page22#qu14#qo52" name="tipologia" type="string"/>
+      <QueryOutput id="sv3#area17#page22#qu14#qo53" name="durata" type="string"/>
+      <QueryOutput id="sv3#area17#page22#qu14#qo54" name="prezzo" type="integer"/>
+      <QueryOutput id="sv3#area17#page22#qu14#qo55" name="punti" type="integer"/>
+      <QueryOutput id="sv3#area17#page22#qu14#qo20" name="target utenza" type="string"/>
+    </QueryUnit>
+    <SelectorUnit id="sv3#area17#page22#seu6" name="Skipass (selector)" gr:x="0" gr:y="95" entity="ent8" distinctAttributes="ent8#att12">
+      <Link id="sv3#area17#page22#seu6#ln44" name="Flow23" to="sv3#area17#page22#enu12" type="transport" validate="true">
+        <LinkParameter id="sv3#area17#page22#seu6#ln44#par156" name="tipologia_PASSING" source="ent8#att12Array" passing="true"/>
+        <LinkParameter id="sv3#area17#page22#seu6#ln44#par158" name="tipologia_tipologia [label]" source="ent8#att12Array" target="sv3#area17#page22#enu12#sfld3_label"/>
+        <LinkParameter id="sv3#area17#page22#seu6#ln44#par159" name="tipologia_Tipologia skipass [output]" source="ent8#att12Array" target="sv3#area17#page22#enu12#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area17#page22#enu12" name="Prenota Skipass" linkOrder="sv3#area17#page22#enu12#ln45" gr:x="230" gr:y="125" fieldOrder="sv3#area17#page22#enu12#sfld3 sv3#area17#page22#enu12#fld40 sv3#area17#page22#enu12#sfld11">
+      <Field id="sv3#area17#page22#enu12#fld40" name="Data attivazione" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area17#page22#enu12#fld40#mnd19" name="Mandatory15"/>
+          <CompareValidationRule id="sv3#area17#page22#enu12#fld40#cmp1" name="CompareData" predicate="gteq" value="today()"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area17#page22#enu12#fld41" name="Usato" type="boolean" preloaded="true" hidden="true" slotOrder="sv3#area17#page22#enu12#fld41#slot8">
+        <Slot id="sv3#area17#page22#enu12#fld41#slot8" name="Stato" value="0" label="true" output="true"/>
+      </Field>
+      <SelectionField id="sv3#area17#page22#enu12#sfld3" name="Tipologia skipass" type="string" modifiable="true" preselectValue="SkiHour">
+        <VRules/>
+      </SelectionField>
+      <Link id="sv3#area17#page22#enu12#ln45" name="Prenota" to="sv3#miu27" type="normal" validate="true">
+        <LinkParameter id="sv3#area17#page22#enu12#ln45#par294" name="Data attivazione_Data attivazione" source="sv3#area17#page22#enu12#fld40" target="sv3#miu27.mov1#hym6#icu4#icp18"/>
+        <LinkParameter id="sv3#area17#page22#enu12#ln45#par295" name="Tipologia skipass_Tipologia skipass" source="sv3#area17#page22#enu12#sfld3" target="sv3#miu27.mov1#hym6#icu4#icp19"/>
+        <LinkParameter id="sv3#area17#page22#enu12#ln45#par296" name="Ora Attivazione_Tempo attivazione" source="sv3#area17#page22#enu12#sfld11" target="sv3#miu27.mov1#hym6#icu4#icp26"/>
+      </Link>
+      <SelectionField id="sv3#area17#page22#enu12#sfld11" name="Ora attivazione" type="time" modifiable="true"/>
+    </EntryUnit>
+    <TimeUnit id="sv3#area17#page22#tmu4" name="Time2" gr:x="335" gr:y="5">
+      <Link id="sv3#area17#page22#tmu4#ln46" name="Flow24" to="sv3#area17#page22#enu12" type="transport" validate="true"/>
+    </TimeUnit>
+    <GetUnit id="sv3#area17#page22#gtu17" name="User_Supporter ID" gr:x="460" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv3#area17#page22#gtu17#ln47" name="Flow42" to="sv3#miu27" type="transport" validate="true">
+        <LinkParameter id="sv3#area17#page22#gtu17#ln47#par297" name="UserCtxParam.oid_user_Key Condition [oid]" source="sv3#area17#page22#gtu17.UserCtxParam" target="sv3#miu27.mov1#hym6#icu4#icp10"/>
+      </Link>
+      <Link id="sv3#area17#page22#gtu17#ln50" name="Flow41" to="sv3#area17#page22#qu16" type="transport" validate="true">
+        <LinkParameter id="sv3#area17#page22#gtu17#ln50#par298" name="UserCtxParam.oid_user_inputuser" source="sv3#area17#page22#gtu17.UserCtxParam" target="sv3#area17#page22#qu16.sv3#area17#page22#qu16#qi5"/>
+      </Link>
+    </GetUnit>
+    <QueryUnit id="sv3#area17#page22#qu16" name="Skipass acquistati" gr:x="445" gr:y="135" mode="select" language="SQL" db="db1" outputsOrder="sv3#area17#page22#qu16#qo61 sv3#area17#page22#qu16#qo56 sv3#area17#page22#qu16#qo57 sv3#area17#page22#qu16#qo58 sv3#area17#page22#qu16#qo59 sv3#area17#page22#qu16#qo60">
+      <QueryText xml:space="preserve">select prenotazioneskipass.skipass_tipologia,prenotazioneskipass.dataattivazione,prenotazioneskipass.timeattivazione,prenotazioneskipass.datascadenza,prenotazioneskipass.timescadenza,prenotazioneskipass.stato from prenotazioneskipass where prenotazioneskipass.userregistrato_oid_user = :inputuser</QueryText>
+      <QueryInput id="sv3#area17#page22#qu16#qi5" name="inputuser" required="true" type="integer"/>
+      <QueryOutput id="sv3#area17#page22#qu16#qo56" name="data attivazione" type="date"/>
+      <QueryOutput id="sv3#area17#page22#qu16#qo57" name="ora attivazione" type="time"/>
+      <QueryOutput id="sv3#area17#page22#qu16#qo58" name="data scadenza" type="date"/>
+      <QueryOutput id="sv3#area17#page22#qu16#qo59" name="ora scadenza" type="time"/>
+      <QueryOutput id="sv3#area17#page22#qu16#qo60" name="stato" type="string"/>
+      <QueryOutput id="sv3#area17#page22#qu16#qo61" name="tipologia skipass" type="string"/>
+    </QueryUnit>
+    <SelectorUnit gr:x="125" gr:y="0" id="sv3#area17#page22#seu7" name="Ora (selector)" entity="ent2" distinctAttributes="ent2#att43">
+      <SortAttribute attribute="ent2#att33" order="ascending"/>
+      <Link id="sv3#area17#page22#seu7#ln128" name="Flow128" to="sv3#area17#page22#enu12" type="transport" validate="true">
+        <LinkParameter id="sv3#area17#page22#seu7#ln128#par326" name="ora_Ora attivazione [label]" source="ent2#att43Array" target="sv3#area17#page22#enu12#sfld11_label"/>
+        <LinkParameter id="sv3#area17#page22#seu7#ln128#par327" name="ora_Ora attivazione [output]" source="ent2#att43Array" target="sv3#area17#page22#enu12#sfld11_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area17#page22#qu14"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area17#page22#enu12">
+          <layout:Link link="sv3#area17#page22#enu12#ln45"/>
+          <layout:Field field="sv3#area17#page22#enu12#sfld3"/>
+          <layout:Field field="sv3#area17#page22#enu12#fld40"/>
+          <layout:Field field="sv3#area17#page22#enu12#sfld11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area17#page22#qu16"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

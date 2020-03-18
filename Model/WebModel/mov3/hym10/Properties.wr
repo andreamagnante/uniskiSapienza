@@ -1,0 +1,21 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym10" name="Modifica Email Admin" gr:x="15" gr:y="20">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym10#icu12" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym10#icu12#icp29" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym10#icu12#oln52" name="OKFlow24" to="mov3#hym10#page29#enu18">
+        <LinkParameter id="mov3#hym10#icu12#oln52#par220" name="Key Condition [oid]_Key Condition [oid]" source="mov3#hym10#icu12#icp29" target="mov3#hym10#page29#enu18.userOID"/>
+        <LinkParameter id="mov3#hym10#icu12#oln52#par302" name="email_E-mail" source="mov3#hym10#icu12#icp87" target="mov3#hym10#page29#enu18#fld51_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym10#icu12#icp87" name="email"/>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov3#hym10#mfu10" name="Update5" gr:x="345" gr:y="205" entity="User">
+      <Selector id="mov3#hym10#mfu10#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym10#mfu10#su25#kcond22" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym10#mfu10#oln53" name="OKFlow70" to="mov3#hym10#okcu13" automaticCoupling="true"/>
+      <KOLink id="mov3#hym10#mfu10#kln36" name="KOFlow27" to="mov3#hym10#kocu13" automaticCoupling="true"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov3#hym10#kocu13" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym10#okcu13" name="OK Port22" gr:x="550" gr:y="105"/>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,146 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area24#page55" name="Istruttore" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv5#area24#page55#inu8" name="Lista Istruttore" linkOrder="sv5#area24#page55#inu8#ln126 sv5#area24#page55#inu8#ln141" gr:x="0" gr:y="10" entity="ent38" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64 ent38#att53 ent38#att55 ent38#att54">
+      <Link id="sv5#area24#page55#inu8#ln126" name="Elimina" to="sv5#miu50" type="normal" validate="true">
+        <LinkParameter id="sv5#area24#page55#inu8#ln126#par545" name="oid_user_oid_user" source="data[].userOID" target="sv5#miu50.mov3#hym32#icu34#icp179"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln126#par546" name="username_username" source="data[].userName" target="sv5#miu50.mov3#hym32#icu34#icp178"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln126#par547" name="nome_cognome" source="data[].User#att63" target="sv5#miu50.mov3#hym32#icu34#icp181"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln126#par548" name="cognome_nome" source="data[].User#att62" target="sv5#miu50.mov3#hym32#icu34#icp180"/>
+      </Link>
+      <Link id="sv5#area24#page55#inu8#ln141" name="Modifica stipendio" to="sv5#miu52" type="normal" validate="true">
+        <LinkParameter id="sv5#area24#page55#inu8#ln141#par558" name="cognome_cognome" source="data[].User#att63" target="sv5#miu52.mov3#hym31#icu33#icp197"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln141#par559" name="nome_nome" source="data[].User#att62" target="sv5#miu52.mov3#hym31#icu33#icp196"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln141#par560" name="oid_user_oid_user" source="data[].userOID" target="sv5#miu52.mov3#hym31#icu33#icp194"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln141#par561" name="stipendio_stipendio" source="data[].ent38#att54" target="sv5#miu52.mov3#hym31#icu33#icp193"/>
+        <LinkParameter id="sv5#area24#page55#inu8#ln141#par562" name="username_username" source="data[].userName" target="sv5#miu52.mov3#hym31#icu33#icp195"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit gr:x="185" gr:y="0" id="sv5#area24#page55#enu43" name="Inserisci nuovo istruttore" entity="ent38" linkOrder="sv5#area24#page55#enu43#ln147" fieldOrder="sv5#area24#page55#enu43#fld121 sv5#area24#page55#enu43#fld122 sv5#area24#page55#enu43#fld123 sv5#area24#page55#enu43#fld124 sv5#area24#page55#enu43#fld125 sv5#area24#page55#enu43#fld130 sv5#area24#page55#enu43#fld132 sv5#area24#page55#enu43#fld135 sv5#area24#page55#enu43#fld136 sv5#area24#page55#enu43#fld137">
+      <Link id="sv5#area24#page55#enu43#ln147" name="Conferma" to="sv5#miu53" type="normal" validate="true">
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par577" name="Brevetto_brevetto" source="sv5#area24#page55#enu43#fld135" target="sv5#miu53.mov3#hym30#icu32#icp206"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par578" name="Codice fiscale_codice fiscale" source="sv5#area24#page55#enu43#fld132" target="sv5#miu53.mov3#hym30#icu32#icp201"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par579" name="Cognome_cognome" source="sv5#area24#page55#enu43#fld123" target="sv5#miu53.mov3#hym30#icu32#icp203"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par580" name="Email_email" source="sv5#area24#page55#enu43#fld125" target="sv5#miu53.mov3#hym30#icu32#icp200"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par581" name="Iban_iban" source="sv5#area24#page55#enu43#fld137" target="sv5#miu53.mov3#hym30#icu32#icp208"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par584" name="Nome_nome" source="sv5#area24#page55#enu43#fld122" target="sv5#miu53.mov3#hym30#icu32#icp202"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par585" name="6_oid_group" sourceValue="6" target="sv5#miu53.mov3#hym30#icu32#icp205"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par590" name="Password_password" source="sv5#area24#page55#enu43#fld124" target="sv5#miu53.mov3#hym30#icu32#icp199"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par591" name="Stipendio_stipendio" source="sv5#area24#page55#enu43#fld136" target="sv5#miu53.mov3#hym30#icu32#icp207"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par592" name="Telefono_telefono" source="sv5#area24#page55#enu43#fld130" target="sv5#miu53.mov3#hym30#icu32#icp204"/>
+        <LinkParameter id="sv5#area24#page55#enu43#ln147#par593" name="Username_username" source="sv5#area24#page55#enu43#fld121" target="sv5#miu53.mov3#hym30#icu32#icp198"/>
+      </Link>
+      <Field id="sv5#area24#page55#enu43#fld148" name="oid_group" type="string" preloaded="true" hidden="true" slotOrder="sv5#area24#page55#enu43#fld148#slot11">
+        <Slot id="sv5#area24#page55#enu43#fld148#slot11" name="group" value="6" label="true" output="true"/>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld137" name="Iban" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld137#mnd76" name="Mandatory76"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld136" name="Stipendio" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld136#mnd79" name="Mandatory79"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld135" name="Brevetto" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld135#mnd72" name="Mandatory72"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld132" name="Codice fiscale" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld132#mnd73" name="Mandatory73"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld130" name="Telefono" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld130#mnd80" name="Mandatory80"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld125" name="Email" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld125#mnd75" name="Mandatory75"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld124" name="Password" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld124#mnd78" name="Mandatory78"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld123" name="Cognome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld123#mnd74" name="Mandatory74"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld122" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld122#mnd77" name="Mandatory77"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area24#page55#enu43#fld121" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area24#page55#enu43#fld121#mnd81" name="Mandatory81"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area24#page55#inu8">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="ent38#att53"/>
+          <layout:Attribute attribute="ent38#att55"/>
+          <layout:Attribute attribute="ent38#att54"/>
+          <layout:Link link="sv5#area24#page55#inu8#ln126"/>
+          <layout:Link link="sv5#area24#page55#inu8#ln141"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area24#page55#enu43">
+          <layout:Link link="sv5#area24#page55#enu43#ln147"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld121"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld122"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld123"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld124"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld125"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld130"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld132"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld135"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld136"/>
+          <layout:Field field="sv5#area24#page55#enu43#fld137"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,80 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="360" gr:y="110" id="mov1#hym34#page60" name=" ">
+  <ContentUnits>
+    <EventCalendarUnit gr:x="0" gr:y="0" id="mov1#hym34#page60#ecu2" name="Calendar2" entityBased="true" entity="ent11" displayAttributes="ent11#att32" dateAttribute="ent11#att22">
+      <Selector id="mov1#hym34#page60#ecu2#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym34#page60#ecu2#su50#kcond44" name="KeyCondition44" predicate="in" implied="false"/>
+      </Selector>
+    </EventCalendarUnit>
+    <SelectorUnit gr:x="5" gr:y="255" id="mov1#hym34#page60#seu8" name="Selector8" entity="ent11" distinctAttributes="rel10#role19.userOID">
+      <Selector id="mov1#hym34#page60#seu8#su51" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym34#page60#seu8#su51#acond8" name="AttCondition8" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role19.userOID"/>
+      </Selector>
+      <Link id="mov1#hym34#page60#seu8#ln158" name="Flow158" to="mov1#hym34#page60#ecu2" type="transport" validate="true">
+        <LinkParameter id="mov1#hym34#page60#seu8#ln158#par506" name="id_KeyCondition44 [id]" source="ent11#att21Array" target="mov1#hym34#page60#ecu2#su50#kcond44.ent11#att21"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit gr:x="155" gr:y="10" id="mov1#hym34#page60#enu44" name="Form Prenota" entity="ent11" linkOrder="mov1#hym34#page60#enu44#ln160">
+      <Field id="mov1#hym34#page60#enu44#fld39" name="Data Lezione" type="string" modifiable="true"/>
+      <Field id="mov1#hym34#page60#enu44#fld56" name="Ora Lezione" type="string" modifiable="true"/>
+      <Link id="mov1#hym34#page60#enu44#ln160" name="Conferma" to="mov1#hym34#cru14" type="normal" validate="true">
+        <LinkParameter id="mov1#hym34#page60#enu44#ln160#par466" name="Data Lezione_data" source="mov1#hym34#page60#enu44#fld39" target="mov1#hym34#cru14.ent11#att22"/>
+        <LinkParameter id="mov1#hym34#page60#enu44#ln160#par467" name="Lezione Object_Lezione Object" source="entityBean" target="mov1#hym34#cru14.entityBeans"/>
+        <LinkParameter id="mov1#hym34#page60#enu44#ln160#par473" name="Ora Lezione_ora" source="mov1#hym34#page60#enu44#fld56" target="mov1#hym34#cru14.ent11#att19"/>
+        <LinkParameter id="mov1#hym34#page60#enu44#ln160#par474" name="Lezione_tipo" sourceValue="Lezione" target="mov1#hym34#cru14.ent11#att32"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym34#page60#ecu2">
+          <layout:Link link="mov1#hym34#page60#ecu2-month-0"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-1"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-2"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-3"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-4"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-5"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-6"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-7"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-8"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-9"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-10"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-month-11"/>
+          <layout:Link link="mov1#hym34#page60#ecu2-year"/>
+          <layout:Attribute attribute="ent11#att32"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym34#page60#enu44">
+          <layout:Field field="mov1#hym34#page60#enu44#fld39"/>
+          <layout:Field field="mov1#hym34#page60#enu44#fld56"/>
+          <layout:Link link="mov1#hym34#page60#enu44#ln160"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

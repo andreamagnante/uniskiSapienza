@@ -1,0 +1,226 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area27#page62" name="Lezione" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit gr:x="220" gr:y="0" id="sv3#area27#page62#inu12" name="LezIoni annullate" entity="ent11" displayAttributes="ent11#att22 ent11#att19 ent11#att32">
+      <Selector id="sv3#area27#page62#inu12#su120" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area27#page62#inu12#su120#acond72" name="AttCondition72" predicate="eq" booleanOperator="and" implied="false" attributes="rel4#role8.userOID"/>
+        <AttributesCondition id="sv3#area27#page62#inu12#su120#acond73" name="AttCondition73" predicate="eq" booleanOperator="and" implied="false" attributes="ent11#att32" value="Annullata"/>
+        <AttributesCondition id="sv3#area27#page62#inu12#su120#acond74" name="AttCondition74" predicate="gteq" booleanOperator="and" implied="false" attributes="ent11#att22"/>
+      </Selector>
+      <SortAttribute attribute="ent11#att22" order="ascending"/>
+    </IndexUnit>
+    <MultiDataUnit id="sv3#area27#page62#mdu6" name="Lezioni del giorno" gr:x="145" gr:y="325" entity="ent11" maxResults="4" displayAttributes="ent11#att22 ent11#att19 rel10#role19.userName rel10#role19.ent38#att53">
+      <Selector id="sv3#area27#page62#mdu6#su117" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area27#page62#mdu6#su117#acond69" name="Start Date" predicate="eq" booleanOperator="and" implied="false" attributes="ent11#att22"/>
+        <AttributesCondition id="sv3#area27#page62#mdu6#su117#acond70" name="idIstruttore" predicate="eq" booleanOperator="and" implied="false" attributes="rel4#role8.userOID"/>
+      </Selector>
+    </MultiDataUnit>
+    <SelectorUnit id="sv3#area27#page62#seu49" name="Selector4" gr:x="315" gr:y="170" entity="ent11" distinctAttributes="rel4#role8.userOID">
+      <Selector id="sv3#area27#page62#seu49#su118" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area27#page62#seu49#su118#acond71" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.userOID"/>
+      </Selector>
+      <Link id="sv3#area27#page62#seu49#ln249" name="Flow164" to="sv3#area27#page62#ecu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#seu49#ln249#par1448" name="id_KeyCondition41 [id]" source="ent11#att21Array" target="sv3#area27#page62#ecu1#su119#kcond65.ent11#att21"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area27#page62#enu59" name="Prenota lezione tramite istruttore" linkOrder="sv3#area27#page62#enu59#ln250" ajaxTooltipEnabled="false" gr:x="355" gr:y="520" fieldOrder="sv3#area27#page62#enu59#sfld16 sv3#area27#page62#enu59#fld173" entity="ent11">
+      <SelectionField id="sv3#area27#page62#enu59#sfld16" name="Istruttore" ajaxEventEnabled="true" ajaxEventLink="sv3#area27#page62#enu59#ln250" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area27#page62#enu59#sfld16#mnd104" name="Mandatory68"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#area27#page62#enu59#ln250" name="Flow177" to="sv3#miu67" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxOpenWaitingDialog="true" ajaxWaitingDialogMessage="Caricamento in corso..">
+        <LinkParameter id="sv3#area27#page62#enu59#ln250#par1449" name="Data lezione_datalezione" source="sv3#area27#page62#enu59#fld173" target="sv3#miu67.mov1#hym44#icu44#icp258"/>
+        <LinkParameter id="sv3#area27#page62#enu59#ln250#par1450" name="Istruttore_istruttoreoid" source="sv3#area27#page62#enu59#sfld16" target="sv3#miu67.mov1#hym44#icu44#icp259"/>
+        <LinkParameter id="sv3#area27#page62#enu59#ln250#par1451" name="UserCtxParam.oid_user_PASSING_useroid" sourceLinkParameter="sv3#area27#page62#gtu19#ln254#par1456" target="sv3#miu67.mov1#hym44#icu44#icp260"/>
+      </Link>
+      <Field id="sv3#area27#page62#enu59#fld173" name="Data lezione" ajaxEventEnabled="true" ajaxEventLink="sv3#area27#page62#enu59#ln250" type="date" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv3#area27#page62#enu59#fld173#cmp7" name="Compare7" predicate="gteq" value="today()"/>
+          <MandatoryValidationRule id="sv3#area27#page62#enu59#fld173#mnd105" name="Mandatory84"/>
+        </VRules>
+      </Field>
+      <VRules/>
+    </EntryUnit>
+    <EntryUnit id="sv3#area27#page62#enu60" name="Prenota lezione tramite data" linkOrder="sv3#area27#page62#enu60#ln251" gr:x="560" gr:y="420" fieldOrder="sv3#area27#page62#enu60#fld174 sv3#area27#page62#enu60#sfld17">
+      <Link id="sv3#area27#page62#enu60#ln251" name="Prenota" to="sv3#miu65" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="400" ajaxWindowClosable="true">
+        <LinkParameter id="sv3#area27#page62#enu60#ln251#par1452" name="Data lezione_dataprenotazione" source="sv3#area27#page62#enu60#fld174" target="sv3#miu65.mov1#hym47#icu49#icp227"/>
+        <LinkParameter id="sv3#area27#page62#enu60#ln251#par1453" name="Ora lezione_oraprenotazione" source="sv3#area27#page62#enu60#sfld17" target="sv3#miu65.mov1#hym47#icu49#icp226"/>
+      </Link>
+      <SelectionField id="sv3#area27#page62#enu60#sfld17" name="Ora lezione" ajaxEventEnabled="true" ajaxEventLink="sv3#area27#page62#enu60#ln251" type="time" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area27#page62#enu60#sfld17#mnd106" name="Mandatory105"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv3#area27#page62#enu60#fld174" name="Data lezione" ajaxEventEnabled="true" ajaxEventLink="sv3#area27#page62#enu60#ln251" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area27#page62#enu60#fld174#mnd107" name="Mandatory104"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+    <GetUnit id="sv3#area27#page62#gtu19" name="User_Supporter ID" gr:x="5" gr:y="160" contextParameters="UserCtxParam">
+      <Link id="sv3#area27#page62#gtu19#ln252" name="Flow155" to="sv3#area27#page62#mdu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#gtu19#ln252#par1454" name="UserCtxParam.oid_user_idIstruttore" source="sv3#area27#page62#gtu19.UserCtxParam" target="sv3#area27#page62#mdu6#su117#acond70"/>
+      </Link>
+      <Link id="sv3#area27#page62#gtu19#ln253" name="Flow163" to="sv3#area27#page62#seu49" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#gtu19#ln253#par1455" name="UserCtxParam.oid_user_AttCondition7" source="sv3#area27#page62#gtu19.UserCtxParam" target="sv3#area27#page62#seu49#su118#acond71"/>
+      </Link>
+      <Link id="sv3#area27#page62#gtu19#ln254" name="Flow199" to="sv3#area27#page62#enu59" type="transport" validate="true" gr:bendpoints="324,110,-81,-250">
+        <LinkParameter id="sv3#area27#page62#gtu19#ln254#par1456" name="UserCtxParam.oid_user_PASSING" source="sv3#area27#page62#gtu19.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv3#area27#page62#gtu19#ln255" name="Flow233" to="sv3#miu65" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#gtu19#ln255#par1457" name="UserCtxParam.oid_user_oidutente" source="sv3#area27#page62#gtu19.UserCtxParam" target="sv3#miu65.mov1#hym47#icu49#icp230"/>
+      </Link>
+      <Link id="sv3#area27#page62#gtu19#ln260" name="Flow260" to="sv3#area27#page62#inu12" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#gtu19#ln260#par1468" name="UserCtxParam.oid_user_AttCondition72" source="sv3#area27#page62#gtu19.UserCtxParam" target="sv3#area27#page62#inu12#su120#acond72"/>
+      </Link>
+    </GetUnit>
+    <EventCalendarUnit id="sv3#area27#page62#ecu1" name="Calendario Lezioni" linkOrder="sv3#area27#page62#ecu1#ln256" gr:x="675" gr:y="140" entityBased="true" entity="ent11" displayAttributes="ent11#att32 ent11#att19 rel10#role19.userName" dateAttribute="ent11#att22" years="3">
+      <Selector id="sv3#area27#page62#ecu1#su119" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area27#page62#ecu1#su119#kcond65" name="KeyCondition41" predicate="in" implied="false"/>
+      </Selector>
+      <SortAttribute attribute="ent11#att19" order="ascending"/>
+      <Link id="sv3#area27#page62#ecu1#ln256" name="Flow221" to="sv3#miu63" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="400" ajaxWindowClosable="true">
+        <LinkParameter id="sv3#area27#page62#ecu1#ln256#par1499" name="data_data" source="date[].data[].ent11#att22" target="sv3#miu63.mov1#hym46#icu54#icp274"/>
+        <LinkParameter id="sv3#area27#page62#ecu1#ln256#par1500" name="LezioneToIstruttore.username_istruttore" source="date[].data[].rel10#role19$userName" target="sv3#miu63.mov1#hym46#icu54#icp272"/>
+        <LinkParameter id="sv3#area27#page62#ecu1#ln256#par1501" name="LezioneToIstruttore.oid_user_istruttoreoid" source="date[].data[].rel10#role19_userOID" target="sv3#miu63.mov1#hym46#icu54#icp276"/>
+        <LinkParameter id="sv3#area27#page62#ecu1#ln256#par1502" name="id_oiddata" source="date[].data[].ent11#att21" target="sv3#miu63.mov1#hym46#icu54#icp275"/>
+        <LinkParameter id="sv3#area27#page62#ecu1#ln256#par1503" name="ora_ora" source="date[].data[].ent11#att19" target="sv3#miu63.mov1#hym46#icu54#icp273"/>
+        <LinkParameter id="sv3#area27#page62#ecu1#ln256#par1504" name="tipo_tipo" source="date[].data[].ent11#att32" target="sv3#miu63.mov1#hym46#icu54#icp278"/>
+      </Link>
+    </EventCalendarUnit>
+    <SelectorUnit id="sv3#area27#page62#seu50" name="Selector23" gr:x="140" gr:y="500" entity="ent38">
+      <Link id="sv3#area27#page62#seu50#ln257" name="Flow172" to="sv3#area27#page62#enu59" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#seu50#ln257#par1462" name="nome_Istruttore [label]" source="User#att62Array" target="sv3#area27#page62#enu59#sfld16_label"/>
+        <LinkParameter id="sv3#area27#page62#seu50#ln257#par1463" name="oid_user_Istruttore [output]" source="userOIDArray" target="sv3#area27#page62#enu59#sfld16_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#area27#page62#seu51" name="Selector23" gr:x="490" gr:y="315" entity="ent2">
+      <Link id="sv3#area27#page62#seu51#ln258" name="Flow232" to="sv3#area27#page62#enu60" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#seu51#ln258#par1464" name="ora_Ora lezione [label]" source="ent2#att43Array" target="sv3#area27#page62#enu60#sfld17_label"/>
+        <LinkParameter id="sv3#area27#page62#seu51#ln258#par1465" name="ora_Ora lezione [output]" source="ent2#att43Array" target="sv3#area27#page62#enu60#sfld17_output"/>
+      </Link>
+    </SelectorUnit>
+    <TimeUnit id="sv3#area27#page62#tmu8" name="data oggi" gr:x="0" gr:y="345">
+      <Link id="sv3#area27#page62#tmu8#ln259" name="Flow153" to="sv3#area27#page62#mdu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#tmu8#ln259#par1466" name="Current/Input Date_Start Date" source="currentDate" target="sv3#area27#page62#mdu6#su117#acond69"/>
+      </Link>
+      <Link id="sv3#area27#page62#tmu8#ln261" name="Flow261" to="sv3#area27#page62#inu12" type="transport" validate="true">
+        <LinkParameter id="sv3#area27#page62#tmu8#ln261#par1469" name="Current/Input Date_AttCondition74" source="currentDate" target="sv3#area27#page62#inu12#su120#acond74"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area27#page62#inu12">
+          <layout:Attribute attribute="ent11#att22"/>
+          <layout:Attribute attribute="ent11#att19"/>
+          <layout:Attribute attribute="ent11#att32"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area27#page62#mdu6" layout:unitVisibilityConditionNegated="true">
+          <layout:Attribute attribute="ent11#att22"/>
+          <layout:Attribute attribute="ent11#att19"/>
+          <layout:Attribute attribute="rel10#role19.userName"/>
+          <layout:Attribute attribute="rel10#role19.ent38#att53"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv3#area27#page62#enu59">
+          <layout:Link link="sv3#area27#page62#enu59#ln250"/>
+          <layout:Field field="sv3#area27#page62#enu59#sfld16"/>
+          <layout:Field field="sv3#area27#page62#enu59#fld173"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv3#area27#page62#enu60">
+          <layout:Link link="sv3#area27#page62#enu60#ln251"/>
+          <layout:Field field="sv3#area27#page62#enu60#fld174"/>
+          <layout:Field field="sv3#area27#page62#enu60#sfld17"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv3#area27#page62#ecu1">
+          <layout:Attribute attribute="ent11#att32"/>
+          <layout:Attribute attribute="ent11#att19"/>
+          <layout:Attribute attribute="rel10#role19.userName"/>
+          <layout:Link link="sv3#area27#page62#ecu1#ln256"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-0"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-1"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-2"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-3"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-4"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-5"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-6"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-7"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-8"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-9"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-10"/>
+          <layout:Link link="sv3#area27#page62#ecu1-month-11"/>
+          <layout:Link link="sv3#area27#page62#ecu1-year"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

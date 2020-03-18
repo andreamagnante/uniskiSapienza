@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym47#page78" name="Prenota lezione" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="635" gr:y="45">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym47#page78#enu61" name="Dettagli prenotazione" linkOrder="mov1#hym47#page78#enu61#ln223 mov1#hym47#page78#enu61#ln230" gr:x="0" gr:y="0" fieldOrder="mov1#hym47#page78#enu61#fld194 mov1#hym47#page78#enu61#fld200 mov1#hym47#page78#enu61#fld199 mov1#hym47#page78#enu61#sfld23">
+      <Field id="mov1#hym47#page78#enu61#fld194" name="Data lezione" type="date" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym47#page78#enu61#fld194#mnd103" name="Mandatory103"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym47#page78#enu61#ln223" name="Conferma" to="mov1#hym47#cru17" type="normal" validate="true">
+        <LinkParameter id="mov1#hym47#page78#enu61#ln223#par921" name="oraprenotazione_PASSING_ora" source="mov1#hym47#page78#enu61#fld200" target="mov1#hym47#cru17.ent11#att19"/>
+        <LinkParameter id="mov1#hym47#page78#enu61#ln223#par922" name="Lezione_tipo" target="mov1#hym47#cru17.ent11#att32" sourceValue="Lezione"/>
+        <LinkParameter id="mov1#hym47#page78#enu61#ln223#par961" name="Istruttore username_Istruttore.oid_user(LezioneToIstruttore)" target="mov1#hym47#cru17.rel10#role19.userOID" sourceLinkParameter="mov1#hym47#seu19#oln193#par984"/>
+        <LinkParameter id="mov1#hym47#page78#enu61#ln223#par974" name="Data lezione_data" source="mov1#hym47#page78#enu61#fld194" target="mov1#hym47#cru17.ent11#att22"/>
+        <LinkParameter id="mov1#hym47#page78#enu61#ln223#par1239" name="oidutente_PASSING_UserRegistrato.oid_user(LezioneToUserRegistrato)" sourceLinkParameter="mov1#hym47#scu18#oln241#par1238" target="mov1#hym47#cru17.rel4#role8.userOID"/>
+      </Link>
+      <Field id="mov1#hym47#page78#enu61#fld199" name="Durata lezione" type="string" preloaded="true" slotOrder="mov1#hym47#page78#enu61#fld199#slot14">
+        <Slot id="mov1#hym47#page78#enu61#fld199#slot14" name="durata" value="1 ora" label="true" output="true"/>
+      </Field>
+      <Field id="mov1#hym47#page78#enu61#fld200" name="Ora lezione" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym47#page78#enu61#fld200#mnd101" name="Mandatory101"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov1#hym47#page78#enu61#sfld23" name="Istruttore username" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov1#hym47#page78#enu61#ln230">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym47#page78#enu61#sfld23#mnd52" name="Mandatory52"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#hym47#page78#enu61#ln230" name="Flow230" to="mov1#hym47#seu19" type="normal" validate="true" ajaxEnabled="false">
+        <LinkParameter id="mov1#hym47#page78#enu61#ln230#par983" name="Istruttore username_AttCondition31" source="mov1#hym47#page78#enu61#sfld23" target="mov1#hym47#seu19#su77#acond31"/>
+      </Link>
+      <VRules/>
+    </EntryUnit>
+    <TimeUnit id="mov1#hym47#page78#tmu10" name="data oggi" gr:x="65" gr:y="145">
+      <Link id="mov1#hym47#page78#tmu10#ln226" name="Flow216" to="mov1#hym47#cru17" type="transport" validate="true">
+        <LinkParameter id="mov1#hym47#page78#tmu10#ln226#par924" name="Current/Input Date_prenotazione" source="currentDate" target="mov1#hym47#cru17.ent11#att23"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym47#page78#enu61">
+          <layout:Link link="mov1#hym47#page78#enu61#ln223"/>
+          <layout:Link link="mov1#hym47#page78#enu61#ln230"/>
+          <layout:Field field="mov1#hym47#page78#enu61#fld194"/>
+          <layout:Field field="mov1#hym47#page78#enu61#fld200"/>
+          <layout:Field field="mov1#hym47#page78#enu61#fld199"/>
+          <layout:Field field="mov1#hym47#page78#enu61#sfld23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

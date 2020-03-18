@@ -1,0 +1,214 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area15#page81">
+  <ContentUnits>
+    <IndexUnit gr:x="5" gr:y="0" id="sv5#area15#page81#inu9" name="Lista Admin Ristorante" entity="ent32" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64 User2DefaultGroup.groupName" linkOrder="sv5#area15#page81#inu9#ln2">
+      <Link id="sv5#area15#page81#inu9#ln2" name="Elimina" to="sv5#miu1" type="normal" validate="true" gr:bendpoints="-264,-92,-4,-97">
+        <LinkParameter id="sv5#area15#page81#inu9#ln2#par1038" name="cognome_cognome" source="data[].User#att63" target="sv5#miu1.mov3#hym49#icu51#icp20"/>
+        <LinkParameter id="sv5#area15#page81#inu9#ln2#par1039" name="defaultGroup.oid_group_Group.oid(defaultGroup)" source="data[].User2DefaultGroup_groupOID" target="sv5#miu1.mov3#hym49#icu51#icp21"/>
+        <LinkParameter id="sv5#area15#page81#inu9#ln2#par1050" name="nome_nome" source="data[].User#att62" target="sv5#miu1.mov3#hym49#icu51#icp23"/>
+        <LinkParameter id="sv5#area15#page81#inu9#ln2#par1052" name="oid_user_oid" source="data[].userOID" target="sv5#miu1.mov3#hym49#icu51#icp249"/>
+        <LinkParameter id="sv5#area15#page81#inu9#ln2#par1053" name="username_username" source="data[].userName" target="sv5#miu1.mov3#hym49#icu51#icp247"/>
+        <LinkParameter id="sv5#area15#page81#inu9#ln2#par1055" name="defaultGroup.groupName_GruppoNome" source="data[].User2DefaultGroup$groupName" target="sv5#miu1.mov3#hym49#icu51#icp22"/>
+      </Link>
+    </IndexUnit>
+    <IndexUnit id="sv5#area15#page81#inu10" name="Lista Admin Struttura" gr:x="0" gr:y="115" entity="ent36" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64 User2DefaultGroup.groupName" linkOrder="sv5#area15#page81#inu10#ln184">
+      <Selector id="sv5#area15#page81#inu10#su97" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area15#page81#inu10#su97#kcond45" name="KeyCondition45" predicate="notIn" implied="false"/>
+        <AttributesCondition id="sv5#area15#page81#inu10#su97#acond68" name="AttCondition68" predicate="neq" booleanOperator="and" implied="false" value="4" attributes="userOID"/>
+      </Selector>
+      <Link id="sv5#area15#page81#inu10#ln184" name="Elimina" to="sv5#miu1" type="normal" validate="true" gr:bendpoints="-238,72,77,102">
+        <LinkParameter id="sv5#area15#page81#inu10#ln184#par1056" name="cognome_cognome" source="data[].User#att63" target="sv5#miu1.mov3#hym49#icu51#icp20"/>
+        <LinkParameter id="sv5#area15#page81#inu10#ln184#par1057" name="defaultGroup.groupName_GruppoNome" source="data[].User2DefaultGroup$groupName" target="sv5#miu1.mov3#hym49#icu51#icp22"/>
+        <LinkParameter id="sv5#area15#page81#inu10#ln184#par1060" name="defaultGroup.oid_group_GruppoOid" source="data[].User2DefaultGroup_groupOID" target="sv5#miu1.mov3#hym49#icu51#icp21"/>
+        <LinkParameter id="sv5#area15#page81#inu10#ln184#par1061" name="nome_nome" source="data[].User#att62" target="sv5#miu1.mov3#hym49#icu51#icp23"/>
+        <LinkParameter id="sv5#area15#page81#inu10#ln184#par1062" name="oid_user_oid" source="data[].userOID" target="sv5#miu1.mov3#hym49#icu51#icp249"/>
+        <LinkParameter id="sv5#area15#page81#inu10#ln184#par1063" name="username_username" source="data[].userName" target="sv5#miu1.mov3#hym49#icu51#icp247"/>
+      </Link>
+    </IndexUnit>
+    <IndexUnit id="sv5#area15#page81#inu11" name="Lista Admin Impianto " gr:x="5" gr:y="275" entity="ent29" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64 User2DefaultGroup.groupName" linkOrder="sv5#area15#page81#inu11#ln185">
+      <Link id="sv5#area15#page81#inu11#ln185" name="Elimina" to="sv5#miu1" type="normal" validate="true" gr:bendpoints="-309,12,6,157">
+        <LinkParameter id="sv5#area15#page81#inu11#ln185#par1064" name="cognome_cognome" source="data[].User#att63" target="sv5#miu1.mov3#hym49#icu51#icp20"/>
+        <LinkParameter id="sv5#area15#page81#inu11#ln185#par1066" name="defaultGroup.groupName_GruppoNome" source="data[].User2DefaultGroup$groupName" target="sv5#miu1.mov3#hym49#icu51#icp22"/>
+        <LinkParameter id="sv5#area15#page81#inu11#ln185#par1067" name="defaultGroup.oid_group_GruppoOid" source="data[].User2DefaultGroup_groupOID" target="sv5#miu1.mov3#hym49#icu51#icp21"/>
+        <LinkParameter id="sv5#area15#page81#inu11#ln185#par1068" name="nome_nome" source="data[].User#att62" target="sv5#miu1.mov3#hym49#icu51#icp23"/>
+        <LinkParameter id="sv5#area15#page81#inu11#ln185#par1069" name="oid_user_oid" source="data[].userOID" target="sv5#miu1.mov3#hym49#icu51#icp249"/>
+        <LinkParameter id="sv5#area15#page81#inu11#ln185#par1070" name="username_username" source="data[].userName" target="sv5#miu1.mov3#hym49#icu51#icp247"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv5#area15#page81#enu50" name="Inserisci nuovo Admin " gr:x="270" gr:y="200" entity="ent20" fieldOrder="sv5#area15#page81#enu50#fld192 sv5#area15#page81#enu50#fld191 sv5#area15#page81#enu50#fld190 sv5#area15#page81#enu50#fld195 sv5#area15#page81#enu50#fld193 sv5#area15#page81#enu50#fld196 sv5#area15#page81#enu50#fld197 sv5#area15#page81#enu50#sfld6" linkOrder="sv5#area15#page81#enu50#ln209">
+      <Field id="sv5#area15#page81#enu50#fld190" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#fld190#mnd111" name="Mandatory3"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area15#page81#enu50#fld191" name="Password" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#fld191#mnd112" name="Mandatory2"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area15#page81#enu50#fld192" name="Username" ajaxEventEnabled="false" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#fld192#mnd113" name="Mandatory1"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area15#page81#enu50#fld193" name="Email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv5#area15#page81#enu50#fld195" name="Cognome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#fld195#mnd114" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area15#page81#enu50#fld196" name="Codice Fiscale " type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#fld196#mnd115" name="Mandatory5"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area15#page81#enu50#fld197" name="Telefono" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#fld197#mnd116" name="Mandatory109"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv5#area15#page81#enu50#sfld6" name="Tipologia Admin" type="string" modifiable="true" slotOrder="sv5#area15#page81#enu50#sfld6#slot22">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area15#page81#enu50#sfld6#mnd117" name="Mandatory110"/>
+        </VRules>
+        <Slot id="sv5#area15#page81#enu50#sfld6#slot22" name="Group" value="AdminRistorazione|AdminStruttura|AdminImpianto" label="true" output="true"/>
+      </SelectionField>
+      <Link id="sv5#area15#page81#enu50#ln209" name="Registra" to="sv5#seu39" type="normal" validate="true">
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1172" name="Tipologia Admin_AttCondition53" source="sv5#area15#page81#enu50#sfld6" target="sv5#seu39#su71#acond53"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1173" name="Codice Fiscale _PASSING" source="sv5#area15#page81#enu50#fld196" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1174" name="Cognome_PASSING" source="sv5#area15#page81#enu50#fld195" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1175" name="Email_PASSING" source="sv5#area15#page81#enu50#fld193" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1176" name="Key [oid_user]_PASSING" source="key.userOID" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1177" name="Nome_PASSING" source="sv5#area15#page81#enu50#fld190" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1178" name="Password_PASSING" source="sv5#area15#page81#enu50#fld191" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1179" name="Telefono_PASSING" source="sv5#area15#page81#enu50#fld197" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1180" name="Tipologia Admin_PASSING" source="sv5#area15#page81#enu50#sfld6" passing="true"/>
+        <LinkParameter id="sv5#area15#page81#enu50#ln209#par1181" name="Username_PASSING" source="sv5#area15#page81#enu50#fld192" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="sv5#area15#page81#gtu21" name="User_Supporter ID" gr:x="235" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv5#area15#page81#gtu21#ln237" name="Flow237" to="sv5#area15#page81#inu10" type="transport" validate="true">
+        <LinkParameter id="sv5#area15#page81#gtu21#ln237#par1347" name="UserCtxParam.oid_user_KeyCondition45 [oid_user]" source="sv5#area15#page81#gtu21.UserCtxParam" target="sv5#area15#page81#inu10#su97#kcond45.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area15#page81#inu9">
+          <layout:Link link="sv5#area15#page81#inu9#ln2"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="User2DefaultGroup.groupName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area15#page81#inu10">
+          <layout:Link link="sv5#area15#page81#inu10#ln184"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="User2DefaultGroup.groupName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area15#page81#inu11">
+          <layout:Link link="sv5#area15#page81#inu11#ln185"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="User2DefaultGroup.groupName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area15#page81#enu50">
+          <layout:Field field="sv5#area15#page81#enu50#fld192"/>
+          <layout:Field field="sv5#area15#page81#enu50#fld191"/>
+          <layout:Field field="sv5#area15#page81#enu50#fld190"/>
+          <layout:Field field="sv5#area15#page81#enu50#fld195"/>
+          <layout:Field field="sv5#area15#page81#enu50#fld193"/>
+          <layout:Field field="sv5#area15#page81#enu50#fld196"/>
+          <layout:Field field="sv5#area15#page81#enu50#fld197"/>
+          <layout:Field field="sv5#area15#page81#enu50#sfld6"/>
+          <layout:Link link="sv5#area15#page81#enu50#ln209"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area13#page11" name="Lista impianti" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit gr:x="10" gr:y="0" id="sv3#area13#page11#inu15" name="Impianto salita" entity="ent4" displayAttributes="ent4#att24 ent4#att77"/>
+    <IndexUnit gr:x="15" gr:y="115" id="sv3#area13#page11#inu16" name="Impianto discesa" entity="ent9" displayAttributes="ent9#att78 ent9#att81 ent9#att80"/>
+    <QueryUnit gr:x="0" gr:y="240" id="sv3#area13#page11#qu10" name="Mappatura impianti" mode="select" language="SQL" db="db1" outputsOrder="sv3#area13#page11#qu10#qo18 sv3#area13#page11#qu10#qo12">
+      <QueryText xml:space="preserve">select impiantodiscesa_impiantosalita.impiantodiscesa_nome, impiantodiscesa_impiantosalita.impiantosalita_nome from impiantodiscesa_impiantosalita</QueryText>
+      <QueryOutput id="sv3#area13#page11#qu10#qo12" name="Salita" type="string"/>
+      <QueryOutput id="sv3#area13#page11#qu10#qo18" name="Discesa" type="string"/>
+    </QueryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area13#page11#inu15">
+          <layout:Attribute attribute="ent4#att24"/>
+          <layout:Attribute attribute="ent4#att77"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area13#page11#inu16">
+          <layout:Attribute attribute="ent9#att78"/>
+          <layout:Attribute attribute="ent9#att81"/>
+          <layout:Attribute attribute="ent9#att80"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area13#page11#qu10"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

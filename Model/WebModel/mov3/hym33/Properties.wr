@@ -1,0 +1,20 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1675" gr:y="60" id="mov3#hym33" name="Indisponibilita">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="70" gr:y="170" id="mov3#hym33#icu35">
+      <InputCollectorParameter id="mov3#hym33#icu35#icp27" name="Istruttore_key"/>
+      <InputCollectorParameter id="mov3#hym33#icu35#icp99" name="datainizio"/>
+      <InputCollectorParameter id="mov3#hym33#icu35#icp36" name="datafine"/>
+      <OKLink id="mov3#hym33#icu35#oln138" name="OKFlow138" to="mov3#hym33#cru13">
+        <LinkParameter id="mov3#hym33#icu35#oln138#par598" name="datafine_datafine" source="mov3#hym33#icu35#icp36" target="mov3#hym33#cru13.ent33#att42"/>
+        <LinkParameter id="mov3#hym33#icu35#oln138#par599" name="datainizio_datainizio" source="mov3#hym33#icu35#icp99" target="mov3#hym33#cru13.ent33#att40"/>
+        <LinkParameter id="mov3#hym33#icu35#oln138#par600" name="Istruttore_key_Istruttore.oid_user(IndisponibileistrToIstruttore)" source="mov3#hym33#icu35#icp27" target="mov3#hym33#cru13.rel11#role21.userOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="755" gr:y="115" id="mov3#hym33#okcu35" name="OK Port35"/>
+    <KOCollectorUnit gr:x="755" gr:y="235" id="mov3#hym33#kocu35" name="KO Port35"/>
+    <CreateUnit gr:x="515" gr:y="160" id="mov3#hym33#cru13" name="Create13" entity="ent33">
+      <OKLink id="mov3#hym33#cru13#oln92" name="OKFlow92" to="mov3#hym33#okcu35" automaticCoupling="true"/>
+      <KOLink id="mov3#hym33#cru13#kln83" name="KOFlow83" to="mov3#hym33#kocu35" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

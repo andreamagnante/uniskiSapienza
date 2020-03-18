@@ -1,0 +1,24 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#opg2" name="Operation Group 3" transaction="true" gr:x="2485" gr:y="620">
+  <OperationUnits>
+    <ScriptUnit id="sv6#opg2#scu2" name="Script3" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input  Date data, Date[] datePrenotazioni
+#output String message
+
+if(datePrenotazioni!= null)
+{
+def int i = 0;  
+for (i=0;i&lt;datePrenotazioni.size() ;i++){
+		if((data.equals(datePrenotazioni[i]))){
+            return ["resultCode":"success","message":"Effettuato con successo!"] 
+	 	    }
+}
+}
+return ["resultCode":"error","message":"Attenzione! Hai gia effettuato una prenotazione all'orario del giorno selezionato!"]
+		</ScriptUnitText>
+      <KOLink id="sv6#opg2#scu2#kln118" name="KOFlow118" to="sv6#page70" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowAutoResizing="false" ajaxWindowModal="false" ajaxWindowClosable="true" ajaxWindowWidth="565" ajaxWindowHeight="150"/>
+      <OKLink id="sv6#opg2#scu2#oln165" name="OKFlow165" to="sv6#area28#page59#pwu7">
+        <LinkParameter id="sv6#opg2#scu2#oln165#par774" name="Data prenotazioni_PASSING_AttCondition33" sourceLinkParameter="sv6#area28#page59#enu46#ln193#par773" target="sv6#area28#page59#pwu7#su78#acond33"/>
+      </OKLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

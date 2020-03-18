@@ -1,0 +1,23 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym24" name="modifica faq" gr:x="850" gr:y="380">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym24#icu26" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym24#icu26#oln35" name="OKFlow30" to="mov3#hym24#page38#enu14">
+        <LinkParameter id="mov3#hym24#icu26#oln35#par352" name="domanda_Domanda" source="mov3#hym24#icu26#icp104" target="mov3#hym24#page38#enu14#fld72_slot"/>
+        <LinkParameter id="mov3#hym24#icu26#oln35#par353" name="id_Key Condition [id]" source="mov3#hym24#icu26#icp103" target="mov3#hym24#page38#enu14.ent31#att37"/>
+        <LinkParameter id="mov3#hym24#icu26#oln35#par358" name="risposta_Risposta" source="mov3#hym24#icu26#icp105" target="mov3#hym24#page38#enu14#fld90_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym24#icu26#icp105" name="risposta"/>
+      <InputCollectorParameter id="mov3#hym24#icu26#icp104" name="domanda"/>
+      <InputCollectorParameter id="mov3#hym24#icu26#icp103" name="id"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym24#kocu26" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym24#okcu26" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit id="mov3#hym24#mfu5" name="Update7" gr:x="495" gr:y="310" entity="ent31">
+      <Selector id="mov3#hym24#mfu5#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym24#mfu5#su13#kcond11" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym24#mfu5#oln75" name="OKFlow76" to="mov3#hym24#okcu26" automaticCoupling="true"/>
+      <KOLink id="mov3#hym24#mfu5#kln52" name="KOFlow53" to="mov3#hym24#kocu26" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

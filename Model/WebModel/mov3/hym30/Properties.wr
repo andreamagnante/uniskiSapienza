@@ -1,0 +1,56 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym30" name="Inserisci istruttore" gr:x="820" gr:y="640">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym30#icu32" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym30#icu32#oln124" name="OKFlow38" to="mov3#hym30#seu35">
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1040" name="brevetto_PASSING" source="mov3#hym30#icu32#icp206" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1041" name="codice fiscale_PASSING" source="mov3#hym30#icu32#icp201" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1042" name="cognome_PASSING" source="mov3#hym30#icu32#icp203" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1043" name="email_PASSING" source="mov3#hym30#icu32#icp200" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1044" name="iban_PASSING" source="mov3#hym30#icu32#icp208" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1045" name="nome_PASSING" source="mov3#hym30#icu32#icp202" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1046" name="oid_group_PASSING" source="mov3#hym30#icu32#icp205" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1047" name="password_PASSING" source="mov3#hym30#icu32#icp199" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1048" name="stipendio_PASSING" source="mov3#hym30#icu32#icp207" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1049" name="telefono_PASSING" source="mov3#hym30#icu32#icp204" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1072" name="username_PASSING" source="mov3#hym30#icu32#icp198" passing="true"/>
+        <LinkParameter id="mov3#hym30#icu32#oln124#par1073" name="username_AttCondition20" source="mov3#hym30#icu32#icp198" target="mov3#hym30#seu35#su67#acond20"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp208" name="iban"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp207" name="stipendio"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp206" name="brevetto"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp205" name="oid_group"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp204" name="telefono"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp203" name="cognome"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp202" name="nome"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp201" name="codice fiscale"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp200" name="email"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp199" name="password"/>
+      <InputCollectorParameter id="mov3#hym30#icu32#icp198" name="username"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym30#kocu32" name="KO Port20" gr:x="855" gr:y="415"/>
+    <OKCollectorUnit id="mov3#hym30#okcu32" name="OK Port22" gr:x="855" gr:y="105"/>
+    <CreateUnit id="mov3#hym30#cru11" name="Create4" gr:x="625" gr:y="135" entity="ent38">
+      <OKLink id="mov3#hym30#cru11#oln125" name="OKFlow36" to="mov3#hym30#okcu32" automaticCoupling="true"/>
+      <KOLink id="mov3#hym30#cru11#kln86" name="KOFlow24" to="mov3#hym30#kocu32" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="mov3#hym30#seu35" name="Selector34" gr:x="285" gr:y="130" entity="User">
+      <Selector id="mov3#hym30#seu35#su67" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov3#hym30#seu35#su67#acond20" name="AttCondition20" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+      </Selector>
+      <OKLink id="mov3#hym30#seu35#oln203" name="OKFlow203" to="mov3#hym30#opg11#scu13">
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1074" name="oid_user_user" source="userOIDArray" target="mov3#hym30#opg11#scu13.user"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1075" name="brevetto_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1040" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1076" name="codice fiscale_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1041" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1077" name="cognome_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1042" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1078" name="email_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1043" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1079" name="iban_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1044" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1080" name="nome_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1045" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1081" name="oid_group_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1046" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1082" name="password_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1047" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1083" name="stipendio_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1048" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1084" name="telefono_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1049" passing="true"/>
+        <LinkParameter id="mov3#hym30#seu35#oln203#par1085" name="username_PASSING" sourceLinkParameter="mov3#hym30#icu32#oln124#par1072" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</HybridModule>

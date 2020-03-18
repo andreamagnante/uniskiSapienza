@@ -1,0 +1,236 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area14#page16" name="Modifica/Inserisci impianti">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="40" id="sv4#area14#page16#inu1" name="Lista impianti salita" linkOrder="sv4#area14#page16#inu1#ln39 sv4#area14#page16#inu1#ln111" entity="ent4" displayAttributes="ent4#att24 ent4#att77">
+      <Link id="sv4#area14#page16#inu1#ln39" name="Elimina" to="sv4#miu26" type="normal" validate="true">
+        <LinkParameter id="sv4#area14#page16#inu1#ln39#par343" name="disponibilita_disponibilita" source="data[].ent4#att77" target="sv4#miu26.mov3#hym2#icu5#icp40"/>
+        <LinkParameter id="sv4#area14#page16#inu1#ln39#par344" name="nome_Key Condition [oid]" source="data[].ent4#att24" target="sv4#miu26.mov3#hym2#icu5#icp37"/>
+        <LinkParameter id="sv4#area14#page16#inu1#ln39#par345" name="nome_nome" source="data[].ent4#att24" target="sv4#miu26.mov3#hym2#icu5#icp38"/>
+        <LinkParameter id="sv4#area14#page16#inu1#ln39#par346" name="tipologia_tipologia" source="data[].ent4#att75" target="sv4#miu26.mov3#hym2#icu5#icp39"/>
+      </Link>
+      <Link id="sv4#area14#page16#inu1#ln111" name="Modifica disponibilit&#224;" to="sv4#miu31" type="normal" validate="true">
+        <LinkParameter id="sv4#area14#page16#inu1#ln111#par426" name="disponibilita_disponibilita" source="data[].ent4#att77" target="sv4#miu31.mov3#hym13#icu15#icp54"/>
+        <LinkParameter id="sv4#area14#page16#inu1#ln111#par427" name="nome_Key Condition [oid]" source="data[].ent4#att24" target="sv4#miu31.mov3#hym13#icu15#icp52"/>
+        <LinkParameter id="sv4#area14#page16#inu1#ln111#par428" name="nome_nome" source="data[].ent4#att24" target="sv4#miu31.mov3#hym13#icu15#icp56"/>
+        <LinkParameter id="sv4#area14#page16#inu1#ln111#par429" name="tipologia_tipologia" source="data[].ent4#att75" target="sv4#miu31.mov3#hym13#icu15#icp55"/>
+      </Link>
+    </IndexUnit>
+    <IndexUnit gr:x="275" gr:y="35" id="sv4#area14#page16#inu17" name="Lista impianti discesa" entity="ent9" linkOrder="sv4#area14#page16#inu17#ln199 sv4#area14#page16#inu17#ln168" displayAttributes="ent9#att78 ent9#att81 ent9#att80">
+      <Link id="sv4#area14#page16#inu17#ln168" name="Modifica disponibilit&#224;" to="sv4#miu71" type="normal" validate="true">
+        <LinkParameter id="sv4#area14#page16#inu17#ln168#par78" name="disponibilit&#224;_disponibilita" source="data[].ent9#att80" target="sv4#miu71.mov3#hym51#icu2#icp3"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln168#par79" name="nome_nome" source="data[].ent9#att78" target="sv4#miu71.mov3#hym51#icu2#icp6"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln168#par80" name="tipologia_tipologia" source="data[].ent9#att79" target="sv4#miu71.mov3#hym51#icu2#icp5"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln168#par81" name="nome_Key Condition [oid]" source="data[].ent9#att78" target="sv4#miu71.mov3#hym51#icu2#icp2"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln168#par82" name="difficolta_difficolta" source="data[].ent9#att81" target="sv4#miu71.mov3#hym51#icu2#icp7"/>
+      </Link>
+      <Link id="sv4#area14#page16#inu17#ln199" name="Elimina" to="sv4#miu72" type="normal" validate="true">
+        <LinkParameter id="sv4#area14#page16#inu17#ln199#par435" name="disponibilit&#224;_disponibilita" source="data[].ent9#att80" target="sv4#miu72.mov3#hym52#icu47#icp9"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln199#par436" name="nome_Key Condition [oid]" source="data[].ent9#att78" target="sv4#miu72.mov3#hym52#icu47#icp8"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln199#par437" name="nome_nome" source="data[].ent9#att78" target="sv4#miu72.mov3#hym52#icu47#icp13"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln199#par507" name="tipologia_tipologia" source="data[].ent9#att79" target="sv4#miu72.mov3#hym52#icu47#icp12"/>
+        <LinkParameter id="sv4#area14#page16#inu17#ln199#par508" name="difficolta_difficolta" source="data[].ent9#att81" target="sv4#miu72.mov3#hym52#icu47#icp14"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv4#area14#page16#enu66" name="Inserisci nuovo impianto salita" linkOrder="sv4#area14#page16#enu66#ln218" gr:x="765" gr:y="15" fieldOrder="sv4#area14#page16#enu66#fld203 sv4#area14#page16#enu66#fld204 sv4#area14#page16#enu66#sfld19 sv4#area14#page16#enu66#msfld1">
+      <SelectionField id="sv4#area14#page16#enu66#sfld19" name="Disponibilita" type="boolean" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area14#page16#enu66#sfld19#mnd18" name="Mandatory18"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv4#area14#page16#enu66#fld203" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area14#page16#enu66#fld203#mnd27" name="Mandatory27"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#area14#page16#enu66#ln218" name="Conferma" to="sv4#miu29" type="normal" validate="true">
+        <LinkParameter id="sv4#area14#page16#enu66#ln218#par829" name="Disponibilita_disponibilita" source="sv4#area14#page16#enu66#sfld19" target="sv4#miu29.mov3#hym8#icu10#icp49"/>
+        <LinkParameter id="sv4#area14#page16#enu66#ln218#par830" name="Nome_Key Condition [oid]" source="sv4#area14#page16#enu66#fld203" target="sv4#miu29.mov3#hym8#icu10#icp47"/>
+        <LinkParameter id="sv4#area14#page16#enu66#ln218#par833" name="Nome_nome" source="sv4#area14#page16#enu66#fld203" target="sv4#miu29.mov3#hym8#icu10#icp51"/>
+        <LinkParameter id="sv4#area14#page16#enu66#ln218#par835" name="Tipologia_tipologia" source="sv4#area14#page16#enu66#fld204" target="sv4#miu29.mov3#hym8#icu10#icp50"/>
+        <LinkParameter id="sv4#area14#page16#enu66#ln218#par856" name="Discese_discese" source="sv4#area14#page16#enu66#msfld1" target="sv4#miu29.mov3#hym8#icu10#icp41"/>
+      </Link>
+      <Field id="sv4#area14#page16#enu66#fld204" name="Tipologia" type="string" preloaded="true" slotOrder="sv4#area14#page16#enu66#fld204#slot15">
+        <Slot id="sv4#area14#page16#enu66#fld204#slot15" name="salita" value="Salita" label="true" output="true"/>
+      </Field>
+      <MultiSelectionField id="sv4#area14#page16#enu66#msfld1" name="Discese collegate" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area14#page16#enu66#msfld1#mnd68" name="Mandatory68"/>
+        </VRules>
+      </MultiSelectionField>
+    </EntryUnit>
+    <EntryUnit id="sv4#area14#page16#enu67" name="Inserisci nuovo impianto discesa" linkOrder="sv4#area14#page16#enu67#ln220" gr:x="1070" gr:y="15" fieldOrder="sv4#area14#page16#enu67#fld205 sv4#area14#page16#enu67#fld206 sv4#area14#page16#enu67#sfld21 sv4#area14#page16#enu67#sfld20 sv4#area14#page16#enu67#msfld2">
+      <SelectionField id="sv4#area14#page16#enu67#sfld20" name="Disponibilita" type="boolean" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area14#page16#enu67#sfld20#mnd31" name="Mandatory18"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv4#area14#page16#enu67#fld205" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area14#page16#enu67#fld205#mnd32" name="Mandatory27"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area14#page16#enu67#fld206" name="Tipologia" type="string" preloaded="true" slotOrder="sv4#area14#page16#enu67#fld206#slot16">
+        <Slot id="sv4#area14#page16#enu67#fld206#slot16" name="discesa" value="Discesa" label="true" output="true"/>
+      </Field>
+      <SelectionField id="sv4#area14#page16#enu67#sfld21" name="Difficolta" type="string" modifiable="true" splitOutput="false" slotOrder="sv4#area14#page16#enu67#sfld21#slot17">
+        <Slot id="sv4#area14#page16#enu67#sfld21#slot17" name="tipo di difficolta" label="true" output="true" value="Facile|Media|Difficile"/>
+      </SelectionField>
+      <Link id="sv4#area14#page16#enu67#ln220" name="Conferma" to="sv4#miu30" type="normal" validate="true">
+        <LinkParameter id="sv4#area14#page16#enu67#ln220#par705" name="Disponibilita_disponibilita" source="sv4#area14#page16#enu67#sfld20" target="sv4#miu30.mov3#hym7#icu9#icp44"/>
+        <LinkParameter id="sv4#area14#page16#enu67#ln220#par707" name="Key [nome]_Key Condition [oid]" source="sv4#area14#page16#enu67#fld205" target="sv4#miu30.mov3#hym7#icu9#icp42"/>
+        <LinkParameter id="sv4#area14#page16#enu67#ln220#par710" name="Nome_nome" source="sv4#area14#page16#enu67#fld205" target="sv4#miu30.mov3#hym7#icu9#icp46"/>
+        <LinkParameter id="sv4#area14#page16#enu67#ln220#par715" name="Tipologia_tipologia" source="sv4#area14#page16#enu67#fld206" target="sv4#miu30.mov3#hym7#icu9#icp45"/>
+        <LinkParameter id="sv4#area14#page16#enu67#ln220#par716" name="Difficolta_difficolta" source="sv4#area14#page16#enu67#sfld21" target="sv4#miu30.mov3#hym7#icu9#icp15"/>
+        <LinkParameter id="sv4#area14#page16#enu67#ln220#par888" name="Salite collegate_salite" source="sv4#area14#page16#enu67#msfld2" target="sv4#miu30.mov3#hym7#icu9#icp43"/>
+      </Link>
+      <MultiSelectionField id="sv4#area14#page16#enu67#msfld2" name="Salite collegate" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area14#page16#enu67#msfld2#mnd84" name="Mandatory84"/>
+        </VRules>
+      </MultiSelectionField>
+    </EntryUnit>
+    <SelectorUnit gr:x="545" gr:y="20" id="sv4#area14#page16#seu17" name="Selector17" entity="ent9">
+      <Link id="sv4#area14#page16#seu17#ln221" name="Flow221" to="sv4#area14#page16#enu66" type="transport" validate="true">
+        <LinkParameter id="sv4#area14#page16#seu17#ln221#par857" name="nome_Discese [label]" source="ent9#att78Array" target="sv4#area14#page16#enu66#msfld1_label"/>
+        <LinkParameter id="sv4#area14#page16#seu17#ln221#par858" name="nome_Discese [output]" source="ent9#att78Array" target="sv4#area14#page16#enu66#msfld1_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="1435" gr:y="0" id="sv4#area14#page16#seu18" name="Selector18" entity="ent4">
+      <Link id="sv4#area14#page16#seu18#ln229" name="Flow229" to="sv4#area14#page16#enu67" type="transport" validate="true">
+        <LinkParameter id="sv4#area14#page16#seu18#ln229#par892" name="nome_Salite collegate [label]" source="ent4#att24Array" target="sv4#area14#page16#enu67#msfld2_label"/>
+        <LinkParameter id="sv4#area14#page16#seu18#ln229#par893" name="nome_Salite collegate [output]" source="ent4#att24Array" target="sv4#area14#page16#enu67#msfld2_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area14#page16#inu1">
+          <layout:Link link="sv4#area14#page16#inu1#ln39"/>
+          <layout:Link link="sv4#area14#page16#inu1#ln111"/>
+          <layout:Attribute attribute="ent4#att24"/>
+          <layout:Attribute attribute="ent4#att77"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area14#page16#inu17">
+          <layout:Attribute attribute="ent9#att78"/>
+          <layout:Attribute attribute="ent9#att81"/>
+          <layout:Attribute attribute="ent9#att80"/>
+          <layout:Link link="sv4#area14#page16#inu17#ln199"/>
+          <layout:Link link="sv4#area14#page16#inu17#ln168"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area14#page16#enu66">
+          <layout:Link link="sv4#area14#page16#enu66#ln218"/>
+          <layout:Field field="sv4#area14#page16#enu66#fld203"/>
+          <layout:Field field="sv4#area14#page16#enu66#fld204"/>
+          <layout:Field field="sv4#area14#page16#enu66#sfld19"/>
+          <layout:Field field="sv4#area14#page16#enu66#msfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area14#page16#enu67">
+          <layout:Link link="sv4#area14#page16#enu67#ln220"/>
+          <layout:Field field="sv4#area14#page16#enu67#fld205"/>
+          <layout:Field field="sv4#area14#page16#enu67#fld206"/>
+          <layout:Field field="sv4#area14#page16#enu67#sfld21"/>
+          <layout:Field field="sv4#area14#page16#enu67#sfld20"/>
+          <layout:Field field="sv4#area14#page16#enu67#msfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,101 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area23#page45" name="Skipass">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv5#area23#page45#inu7" name="Lista skipass" entity="ent8" displayAttributes="ent8#att12 ent8#att13 ent8#att14 ent8#att16 ent8#att18" linkOrder="sv5#area23#page45#inu7#ln108 sv5#area23#page45#inu7#ln122">
+      <Link id="sv5#area23#page45#inu7#ln108" name="Modifica" to="sv5#miu45" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page45#inu7#ln108#par350" name="durata_durata" source="data[].ent8#att13" target="sv5#miu45.mov3#hym26#icu28#icp112"/>
+        <LinkParameter id="sv5#area23#page45#inu7#ln108#par351" name="prezzo_prezzo" source="data[].ent8#att14" target="sv5#miu45.mov3#hym26#icu28#icp113"/>
+        <LinkParameter id="sv5#area23#page45#inu7#ln108#par365" name="punti_punti" source="data[].ent8#att16" target="sv5#miu45.mov3#hym26#icu28#icp114"/>
+        <LinkParameter id="sv5#area23#page45#inu7#ln108#par366" name="targetutenza_targetutenza" source="data[].ent8#att18" target="sv5#miu45.mov3#hym26#icu28#icp115"/>
+        <LinkParameter id="sv5#area23#page45#inu7#ln108#par367" name="tipologia_tipologia" source="data[].ent8#att12" target="sv5#miu45.mov3#hym26#icu28#icp107"/>
+      </Link>
+      <Link id="sv5#area23#page45#inu7#ln122" name="Elimina" to="sv5#miu46" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page45#inu7#ln122#par422" name="tipologia_tipologia" source="data[].ent8#att12" target="sv5#miu46.mov3#hym27#icu29#icp128"/>
+      </Link>
+      <SortAttribute attribute="ent8#att14" order="ascending"/>
+    </IndexUnit>
+    <EntryUnit gr:x="175" gr:y="0" id="sv5#area23#page45#enu38" name="Inserisci nuovo skipass" linkOrder="sv5#area23#page45#enu38#ln123" fieldOrder="sv5#area23#page45#enu38#fld98 sv5#area23#page45#enu38#fld99 sv5#area23#page45#enu38#fld100 sv5#area23#page45#enu38#fld101 sv5#area23#page45#enu38#sfld4">
+      <Link id="sv5#area23#page45#enu38#ln123" name="Conferma" to="sv5#miu47" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page45#enu38#ln123#par445" name="Durata_durata" source="sv5#area23#page45#enu38#fld99" target="sv5#miu47.mov3#hym28#icu30#icp141"/>
+        <LinkParameter id="sv5#area23#page45#enu38#ln123#par446" name="Prezzo_prezzo" source="sv5#area23#page45#enu38#fld100" target="sv5#miu47.mov3#hym28#icu30#icp142"/>
+        <LinkParameter id="sv5#area23#page45#enu38#ln123#par447" name="Punti_punti" source="sv5#area23#page45#enu38#fld101" target="sv5#miu47.mov3#hym28#icu30#icp143"/>
+        <LinkParameter id="sv5#area23#page45#enu38#ln123#par448" name="Target Utenza_targetutenza" source="sv5#area23#page45#enu38#sfld4" target="sv5#miu47.mov3#hym28#icu30#icp144"/>
+        <LinkParameter id="sv5#area23#page45#enu38#ln123#par463" name="Tipologia_tipologia" source="sv5#area23#page45#enu38#fld98" target="sv5#miu47.mov3#hym28#icu30#icp140"/>
+      </Link>
+      <SelectionField id="sv5#area23#page45#enu38#sfld4" name="Target Utenza" type="string" modifiable="true" slotOrder="sv5#area23#page45#enu38#sfld4#slot9">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area23#page45#enu38#sfld4#mnd64" name="Mandatory64"/>
+        </VRules>
+        <Slot id="sv5#area23#page45#enu38#sfld4#slot9" name="Target" label="true" output="true" value="Entrambi|Solo socio"/>
+      </SelectionField>
+      <Field id="sv5#area23#page45#enu38#fld101" name="Punti" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area23#page45#enu38#fld101#mnd62" name="Mandatory62"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area23#page45#enu38#fld100" name="Prezzo" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area23#page45#enu38#fld100#mnd61" name="Mandatory61"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area23#page45#enu38#fld99" name="Durata" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area23#page45#enu38#fld99#mnd60" name="Mandatory60"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area23#page45#enu38#fld98" name="Tipologia" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area23#page45#enu38#fld98#mnd63" name="Mandatory63"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page45#inu7">
+          <layout:Attribute attribute="ent8#att12"/>
+          <layout:Attribute attribute="ent8#att13"/>
+          <layout:Attribute attribute="ent8#att14"/>
+          <layout:Attribute attribute="ent8#att16"/>
+          <layout:Attribute attribute="ent8#att18"/>
+          <layout:Link link="sv5#area23#page45#inu7#ln108"/>
+          <layout:Link link="sv5#area23#page45#inu7#ln122"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page45#enu38">
+          <layout:Link link="sv5#area23#page45#enu38#ln123"/>
+          <layout:Field field="sv5#area23#page45#enu38#fld98"/>
+          <layout:Field field="sv5#area23#page45#enu38#fld99"/>
+          <layout:Field field="sv5#area23#page45#enu38#fld100"/>
+          <layout:Field field="sv5#area23#page45#enu38#fld101"/>
+          <layout:Field field="sv5#area23#page45#enu38#sfld4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

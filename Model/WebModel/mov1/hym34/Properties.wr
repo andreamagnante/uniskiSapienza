@@ -1,0 +1,21 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="705" gr:y="45" id="mov1#hym34" name="Inserisci Lezione">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="80" gr:y="130" id="mov1#hym34#icu36">
+      <InputCollectorParameter id="mov1#hym34#icu36#icp33" name="User_key"/>
+      <InputCollectorParameter id="mov1#hym34#icu36#icp32" name="Istruttore_key"/>
+      <Link id="mov1#hym34#icu36#ln159" name="Flow159" to="mov1#hym34#cru14" type="transport" validate="true">
+        <LinkParameter id="mov1#hym34#icu36#ln159#par439" name="Istruttore_key_Istruttore.oid_user(LezioneToIstruttore)" source="mov1#hym34#icu36#icp32" target="mov1#hym34#cru14.rel10#role19.userOID"/>
+        <LinkParameter id="mov1#hym34#icu36#ln159#par464" name="User_key_UserRegistrato.oid_user(LezioneToUserRegistrato)" source="mov1#hym34#icu36#icp33" target="mov1#hym34#cru14.rel4#role8.userOID"/>
+      </Link>
+      <OKLink id="mov1#hym34#icu36#oln133" name="OKFlow133" to="mov1#hym34#page60#seu8">
+        <LinkParameter id="mov1#hym34#icu36#oln133#par465" name="Istruttore_key_AttCondition8" source="mov1#hym34#icu36#icp32" target="mov1#hym34#page60#seu8#su51#acond8"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="785" gr:y="110" id="mov1#hym34#okcu36" name="OK Port36"/>
+    <KOCollectorUnit gr:x="785" gr:y="275" id="mov1#hym34#kocu36" name="KO Port36"/>
+    <CreateUnit gr:x="695" gr:y="360" id="mov1#hym34#cru14" name="Create14" entity="ent11">
+      <OKLink id="mov1#hym34#cru14#oln134" name="OKFlow134" to="mov1#hym34#okcu36" automaticCoupling="true"/>
+      <KOLink id="mov1#hym34#cru14#kln91" name="KOFlow91" to="mov1#hym34#kocu36" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

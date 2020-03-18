@@ -1,0 +1,25 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym32" name="Elimina istruttore" gr:x="840" gr:y="720">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym32#icu34" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym32#icu34#oln128" name="OKFlow30" to="mov3#hym32#page57#enu42">
+        <LinkParameter id="mov3#hym32#icu34#oln128#par542" name="username_Username" source="mov3#hym32#icu34#icp178" target="mov3#hym32#page57#enu42#fld111_slot"/>
+        <LinkParameter id="mov3#hym32#icu34#oln128#par543" name="oid_user_PASSING" source="mov3#hym32#icu34#icp179" passing="true"/>
+        <LinkParameter id="mov3#hym32#icu34#oln128#par1117" name="cognome_Cognome" source="mov3#hym32#icu34#icp181" target="mov3#hym32#page57#enu42#fld113_slot"/>
+        <LinkParameter id="mov3#hym32#icu34#oln128#par1124" name="nome_Nome" source="mov3#hym32#icu34#icp180" target="mov3#hym32#page57#enu42#fld112_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym32#icu34#icp178" name="username"/>
+      <InputCollectorParameter id="mov3#hym32#icu34#icp179" name="oid_user"/>
+      <InputCollectorParameter id="mov3#hym32#icu34#icp181" name="cognome"/>
+      <InputCollectorParameter id="mov3#hym32#icu34#icp180" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym32#kocu34" name="KO Port20" gr:x="800" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym32#okcu34" name="OK Port22" gr:x="800" gr:y="100"/>
+    <DeleteUnit id="mov3#hym32#dlu8" name="Delete1" gr:x="460" gr:y="310" entity="ent38">
+      <Selector id="mov3#hym32#dlu8#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym32#dlu8#su47#kcond40" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym32#dlu8#oln129" name="OKFlow31" to="mov3#hym32#okcu34" automaticCoupling="true"/>
+      <KOLink id="mov3#hym32#dlu8#kln88" name="KOFlow22" to="mov3#hym32#kocu34" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

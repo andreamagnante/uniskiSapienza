@@ -1,0 +1,5 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym46#page92" name="Lezione gia annullata" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="810" gr:y="145">
+  <ContentUnits>
+    <MultiMessageUnit id="mov1#hym46#page92#mssu46" name="Errore" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Non e possibile eliminare una lezione annullata!
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="mov1#hym46#page92#mssu46"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

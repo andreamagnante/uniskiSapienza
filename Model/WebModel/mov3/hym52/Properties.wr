@@ -1,0 +1,30 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym52" name="Elimina impiantoD" gr:x="395" gr:y="250">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym52#icu47" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym52#icu47#icp8" name="Key Condition [oid]"/>
+      <InputCollectorParameter id="mov3#hym52#icu47#icp9" name="disponibilita"/>
+      <InputCollectorParameter id="mov3#hym52#icu47#icp12" name="tipologia"/>
+      <InputCollectorParameter id="mov3#hym52#icu47#icp13" name="nome"/>
+      <OKLink id="mov3#hym52#icu47#oln185" name="OKFlow30" to="mov3#hym52#page87#enu64">
+        <LinkParameter id="mov3#hym52#icu47#oln185#par384" name="disponibilita_PASSING" source="mov3#hym52#icu47#icp9" passing="true"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par385" name="nome_PASSING" source="mov3#hym52#icu47#icp13" passing="true"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par393" name="tipologia_PASSING" source="mov3#hym52#icu47#icp12" passing="true"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par414" name="nome_Nome" source="mov3#hym52#icu47#icp13" target="mov3#hym52#page87#enu64#fld201_slot"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par425" name="tipologia_Tipologia" source="mov3#hym52#icu47#icp12" target="mov3#hym52#page87#enu64#fld198_slot"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par430" name="Key Condition [oid]_PASSING" source="mov3#hym52#icu47#icp8" passing="true"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par509" name="difficolta_DIfficolt&#224;" source="mov3#hym52#icu47#icp14" target="mov3#hym52#page87#enu64#fld202_slot"/>
+        <LinkParameter id="mov3#hym52#icu47#oln185#par510" name="difficolta_PASSING" source="mov3#hym52#icu47#icp14" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym52#icu47#icp14" name="difficolta"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym52#kocu47" name="KO Port20" gr:x="800" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym52#okcu45" name="OK Port22" gr:x="800" gr:y="100"/>
+    <DeleteUnit id="mov3#hym52#dlu14" name="Deleteimpiantodiscesa" gr:x="420" gr:y="305" entity="ent9">
+      <Selector id="mov3#hym52#dlu14#su68" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym52#dlu14#su68#kcond60" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym52#dlu14#oln196" name="OKFlow31" to="mov3#hym52#okcu45" automaticCoupling="true"/>
+      <KOLink id="mov3#hym52#dlu14#kln132" name="KOFlow22" to="mov3#hym52#kocu47" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

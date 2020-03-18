@@ -1,0 +1,35 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym15" name="modifica menu fisso" gr:x="1275" gr:y="205">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym15#icu17" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym15#icu17#icp71" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym15#icu17#oln81" name="OKFlow30" to="mov3#hym15#page43#enu27">
+        <LinkParameter id="mov3#hym15#icu17#oln81#par477" name="antipasto_Antipasto" source="mov3#hym15#icu17#icp83" target="mov3#hym15#page43#enu27#fld80_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par478" name="bevanda_Bevanda" source="mov3#hym15#icu17#icp78" target="mov3#hym15#page43#enu27#fld75_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par479" name="contorno_Contorno" source="mov3#hym15#icu17#icp82" target="mov3#hym15#page43#enu27#fld77_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par480" name="costo_Costo" source="mov3#hym15#icu17#icp77" target="mov3#hym15#page43#enu27#fld74_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par481" name="dessert_Dessert" source="mov3#hym15#icu17#icp79" target="mov3#hym15#page43#enu27#fld76_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par482" name="Key Condition [oid]_Key Condition [nome]" source="mov3#hym15#icu17#icp71" target="mov3#hym15#page43#enu27.ent1#att1"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par483" name="nome_Nome" source="mov3#hym15#icu17#icp76" target="mov3#hym15#page43#enu27#fld73_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par484" name="primo_Primo" source="mov3#hym15#icu17#icp80" target="mov3#hym15#page43#enu27#fld78_slot"/>
+        <LinkParameter id="mov3#hym15#icu17#oln81#par485" name="secondo_Secondo" source="mov3#hym15#icu17#icp81" target="mov3#hym15#page43#enu27#fld79_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp83" name="antipasto"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp82" name="contorno"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp81" name="secondo"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp80" name="primo"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp79" name="dessert"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp78" name="bevanda"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp77" name="costo"/>
+      <InputCollectorParameter id="mov3#hym15#icu17#icp76" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym15#kocu17" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym15#okcu17" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit id="mov3#hym15#mfu8" name="Update7" gr:x="495" gr:y="310" entity="ent1">
+      <Selector id="mov3#hym15#mfu8#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym15#mfu8#su40#kcond33" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym15#mfu8#oln82" name="OKFlow76" to="mov3#hym15#okcu17" automaticCoupling="true"/>
+      <KOLink id="mov3#hym15#mfu8#kln55" name="KOFlow53" to="mov3#hym15#kocu17" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

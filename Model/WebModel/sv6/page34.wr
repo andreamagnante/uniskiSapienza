@@ -1,0 +1,60 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#page34" name="Home" gr:x="70" gr:y="25" landmark="true">
+  <ContentUnits>
+    <MultiMessageUnit id="sv6#page34#mssu29" name="Admin Ristorazione" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Ciao Admin Ristorazione </Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv6#page34#gtu10" name="User_Supporter ID" gr:x="5" gr:y="110" contextParameters="UserCtxParam">
+      <Link id="sv6#page34#gtu10#ln89" name="Flow8" to="sv6#page34#dau11" type="transport" validate="true">
+        <LinkParameter id="sv6#page34#gtu10#ln89#par258" name="UserCtxParam.oid_user_PASSING" source="sv6#page34#gtu10.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv6#page34#gtu10#ln89#par259" name="UserCtxParam.oid_user_KeyCondition5 [oid_user]" source="sv6#page34#gtu10.UserCtxParam" target="sv6#page34#dau11#su32#kcond28.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit id="sv6#page34#dau11" name="Details Supporter" gr:x="10" gr:y="245" entity="User" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64">
+      <Selector id="sv6#page34#dau11#su32" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#page34#dau11#su32#kcond28" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#page34#mssu29"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#page34#dau11">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

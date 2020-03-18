@@ -1,0 +1,82 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym6#page6" name=" " linkOrder="mov1#hym6#page6#ln26" gr:x="350" gr:y="5">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym6#page6#enu8" name="Conferma acquisto skipass" linkOrder="mov1#hym6#page6#enu8#ln24 mov1#hym6#page6#enu8#ln43" gr:x="0" gr:y="0" fieldOrder="mov1#hym6#page6#enu8#fld23 mov1#hym6#page6#enu8#fld22 mov1#hym6#page6#enu8#fld44 mov1#hym6#page6#enu8#fld21 mov1#hym6#page6#enu8#fld35">
+      <Field id="mov1#hym6#page6#enu8#fld21" name="Data Attivazione" type="date" preloaded="true"/>
+      <Field id="mov1#hym6#page6#enu8#fld22" name="Prezzo" type="integer" preloaded="true"/>
+      <Field id="mov1#hym6#page6#enu8#fld23" name="Tipologia skipass" type="string" preloaded="true"/>
+      <Link id="mov1#hym6#page6#enu8#ln24" name="Acquista skipass" to="mov1#hym6#cru3" type="normal" validate="true" gr:bendpoints="201,-16,-59,-266">
+        <LinkParameter id="mov1#hym6#page6#enu8#ln24#par110" name="Data Attivazione_data" source="mov1#hym6#page6#enu8#fld21" target="mov1#hym6#cru3.ent30#att35"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln24#par138" name="Ora Attivazione_timeAttivazione" source="mov1#hym6#page6#enu8#fld35" target="mov1#hym6#cru3.ent30#att15"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln24#par145" name="Tipologia skipass_Skipass.tipologia(PrenotazioneskipassToSkipass)" source="mov1#hym6#page6#enu8#fld23" target="mov1#hym6#cru3.rel7#role14.ent8#att12"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln24#par146" name="Non attivo_stato" target="mov1#hym6#cru3.ent30#att36" sourceValue="Non attivo"/>
+      </Link>
+      <Field id="mov1#hym6#page6#enu8#fld35" name="Ora Attivazione" type="time" preloaded="true"/>
+      <Link id="mov1#hym6#page6#enu8#ln43" name="Cambia modalita pagamento" to="mov1#hym6#miu28" type="normal" validate="true">
+        <LinkParameter id="mov1#hym6#page6#enu8#ln43#par165" name="Key Condition [oid]_PASSING_Key Condition [oid]" sourceLinkParameter="mov1#hym6#qu2#oln18#par164" target="mov1#hym6#miu28.mov1#hym4#icu7#icp24"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln43#par304" name="Data Attivazione_dataattivazione" source="mov1#hym6#page6#enu8#fld21" target="mov1#hym6#miu28.mov1#hym4#icu7#icp27"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln43#par305" name="Ora Attivazione_oraattivazione" source="mov1#hym6#page6#enu8#fld35" target="mov1#hym6#miu28.mov1#hym4#icu7#icp32"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln43#par306" name="Prezzo_prezzo" source="mov1#hym6#page6#enu8#fld22" target="mov1#hym6#miu28.mov1#hym4#icu7#icp34"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln43#par308" name="Punti accumulati_punti" source="mov1#hym6#page6#enu8#fld44" target="mov1#hym6#miu28.mov1#hym4#icu7#icp36"/>
+        <LinkParameter id="mov1#hym6#page6#enu8#ln43#par309" name="Tipologia skipass_tipologiaskipass" source="mov1#hym6#page6#enu8#fld23" target="mov1#hym6#miu28.mov1#hym4#icu7#icp33"/>
+      </Link>
+      <Field id="mov1#hym6#page6#enu8#fld44" name="Punti accumulati" type="string" preloaded="true"/>
+    </EntryUnit>
+    <DataUnit id="mov1#hym6#page6#dau15" name="Dati pagamento" gr:x="150" gr:y="85" entity="ent7" displayAttributes="userName ent7#att20 ent7#att29 ent7#att30 ent7#att31">
+      <Selector id="mov1#hym6#page6#dau15#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym6#page6#dau15#su10#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov1#hym6#page6#dau15#ln25" name="Flow37" to="mov1#hym6#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#hym6#page6#dau15#ln25#par113" name="oid_user_UserRegistrato.oid_user(PrenotazioneskipassToUserRegistrato)" source="data.userOID" target="mov1#hym6#cru3.rel12#role24.userOID"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym6#page6#enu8">
+          <layout:Link link="mov1#hym6#page6#enu8#ln24"/>
+          <layout:Link link="mov1#hym6#page6#enu8#ln43"/>
+          <layout:Field field="mov1#hym6#page6#enu8#fld23"/>
+          <layout:Field field="mov1#hym6#page6#enu8#fld22"/>
+          <layout:Field field="mov1#hym6#page6#enu8#fld44"/>
+          <layout:Field field="mov1#hym6#page6#enu8#fld21"/>
+          <layout:Field field="mov1#hym6#page6#enu8#fld35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym6#page6#dau15">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Attribute attribute="ent7#att29"/>
+          <layout:Attribute attribute="ent7#att30"/>
+          <layout:Attribute attribute="ent7#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym6#page6#ln26" name="Annulla" to="mov1#hym6#kocu4" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym18#page48" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym18#page48#enu33" name="Modifica il menu a la carte" linkOrder="mov3#hym18#page48#enu33#ln133" gr:x="0" gr:y="0" fieldOrder="mov3#hym18#page48#enu33#fld126 mov3#hym18#page48#enu33#fld127 mov3#hym18#page48#enu33#fld128" entity="ent37">
+      <Link id="mov3#hym18#page48#enu33#ln133" name="Conferma" to="mov3#hym18#mfu13" type="normal" validate="true">
+        <LinkParameter id="mov3#hym18#page48#enu33#ln133#par614" name="Nome_KeyCondition15 [nome]" source="mov3#hym18#page48#enu33#fld126" target="mov3#hym18#mfu13#su42#kcond35.ent37#att50"/>
+        <LinkParameter id="mov3#hym18#page48#enu33#ln133#par615" name="Prezzo_prezzo" source="mov3#hym18#page48#enu33#fld128" target="mov3#hym18#mfu13.ent37#att51"/>
+        <LinkParameter id="mov3#hym18#page48#enu33#ln133#par616" name="TIpologia_tipologia" source="mov3#hym18#page48#enu33#fld127" target="mov3#hym18#mfu13.ent37#att52"/>
+      </Link>
+      <Field id="mov3#hym18#page48#enu33#fld128" name="Prezzo" type="integer" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym18#page48#enu33#fld128#mnd86" name="Mandatory86"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym18#page48#enu33#fld127" name="TIpologia" type="string" preloaded="true"/>
+      <Field id="mov3#hym18#page48#enu33#fld126" name="Nome" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym18#page48#enu33">
+          <layout:Link link="mov3#hym18#page48#enu33#ln133"/>
+          <layout:Field field="mov3#hym18#page48#enu33#fld126"/>
+          <layout:Field field="mov3#hym18#page48#enu33#fld127"/>
+          <layout:Field field="mov3#hym18#page48#enu33#fld128"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

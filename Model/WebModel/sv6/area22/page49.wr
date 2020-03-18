@@ -1,0 +1,105 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv6#area22#page49" name="Imposta/modifica sconti">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="10" id="sv6#area22#page49#inu6" name="Lista sconti" entity="ent35" displayAttributes="ent35#att45 ent35#att46 ent35#att47 ent35#att48 ent35#att49" linkOrder="sv6#area22#page49#inu6#ln139 sv6#area22#page49#inu6#ln142">
+      <Link id="sv6#area22#page49#inu6#ln139" name="Elimina" to="sv6#miu38" type="normal" validate="true">
+        <LinkParameter id="sv6#area22#page49#inu6#ln139#par640" name="nome_nome" source="data[].ent35#att45" target="sv6#miu38.mov3#hym20#icu22#icp146"/>
+        <LinkParameter id="sv6#area22#page49#inu6#ln139#par641" name="percentuale_percentuale" source="data[].ent35#att48" target="sv6#miu38.mov3#hym20#icu22#icp151"/>
+      </Link>
+      <Link id="sv6#area22#page49#inu6#ln142" name="Modifica" to="sv6#miu39" type="normal" validate="true">
+        <LinkParameter id="sv6#area22#page49#inu6#ln142#par665" name="dataFine_datafine" source="data[].ent35#att47" target="sv6#miu39.mov3#hym21#icu23#icp159"/>
+        <LinkParameter id="sv6#area22#page49#inu6#ln142#par666" name="dataInizio_datainizio" source="data[].ent35#att46" target="sv6#miu39.mov3#hym21#icu23#icp158"/>
+        <LinkParameter id="sv6#area22#page49#inu6#ln142#par667" name="descrizione_descrizione" source="data[].ent35#att49" target="sv6#miu39.mov3#hym21#icu23#icp161"/>
+        <LinkParameter id="sv6#area22#page49#inu6#ln142#par668" name="nome_nome" source="data[].ent35#att45" target="sv6#miu39.mov3#hym21#icu23#icp156"/>
+        <LinkParameter id="sv6#area22#page49#inu6#ln142#par669" name="percentuale_percentuale" source="data[].ent35#att48" target="sv6#miu39.mov3#hym21#icu23#icp160"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit gr:x="200" gr:y="15" id="sv6#area22#page49#enu36" name="Inserisci nuovo sconto" fieldOrder="sv6#area22#page49#enu36#fld143 sv6#area22#page49#enu36#fld144 sv6#area22#page49#enu36#fld145 sv6#area22#page49#enu36#fld146 sv6#area22#page49#enu36#fld147" linkOrder="sv6#area22#page49#enu36#ln143">
+      <Field id="sv6#area22#page49#enu36#fld147" name="Descrizione" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area22#page49#enu36#fld147#mnd97" name="Mandatory97"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area22#page49#enu36#fld146" name="Data fine" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area22#page49#enu36#fld146#mnd95" name="Mandatory95"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area22#page49#enu36#fld145" name="Data inizio" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area22#page49#enu36#fld145#mnd96" name="Mandatory96"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area22#page49#enu36#fld144" name="Percentuale" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area22#page49#enu36#fld144#mnd99" name="Mandatory99"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area22#page49#enu36#fld143" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area22#page49#enu36#fld143#mnd98" name="Mandatory98"/>
+        </VRules>
+      </Field>
+      <Link id="sv6#area22#page49#enu36#ln143" name="Conferma" to="sv6#miu40" type="normal" validate="true">
+        <LinkParameter id="sv6#area22#page49#enu36#ln143#par674" name="Data fine_Datafine" source="sv6#area22#page49#enu36#fld146" target="sv6#miu40.mov3#hym22#icu24#icp169"/>
+        <LinkParameter id="sv6#area22#page49#enu36#ln143#par675" name="Data inizio_Datainizio" source="sv6#area22#page49#enu36#fld145" target="sv6#miu40.mov3#hym22#icu24#icp168"/>
+        <LinkParameter id="sv6#area22#page49#enu36#ln143#par676" name="Descrizione_Descrizione" source="sv6#area22#page49#enu36#fld147" target="sv6#miu40.mov3#hym22#icu24#icp170"/>
+        <LinkParameter id="sv6#area22#page49#enu36#ln143#par677" name="Nome_Nome" source="sv6#area22#page49#enu36#fld143" target="sv6#miu40.mov3#hym22#icu24#icp166"/>
+        <LinkParameter id="sv6#area22#page49#enu36#ln143#par678" name="Percentuale_Percentuale" source="sv6#area22#page49#enu36#fld144" target="sv6#miu40.mov3#hym22#icu24#icp167"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="sv6#area22#page49#gtu20" name="User_Supporter ID" gr:x="445" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv6#area22#page49#gtu20#ln145" name="Flow145" to="sv6#miu40" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#page49#gtu20#ln145#par680" name="UserCtxParam.oid_user_Key Condition [oid]" source="sv6#area22#page49#gtu20.UserCtxParam" target="sv6#miu40.mov3#hym22#icu24#icp165"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area22#page49#inu6">
+          <layout:Attribute attribute="ent35#att45"/>
+          <layout:Attribute attribute="ent35#att46"/>
+          <layout:Attribute attribute="ent35#att47"/>
+          <layout:Attribute attribute="ent35#att48"/>
+          <layout:Attribute attribute="ent35#att49"/>
+          <layout:Link link="sv6#area22#page49#inu6#ln139"/>
+          <layout:Link link="sv6#area22#page49#inu6#ln142"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area22#page49#enu36">
+          <layout:Field field="sv6#area22#page49#enu36#fld143"/>
+          <layout:Field field="sv6#area22#page49#enu36#fld144"/>
+          <layout:Field field="sv6#area22#page49#enu36#fld145"/>
+          <layout:Field field="sv6#area22#page49#enu36#fld146"/>
+          <layout:Field field="sv6#area22#page49#enu36#fld147"/>
+          <layout:Link link="sv6#area22#page49#enu36#ln143"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

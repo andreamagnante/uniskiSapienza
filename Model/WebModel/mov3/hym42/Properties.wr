@@ -1,0 +1,31 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1290" gr:y="850" id="mov3#hym42" name="Elimina prenotazione in attesa">
+  <OperationUnits>
+    <ModifyUnit id="mov3#hym42#mfu23" name="Update25" gr:x="850" gr:y="65" entity="ent5">
+      <Selector id="mov3#hym42#mfu23#su90" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov3#hym42#mfu23#su90#acond43" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att66"/>
+      </Selector>
+      <OKLink id="mov3#hym42#mfu23#oln172" name="OKFlow153" to="mov3#hym42#okcu46" automaticCoupling="true"/>
+      <KOLink id="mov3#hym42#mfu23#kln123" name="KOFlow111" to="mov3#hym42#kocu45" automaticCoupling="true"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov3#hym42#kocu45" name="KO Port41" gr:x="1180" gr:y="305"/>
+    <OKCollectorUnit id="mov3#hym42#okcu46" name="OK Port41" gr:x="1180" gr:y="95"/>
+    <DeleteUnit id="mov3#hym42#dlu12" name="Delete19" gr:x="655" gr:y="190" entity="ent6">
+      <Selector id="mov3#hym42#dlu12#su91" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym42#dlu12#su91#kcond52" name="KeyCondition49" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym42#dlu12#oln173" name="OKFlow150" to="mov3#hym42#mfu23">
+        <LinkParameter id="mov3#hym42#dlu12#oln173#par794" name="0_utilizzato" target="mov3#hym42#mfu23.ent5#att67" sourceValue="0"/>
+        <LinkParameter id="mov3#hym42#dlu12#oln173#par795" name="coupon_PASSING_AttCondition7" sourceLinkParameter="mov3#hym42#icu45#oln174#par797" target="mov3#hym42#mfu23#su90#acond43"/>
+      </OKLink>
+      <KOLink id="mov3#hym42#dlu12#kln124" name="KOFlow109" to="mov3#hym42#kocu45" automaticCoupling="true"/>
+    </DeleteUnit>
+    <InputCollectorUnit id="mov3#hym42#icu45" gr:x="245" gr:y="215">
+      <OKLink id="mov3#hym42#icu45#oln174" name="OKFlow147" to="mov3#hym42#dlu12">
+        <LinkParameter id="mov3#hym42#icu45#oln174#par796" name="oidPrenotazione_KeyCondition49 [oid]" source="mov3#hym42#icu45#icp177" target="mov3#hym42#dlu12#su91#kcond52.ent6#att68"/>
+        <LinkParameter id="mov3#hym42#icu45#oln174#par797" name="coupon_PASSING" source="mov3#hym42#icu45#icp184" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym42#icu45#icp177" name="oidPrenotazione"/>
+      <InputCollectorParameter id="mov3#hym42#icu45#icp184" name="coupon"/>
+    </InputCollectorUnit>
+  </OperationUnits>
+</HybridModule>

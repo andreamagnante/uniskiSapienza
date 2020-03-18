@@ -1,0 +1,36 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Area Pubblica" homePage="sv2#page1" landmarks="sv2#page1">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="485" gr:y="650" id="sv2#miu2" action="true" moduleId="mov2#opm2">
+      <KOLink id="sv2#miu2#kln4" name="Home" to="sv2#switch4">
+        <LinkParameter id="sv2#miu2#kln4#par960" name="id_Switch" source="mov2#opm2#kocu1#ocp2" target="sv2#switch4.switch"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="505" gr:y="15" id="sv2#miu68" action="false" moduleId="mov2#hym45">
+      <OKLink id="sv2#miu68#oln199" name="OKFlow199" to="sv2#page2#dau1">
+        <LinkParameter id="sv2#miu68#oln199#par947" name="oid_KeyCondition1 [oid_user]" source="mov2#hym45#okcu48#ocp19" target="sv2#page2#dau1#su1#kcond1.userOID"/>
+        <LinkParameter id="sv2#miu68#oln199#par1009" name="annoscadenza_PASSING" source="mov2#hym45#okcu48#ocp30" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1010" name="codicefiscale_PASSING" source="mov2#hym45#okcu48#ocp18" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1011" name="cognome_PASSING" source="mov2#hym45#okcu48#ocp25" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1012" name="cvv_PASSING" source="mov2#hym45#okcu48#ocp22" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1013" name="email_PASSING" source="mov2#hym45#okcu48#ocp29" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1014" name="mesescadenza_PASSING" source="mov2#hym45#okcu48#ocp26" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1015" name="modalitapagamento_PASSING" source="mov2#hym45#okcu48#ocp17" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1016" name="nome_PASSING" source="mov2#hym45#okcu48#ocp24" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1017" name="numerocarta_PASSING" source="mov2#hym45#okcu48#ocp20" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1018" name="numerocarta_PASSING" source="mov2#hym45#okcu48#ocp31" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1019" name="oid_PASSING" source="mov2#hym45#okcu48#ocp19" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1020" name="password_PASSING" source="mov2#hym45#okcu48#ocp23" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1021" name="Socio_PASSING" source="mov2#hym45#okcu48#ocp21" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1022" name="telefono_PASSING" source="mov2#hym45#okcu48#ocp27" passing="true"/>
+        <LinkParameter id="sv2#miu68#oln199#par1023" name="username_PASSING" source="mov2#hym45#okcu48#ocp28" passing="true"/>
+      </OKLink>
+      <KOLink id="sv2#miu68#kln143" name="KOFlow143" to="sv2#page85" automaticCoupling="true" ajaxOpenWindow="false" ajaxWindowWidth="565" ajaxWindowHeight="200" ajaxWindowClosable="true"/>
+    </ModuleInstanceUnit>
+    <SwitchUnit gr:x="585" gr:y="445" id="sv2#switch4" name="Switch4">
+      <Case value="1"/>
+      <Case value="2"/>
+      <OKLink id="sv2#switch4#oln256" name="OKFlow256" to="sv2#page3" automaticCoupling="true" code="1"/>
+      <OKLink id="sv2#switch4#oln257" name="OKFlow257" to="sv2#page90" automaticCoupling="true" code="2"/>
+    </SwitchUnit>
+  </OperationUnits>
+</SiteView>

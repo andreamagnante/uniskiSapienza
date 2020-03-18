@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym36#page65" name="Elimina indisponbilita" gr:x="575" gr:y="110">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym36#page65#enu49" name="Vuoi davvero eliminare questa indisponibilit&#224;?" gr:x="0" gr:y="0" fieldOrder="mov3#hym36#page65#enu49#fld107 mov3#hym36#page65#enu49#fld106" entity="ent33" linkOrder="mov3#hym36#page65#enu49#ln182">
+      <Field id="mov3#hym36#page65#enu49#fld106" name="Data fine" type="date" preloaded="true" modifiable="true"/>
+      <Field id="mov3#hym36#page65#enu49#fld107" name="Data inizio" type="date" preloaded="true" modifiable="true"/>
+      <Link id="mov3#hym36#page65#enu49#ln182" name="Conferma" to="mov3#hym36#dlu9" type="normal" validate="true">
+        <LinkParameter id="mov3#hym36#page65#enu49#ln182#par647" name="idIndisponibilita_PASSING_KeyCondition46 [id]" sourceLinkParameter="mov3#hym36#icu38#oln142#par643" target="mov3#hym36#dlu9#su66#kcond46.ent33#att41"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym36#page65#enu49">
+          <layout:Field field="mov3#hym36#page65#enu49#fld107"/>
+          <layout:Field field="mov3#hym36#page65#enu49#fld106"/>
+          <layout:Link link="mov3#hym36#page65#enu49#ln182"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

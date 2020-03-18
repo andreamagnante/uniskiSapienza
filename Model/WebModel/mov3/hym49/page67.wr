@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="560" gr:y="150" id="mov3#hym49#page67" name="Dettagli admin">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="mov3#hym49#page67#enu45" name="Elimina amministratore" fieldOrder="mov3#hym49#page67#enu45#fld157 mov3#hym49#page67#enu45#fld166 mov3#hym49#page67#enu45#fld168 mov3#hym49#page67#enu45#fld169" linkOrder="mov3#hym49#page67#enu45#ln206">
+      <Field id="mov3#hym49#page67#enu45#fld169" name="Tipologia amministratore" type="string" preloaded="true"/>
+      <Field id="mov3#hym49#page67#enu45#fld168" name="Cognome" type="string" preloaded="true"/>
+      <Field id="mov3#hym49#page67#enu45#fld166" name="Nome" type="string" preloaded="true"/>
+      <Field id="mov3#hym49#page67#enu45#fld157" name="Username" type="string" preloaded="true"/>
+      <Link id="mov3#hym49#page67#enu45#ln206" name="Elimina" to="mov3#hym49#opg16#switch3" type="normal" validate="true">
+        <LinkParameter id="mov3#hym49#page67#enu45#ln206#par1165" name="GruppoOid_PASSING_Switch" sourceLinkParameter="mov3#hym49#icu51#oln237#par1162" target="mov3#hym49#opg16#switch3.switch"/>
+        <LinkParameter id="mov3#hym49#page67#enu45#ln206#par1166" name="oid_PASSING" sourceLinkParameter="mov3#hym49#icu51#oln237#par1163" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym49#page67#enu45">
+          <layout:Field field="mov3#hym49#page67#enu45#fld157"/>
+          <layout:Field field="mov3#hym49#page67#enu45#fld166"/>
+          <layout:Field field="mov3#hym49#page67#enu45#fld168"/>
+          <layout:Field field="mov3#hym49#page67#enu45#fld169"/>
+          <layout:Link link="mov3#hym49#page67#enu45#ln206"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

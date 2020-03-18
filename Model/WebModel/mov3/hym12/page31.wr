@@ -1,0 +1,109 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym12#page31" name=" " linkOrder="mov3#hym12#page31#ln83" gr:x="310" gr:y="-55">
+  <ContentUnits>
+    <SelectorUnit id="mov3#hym12#page31#seu12" name="SelezionaUtente" gr:x="10" gr:y="0" entity="User">
+      <Selector id="mov3#hym12#page31#seu12#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym12#page31#seu12#su27#kcond24" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov3#hym12#page31#seu12#ln79" name="Flow9" to="mov3#hym12#opg5#scu5" type="transport" validate="true">
+        <LinkParameter id="mov3#hym12#page31#seu12#ln79#par229" name="password_pass1" source="passwordArray" target="mov3#hym12#opg5#scu5.pass1"/>
+      </Link>
+      <Link id="mov3#hym12#page31#seu12#ln80" name="Flow11" to="mov3#hym12#opg5#mfu12" type="transport" validate="true">
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par230" name="oid_KeyCondition1 [oid]" source="userOIDArray" target="mov3#hym12#opg5#mfu12#su28#kcond25.userOID"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par231" name="username_username" source="userNameArray" target="mov3#hym12#opg5#mfu12.userName"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par233" name="codicefiscale_codicefiscale" source="User#att64Array" target="mov3#hym12#opg5#mfu12.User#att64"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par234" name="cognome_cognome" source="User#att63Array" target="mov3#hym12#opg5#mfu12.User#att63"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par236" name="email_email" source="emailArray" target="mov3#hym12#opg5#mfu12.email"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par238" name="nome_nome" source="User#att62Array" target="mov3#hym12#opg5#mfu12.User#att62"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par241" name="telefono_telefono" source="User#att61Array" target="mov3#hym12#opg5#mfu12.User#att61"/>
+        <LinkParameter id="mov3#hym12#page31#seu12#ln80#par242" name="defaultGroup.oid_group_Group.oid_group(defaultGroup)" source="User2DefaultGroup_groupOIDArray" target="mov3#hym12#opg5#mfu12.User2DefaultGroup.groupOID"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit id="mov3#hym12#page31#mssu24" name="Errore" gr:x="35" gr:y="175"/>
+    <EntryUnit id="mov3#hym12#page31#enu20" name="Cambia Password" linkOrder="mov3#hym12#page31#enu20#ln82" gr:x="0" gr:y="305" entity="User" fieldOrder="mov3#hym12#page31#enu20#fld54 mov3#hym12#page31#enu20#fld55">
+      <Field id="mov3#hym12#page31#enu20#fld54" name="Vecchia Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym12#page31#enu20#fld54#mnd25" name="Mandatory41"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym12#page31#enu20#fld55" name="Nuova Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym12#page31#enu20#fld55#mnd26" name="Mandatory40"/>
+        </VRules>
+      </Field>
+      <Link id="mov3#hym12#page31#enu20#ln81" name="Flow12" to="mov3#hym12#opg5#mfu12" type="transport" validate="true">
+        <LinkParameter id="mov3#hym12#page31#enu20#ln81#par243" name="User Object_User Object" source="entityBean" target="mov3#hym12#opg5#mfu12.entityBeans"/>
+        <LinkParameter id="mov3#hym12#page31#enu20#ln81#par244" name="Nuova Password _password" source="mov3#hym12#page31#enu20#fld55" target="mov3#hym12#opg5#mfu12.password"/>
+      </Link>
+      <Link id="mov3#hym12#page31#enu20#ln82" name="Conferma" to="mov3#hym12#opg5#scu5" type="normal" validate="true">
+        <LinkParameter id="mov3#hym12#page31#enu20#ln82#par245" name="password_pass2" source="mov3#hym12#page31#enu20#fld54" target="mov3#hym12#opg5#scu5.pass2"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym12#page31#mssu24"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym12#page31#enu20">
+          <layout:Link link="mov3#hym12#page31#enu20#ln82"/>
+          <layout:Field field="mov3#hym12#page31#enu20#fld54"/>
+          <layout:Field field="mov3#hym12#page31#enu20#fld55"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov3#hym12#page31#ln83" name="Annulla" to="mov3#hym12#kocu15" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

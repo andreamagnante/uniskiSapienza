@@ -1,0 +1,50 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym35#opg10" name="Operation Group 8" transaction="true" gr:x="485" gr:y="380">
+  <OperationUnits>
+    <ScriptUnit id="mov3#hym35#opg10#scu8" name="Script7" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input Date[] dateInizio, Date[] dateFine, Date dateIndInizio, Date dateIndFine, Date vecchiaFine, Date vecchioInizio
+#output String message
+
+
+if(dateInizio!= null)
+{ 
+  if(vecchioInizio.equals(dateIndInizio) &amp;&amp; vecchiaFine.equals(dateIndFine)){
+      return ["resultCode":"error","message":"Non hai effettuato nessuna modifica alle date selezionate!"]
+  }
+  else if(vecchioInizio.equals(dateIndInizio)){
+    def int i = 0;
+    for(i=0;i&lt;dateInizio.size();i++){
+        if((dateIndInizio.before(dateFine[i]) &amp;&amp; dateIndInizio.after(dateInizio[i])) || (dateIndFine.before(dateFine[i]) &amp;&amp; dateIndFine.after(dateInizio[i])) || dateIndFine.equals(dateInizio[i]) || dateIndFine.equals(dateFine[i]) || (dateIndInizio.before(dateInizio[i]) &amp;&amp; dateIndFine.after(dateFine[i]))){
+             return ["resultCode":"error","message":"La nuova indisponibilita non deve coincidere con i periodi gi&#224; inseriti!"]
+        } 
+    }
+   }
+   else if(vecchiaFine.equals(dateIndFine)){
+    def int i = 0;
+    for(i=0;i&lt;dateInizio.size();i++){
+        if((dateIndInizio.before(dateFine[i]) &amp;&amp; dateIndInizio.after(dateInizio[i])) || (dateIndFine.before(dateFine[i]) &amp;&amp; dateIndFine.after(dateInizio[i])) || dateIndInizio.equals(dateInizio[i]) || dateIndInizio.equals(dateFine[i]) || (dateIndInizio.before(dateInizio[i]) &amp;&amp; dateIndFine.after(dateFine[i]))){
+             return ["resultCode":"error","message":"La nuova indisponibilita non deve coincidere con i periodi gi&#224; inseriti!"]
+        } 
+    }
+   }
+   else{
+     def int i = 0;
+     for(i=0;i&lt;dateInizio.size();i++){
+        if((dateIndInizio.before(dateFine[i]) &amp;&amp; dateIndInizio.after(dateInizio[i])) || (dateIndFine.before(dateFine[i]) &amp;&amp; dateIndFine.after(dateInizio[i])) || dateIndInizio.equals(dateInizio[i]) || dateIndFine.equals(dateInizio[i]) || dateIndInizio.equals(dateFine[i]) || dateIndFine.equals(dateFine[i]) || (dateIndInizio.before(dateInizio[i]) &amp;&amp; dateIndFine.after(dateFine[i]))){
+             return ["resultCode":"error","message":"La nuova indisponibilita non deve coincidere con i periodi gi&#224; inseriti!"]
+        } 
+     }  
+   }     
+}
+return ["resultCode":"success","message":"Effettuato con successo!"] 
+        </ScriptUnitText>
+      <OKLink id="mov3#hym35#opg10#scu8#oln161" name="OKFlow161" to="mov3#hym35#mfu16">
+        <LinkParameter id="mov3#hym35#opg10#scu8#oln161#par626" name="Data fine_PASSING_datafine" sourceLinkParameter="mov3#hym35#page64#enu48#ln180#par620" target="mov3#hym35#mfu16.ent33#att42"/>
+        <LinkParameter id="mov3#hym35#opg10#scu8#oln161#par699" name="Data inizio_PASSING_datainizio" sourceLinkParameter="mov3#hym35#page64#enu48#ln180#par624" target="mov3#hym35#mfu16.ent33#att40"/>
+        <LinkParameter id="mov3#hym35#opg10#scu8#oln161#par711" name="idIndisponibilita_PASSING_KeyCondition43 [id]" sourceLinkParameter="mov3#hym35#page64#enu48#ln180#par625" target="mov3#hym35#mfu16#su64#kcond43.ent33#att41"/>
+      </OKLink>
+      <KOLink id="mov3#hym35#opg10#scu8#kln129" name="KOFlow129" to="mov3#hym35#page77#mssu41" ajaxOpenWindow="true" ajaxWindowClosable="true" ajaxWindowWidth="565" ajaxWindowHeight="150" ajaxWindowModal="true">
+        <LinkParameter id="mov3#hym35#opg10#scu8#kln129#par848" name="message_Shown Messages" source="result(message)" target="mov3#hym35#page77#mssu41.shownMessages"/>
+      </KOLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

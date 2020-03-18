@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym17#page47" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym17#page47#enu32" name="Vuoi davvero eliminare questo menu a la carte?" linkOrder="mov3#hym17#page47#enu32#ln131" gr:x="0" gr:y="0" entity="ent37" fieldOrder="mov3#hym17#page47#enu32#fld117">
+      <Link id="mov3#hym17#page47#enu32#ln131" name="Conferma" to="mov3#hym17#dlu5" type="normal" validate="true">
+        <LinkParameter id="mov3#hym17#page47#enu32#ln131#par589" name="Nome_KeyCondition12 [nome]" source="mov3#hym17#page47#enu32#fld117" target="mov3#hym17#dlu5#su41#kcond34.ent37#att50"/>
+      </Link>
+      <Field id="mov3#hym17#page47#enu32#fld117" name="Nome" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym17#page47#enu32">
+          <layout:Link link="mov3#hym17#page47#enu32#ln131"/>
+          <layout:Field field="mov3#hym17#page47#enu32#fld117"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

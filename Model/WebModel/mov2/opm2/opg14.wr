@@ -1,0 +1,27 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1000" gr:y="360" id="mov2#opm2#opg14" name="Operation Group 14" transaction="true">
+  <OperationUnits>
+    <ScriptUnit gr:x="0" gr:y="0" id="mov2#opm2#opg14#scu14" name="Script14">
+      <ScriptUnitText xml:space="preserve">#input int[] id
+
+if (id.size()==0){
+
+	return["resultCode":"error"]
+
+}
+
+return["resultCode":"success"]</ScriptUnitText>
+      <OKLink id="mov2#opm2#opg14#scu14#oln255" name="OKFlow255" to="mov2#opm2#lgu1">
+        <LinkParameter id="mov2#opm2#opg14#scu14#oln255#par941" name="Username_PASSING_Username" sourceLinkParameter="mov2#opm2#seu33#oln254#par940" target="mov2#opm2#lgu1.username"/>
+        <LinkParameter id="mov2#opm2#opg14#scu14#oln255#par944" name="Password_PASSING_Password" sourceLinkParameter="mov2#opm2#seu33#oln254#par939" target="mov2#opm2#lgu1.password"/>
+      </OKLink>
+      <KOLink id="mov2#opm2#opg14#scu14#kln149" name="KOFlow149" to="mov2#opm2#mfu32">
+        <LinkParameter id="mov2#opm2#opg14#scu14#kln149#par975" name="oid_user_PASSING_KeyCondition67 [oid_user]" sourceLinkParameter="mov2#opm2#seu33#oln254#par973" target="mov2#opm2#mfu32#su108#kcond67.userOID"/>
+        <LinkParameter id="mov2#opm2#opg14#scu14#kln149#par977" name="Password_PASSING" sourceLinkParameter="mov2#opm2#seu33#oln254#par939" passing="true"/>
+        <LinkParameter id="mov2#opm2#opg14#scu14#kln149#par978" name="Username_PASSING" sourceLinkParameter="mov2#opm2#seu33#oln254#par940" passing="true"/>
+        <LinkParameter id="mov2#opm2#opg14#scu14#kln149#par979" name="1_Group.oid_group(defaultGroup)" sourceValue="1" target="mov2#opm2#mfu32.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#opm2#opg14#scu14#kln149#par985" name="1_Group.oid_group(groups)" sourceValue="1" target="mov2#opm2#mfu32.User2Group.groupOID"/>
+        <LinkParameter id="mov2#opm2#opg14#scu14#kln149#par986" name="0_socio" sourceValue="0" target="mov2#opm2#mfu32.ent7#att11"/>
+      </KOLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

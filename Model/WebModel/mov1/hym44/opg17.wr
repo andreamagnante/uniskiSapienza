@@ -1,0 +1,33 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym44#opg17" name="Operation Group 9" transaction="true" gr:x="1050" gr:y="460">
+  <OperationUnits>
+    <ScriptUnit id="mov1#hym44#opg17#scu19" name="Script11" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input Date dateScelta, Date[] dateLezioni, Time[] oraLezioni, Time[] orario, int[] oid
+#output String message, Time[] risultato
+
+if(dateLezioni.size()!= 13){
+
+  def int j = 0;
+  def int k = 0;
+  for(j=0;j&lt;dateLezioni.size();j++){
+     for(k=0;k&lt;13;k++){
+        if(oraLezioni[j].equals(orario[k])){
+           orario[k] = null;
+        }
+     }
+  }   
+  return["resultCode":"success","message":"Lezioni disponibili","risultato":orario]
+}
+
+return["resultCode":"error","message":"Lezioni gi&#224; tutte prese!"] 
+        </ScriptUnitText>
+      <OKLink id="mov1#hym44#opg17#scu19#oln243" name="OKFlow201" to="mov1#hym44#seu37">
+        <LinkParameter id="mov1#hym44#opg17#scu19#oln243#par1244" name="risultato_PASSING" source="result(risultato)" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg17#scu19#oln243#par1351" name="istruttoreoid_PASSING_KeyCondition47 [oid_user]" sourceLinkParameter="mov1#hym44#seu38#oln242#par1349" target="mov1#hym44#seu37#su104#kcond59.userOID"/>
+        <LinkParameter id="mov1#hym44#opg17#scu19#oln243#par1352" name="datalezione_PASSING" sourceLinkParameter="mov1#hym44#seu38#oln242#par1348" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg17#scu19#oln243#par1353" name="useroid_PASSING" sourceLinkParameter="mov1#hym44#seu38#oln242#par1350" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg17#scu19#oln243#par1365" name="istruttoreoid_PASSING" sourceLinkParameter="mov1#hym44#seu38#oln242#par1349" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#hym44#opg17#scu19#kln156" name="KOFlow135" to="mov1#hym44#page80#mssu38" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="200" ajaxWindowClosable="true"/>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

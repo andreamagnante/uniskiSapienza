@@ -1,0 +1,20 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym46#opg20" name="Operation Group 19" transaction="true" gr:x="485" gr:y="375">
+  <OperationUnits>
+    <ScriptUnit id="mov1#hym46#opg20#scu23" name="Script21" gr:x="0" gr:y="0">
+      <KOLink id="mov1#hym46#opg20#scu23#kln165" name="KOFlow162" to="mov1#hym46#page92#mssu46" automaticCoupling="true"/>
+      <ScriptUnitText xml:space="preserve">#input String tipo
+#output String message
+
+if(!tipo.compareToIgnoreCase("Lezione")){
+   return["resultCode":"success","message":"Lezione"] 
+}
+return["resultCode":"error","message":"Lezione annullata"] </ScriptUnitText>
+      <OKLink id="mov1#hym46#opg20#scu23#oln267" name="OKFlow267" to="mov1#hym46#page91#enu63">
+        <LinkParameter id="mov1#hym46#opg20#scu23#oln267#par1494" name="data_PASSING_Data prenotazione" sourceLinkParameter="mov1#hym46#icu54#oln266#par1489" target="mov1#hym46#page91#enu63#fld180_slot"/>
+        <LinkParameter id="mov1#hym46#opg20#scu23#oln267#par1495" name="istruttore_PASSING_Istruttore" sourceLinkParameter="mov1#hym46#icu54#oln266#par1490" target="mov1#hym46#page91#enu63#fld178_slot"/>
+        <LinkParameter id="mov1#hym46#opg20#scu23#oln267#par1496" name="ora_PASSING_Ora prenotazione" sourceLinkParameter="mov1#hym46#icu54#oln266#par1493" target="mov1#hym46#page91#enu63#fld179_slot"/>
+        <LinkParameter id="mov1#hym46#opg20#scu23#oln267#par1497" name="oiddata_PASSING" sourceLinkParameter="mov1#hym46#icu54#oln266#par1492" passing="true"/>
+      </OKLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

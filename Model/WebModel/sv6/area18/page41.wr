@@ -1,0 +1,159 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv6#area18#page41" name="Menu">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="100" id="sv6#area18#page41#inu2" name="Menu fisso" entity="ent1" displayAttributes="ent1#att1 ent1#att8 ent1#att7 ent1#att6 ent1#att5 ent1#att4 ent1#att3 ent1#att2" linkOrder="sv6#area18#page41#inu2#ln115 sv6#area18#page41#inu2#ln118">
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <Link id="sv6#area18#page41#inu2#ln115" name="Elimina" to="sv6#miu32" type="normal" validate="true">
+        <LinkParameter id="sv6#area18#page41#inu2#ln115#par461" name="nome_nome" source="data[].ent1#att1" target="sv6#miu32.mov3#hym14#icu16#icp62"/>
+      </Link>
+      <Link id="sv6#area18#page41#inu2#ln118" name="Modifica" to="sv6#miu33" type="normal" validate="true">
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par493" name="antipasto_antipasto" source="data[].ent1#att8" target="sv6#miu33.mov3#hym15#icu17#icp83"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par494" name="bevanda_bevanda" source="data[].ent1#att3" target="sv6#miu33.mov3#hym15#icu17#icp78"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par495" name="contorno_contorno" source="data[].ent1#att5" target="sv6#miu33.mov3#hym15#icu17#icp82"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par496" name="costo_costo" source="data[].ent1#att2" target="sv6#miu33.mov3#hym15#icu17#icp77"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par497" name="dessert_dessert" source="data[].ent1#att4" target="sv6#miu33.mov3#hym15#icu17#icp79"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par498" name="nome_nome" source="data[].ent1#att1" target="sv6#miu33.mov3#hym15#icu17#icp76"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par499" name="primo_primo" source="data[].ent1#att7" target="sv6#miu33.mov3#hym15#icu17#icp80"/>
+        <LinkParameter id="sv6#area18#page41#inu2#ln118#par500" name="secondo_secondo" source="data[].ent1#att6" target="sv6#miu33.mov3#hym15#icu17#icp81"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit gr:x="170" gr:y="110" id="sv6#area18#page41#enu28" name="Inserisci menu fisso" fieldOrder="sv6#area18#page41#enu28#fld81 sv6#area18#page41#enu28#fld82 sv6#area18#page41#enu28#fld83 sv6#area18#page41#enu28#fld84 sv6#area18#page41#enu28#fld85 sv6#area18#page41#enu28#fld86 sv6#area18#page41#enu28#fld87 sv6#area18#page41#enu28#fld88 sv6#area18#page41#enu28#fld89" linkOrder="sv6#area18#page41#enu28#ln120">
+      <Field id="sv6#area18#page41#enu28#fld89" name="Data Inserimento" type="date" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld89#mnd46" name="Mandatory46"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld88" name="Costo" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld88#mnd45" name="Mandatory45"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld87" name="Bevanda" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld87#mnd43" name="Mandatory43"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld86" name="Dessert" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld86#mnd47" name="Mandatory47"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld85" name="Contorno" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld85#mnd44" name="Mandatory44"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld84" name="Secondo" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld84#mnd50" name="Mandatory50"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld83" name="Primo" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld83#mnd49" name="Mandatory49"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld82" name="Antipasto" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld82#mnd42" name="Mandatory42"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area18#page41#enu28#fld81" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area18#page41#enu28#fld81#mnd48" name="Mandatory48"/>
+        </VRules>
+      </Field>
+      <Link id="sv6#area18#page41#enu28#ln120" name="Conferma" to="sv6#miu34" type="normal" validate="true">
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par523" name="Antipasto_antipasto" source="sv6#area18#page41#enu28#fld82" target="sv6#miu34.mov3#hym16#icu18#icp96"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par524" name="Bevanda_bevanda" source="sv6#area18#page41#enu28#fld87" target="sv6#miu34.mov3#hym16#icu18#icp91"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par525" name="Contorno_contorno" source="sv6#area18#page41#enu28#fld85" target="sv6#miu34.mov3#hym16#icu18#icp93"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par526" name="Costo_costo" source="sv6#area18#page41#enu28#fld88" target="sv6#miu34.mov3#hym16#icu18#icp90"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par527" name="Data Inserimento_datainserimento" source="sv6#area18#page41#enu28#fld89" target="sv6#miu34.mov3#hym16#icu18#icp97"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par528" name="Dessert_dessert" source="sv6#area18#page41#enu28#fld86" target="sv6#miu34.mov3#hym16#icu18#icp92"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par529" name="Nome_nome" source="sv6#area18#page41#enu28#fld81" target="sv6#miu34.mov3#hym16#icu18#icp89"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par530" name="Primo_primo" source="sv6#area18#page41#enu28#fld83" target="sv6#miu34.mov3#hym16#icu18#icp94"/>
+        <LinkParameter id="sv6#area18#page41#enu28#ln120#par531" name="Secondo_secondo" source="sv6#area18#page41#enu28#fld84" target="sv6#miu34.mov3#hym16#icu18#icp95"/>
+      </Link>
+      <VRules/>
+    </EntryUnit>
+    <TimeUnit gr:x="385" gr:y="100" id="sv6#area18#page41#tmu1" name="Time1">
+      <Link id="sv6#area18#page41#tmu1#ln119" name="Flow119" to="sv6#area18#page41#enu28" type="transport" validate="true">
+        <LinkParameter id="sv6#area18#page41#tmu1#ln119#par522" name="Current/Input Date_Data Inserimento" source="currentDate" target="sv6#area18#page41#enu28#fld89_slot"/>
+      </Link>
+    </TimeUnit>
+    <GetUnit id="sv6#area18#page41#gtu15" name="User_Supporter ID" gr:x="185" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv6#area18#page41#gtu15#ln130" name="Flow130" to="sv6#miu34" type="transport" validate="true">
+        <LinkParameter id="sv6#area18#page41#gtu15#ln130#par572" name="UserCtxParam.oid_user_Key Condition [oid]" source="sv6#area18#page41#gtu15.UserCtxParam" target="sv6#miu34.mov3#hym16#icu18#icp84"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area18#page41#inu2">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv6#area18#page41#inu2#ln115"/>
+          <layout:Link link="sv6#area18#page41#inu2#ln118"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area18#page41#enu28">
+          <layout:Field field="sv6#area18#page41#enu28#fld81"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld82"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld83"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld84"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld85"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld86"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld87"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld88"/>
+          <layout:Field field="sv6#area18#page41#enu28#fld89"/>
+          <layout:Link link="sv6#area18#page41#enu28#ln120"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

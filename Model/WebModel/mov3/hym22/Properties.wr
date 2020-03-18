@@ -1,0 +1,26 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym22" name="Inserisci sconto" gr:x="1290" gr:y="500">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym22#icu24" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym22#icu24#oln110" name="OKFlow38" to="mov3#hym22#cru8">
+        <LinkParameter id="mov3#hym22#icu24#oln110#par681" name="Key Condition [oid]_Amristorazione.oid_user(ScontoToAmristorazione)" source="mov3#hym22#icu24#icp165" target="mov3#hym22#cru8.rel19#role32.userOID"/>
+        <LinkParameter id="mov3#hym22#icu24#oln110#par682" name="Datafine_dataFine" source="mov3#hym22#icu24#icp169" target="mov3#hym22#cru8.ent35#att47"/>
+        <LinkParameter id="mov3#hym22#icu24#oln110#par683" name="Datainizio_dataInizio" source="mov3#hym22#icu24#icp168" target="mov3#hym22#cru8.ent35#att46"/>
+        <LinkParameter id="mov3#hym22#icu24#oln110#par684" name="Descrizione_descrizione" source="mov3#hym22#icu24#icp170" target="mov3#hym22#cru8.ent35#att49"/>
+        <LinkParameter id="mov3#hym22#icu24#oln110#par685" name="Nome_nome" source="mov3#hym22#icu24#icp166" target="mov3#hym22#cru8.ent35#att45"/>
+        <LinkParameter id="mov3#hym22#icu24#oln110#par686" name="Percentuale_percentuale" source="mov3#hym22#icu24#icp167" target="mov3#hym22#cru8.ent35#att48"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym22#icu24#icp165" name="Key Condition [oid]"/>
+      <InputCollectorParameter id="mov3#hym22#icu24#icp170" name="Descrizione"/>
+      <InputCollectorParameter id="mov3#hym22#icu24#icp169" name="Datafine"/>
+      <InputCollectorParameter id="mov3#hym22#icu24#icp168" name="Datainizio"/>
+      <InputCollectorParameter id="mov3#hym22#icu24#icp167" name="Percentuale"/>
+      <InputCollectorParameter id="mov3#hym22#icu24#icp166" name="Nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym22#kocu24" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym22#okcu24" name="OK Port22" gr:x="550" gr:y="105"/>
+    <CreateUnit id="mov3#hym22#cru8" name="Create4" gr:x="370" gr:y="185" entity="ent35">
+      <OKLink id="mov3#hym22#cru8#oln111" name="OKFlow36" to="mov3#hym22#okcu24" automaticCoupling="true"/>
+      <KOLink id="mov3#hym22#cru8#kln76" name="KOFlow24" to="mov3#hym22#kocu24" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

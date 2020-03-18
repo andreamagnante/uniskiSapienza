@@ -1,0 +1,144 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area10#page33" name=" " gr:x="0" gr:y="0">
+  <ContentUnits>
+    <MultiMessageUnit id="sv5#area10#page33#mssu26" name="Impostazione account" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Caro Admin Struttura, in questa pagina potrai modificare i dettagli del tuo profilo</Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv5#area10#page33#gtu9" name="User_Supporter ID" gr:x="240" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv5#area10#page33#gtu9#ln85" name="Flow8" to="sv5#area10#page33#dau10" type="transport" validate="true">
+        <LinkParameter id="sv5#area10#page33#gtu9#ln85#par253" name="UserCtxParam.oid_user_PASSING" source="sv5#area10#page33#gtu9.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv5#area10#page33#gtu9#ln85#par254" name="UserCtxParam.oid_user_KeyCondition5 [oid_user]" source="sv5#area10#page33#gtu9.UserCtxParam" target="sv5#area10#page33#dau10#su31#kcond27.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit id="sv5#area10#page33#dau10" name="Details Supporter" gr:x="180" gr:y="120" entity="User" displayAttributes="userName email User#att61 password User#att62 User#att63 User#att64" linkOrder="sv5#area10#page33#dau10#ln86 sv5#area10#page33#dau10#ln87 sv5#area10#page33#dau10#ln88">
+      <Selector id="sv5#area10#page33#dau10#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area10#page33#dau10#su31#kcond27" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#area10#page33#dau10#ln86" name="modifica email" to="sv5#miu17" type="normal" validate="true">
+        <LinkParameter id="sv5#area10#page33#dau10#ln86#par255" name="oid_user_Key Condition [oid]" source="data.userOID" target="sv5#miu17.mov3#hym10#icu12#icp29"/>
+        <LinkParameter id="sv5#area10#page33#dau10#ln86#par318" name="email_email" source="data.email" target="sv5#miu17.mov3#hym10#icu12#icp87"/>
+      </Link>
+      <Link id="sv5#area10#page33#dau10#ln87" name="modifica telefono" to="sv5#miu18" type="normal" validate="true">
+        <LinkParameter id="sv5#area10#page33#dau10#ln87#par256" name="oid_user_Key Condition [oid]" source="data.userOID" target="sv5#miu18.mov3#hym11#icu13#icp30"/>
+        <LinkParameter id="sv5#area10#page33#dau10#ln87#par287" name="telefono_numerotelefono" source="data.User#att61" target="sv5#miu18.mov3#hym11#icu13#icp73"/>
+      </Link>
+      <Link id="sv5#area10#page33#dau10#ln88" name="modifica password " to="sv5#miu19" type="normal" validate="true">
+        <LinkParameter id="sv5#area10#page33#dau10#ln88#par257" name="oid_user_KeyCondition2 [oid]" source="data.userOID" target="sv5#miu19.mov3#hym12#icu14#icp31"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area10#page33#mssu26"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area10#page33#dau10">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Link link="sv5#area10#page33#dau10#ln86"/>
+          <layout:Link link="sv5#area10#page33#dau10#ln87"/>
+          <layout:Link link="sv5#area10#page33#dau10#ln88"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,27 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="470" gr:y="295" id="mov2#opm2#opg12" name="Operation Group 12" transaction="true">
+  <OperationUnits>
+    <ScriptUnit gr:x="0" gr:y="0" id="mov2#opm2#opg12#scu11" name="Script11">
+      <ScriptUnitText xml:space="preserve">#input int tipoutente
+
+if (tipoutente == 2) {
+
+	return["resultCode":"error"]
+	
+}
+
+return["resultCode":"success"]</ScriptUnitText>
+      <OKLink id="mov2#opm2#opg12#scu11#oln253" name="OKFlow253" to="mov2#opm2#lgu1">
+        <LinkParameter id="mov2#opm2#opg12#scu11#oln253#par930" name="Username_PASSING_Username" sourceLinkParameter="mov2#opm2#seu23#oln252#par929" target="mov2#opm2#lgu1.username"/>
+        <LinkParameter id="mov2#opm2#opg12#scu11#oln253#par931" name="Password_PASSING_Password" sourceLinkParameter="mov2#opm2#seu23#oln252#par928" target="mov2#opm2#lgu1.password"/>
+      </OKLink>
+      <KOLink id="mov2#opm2#opg12#scu11#kln141" name="KOFlow141" to="mov2#opm2#seu33">
+        <LinkParameter id="mov2#opm2#opg12#scu11#kln141#par937" name="Password_PASSING" sourceLinkParameter="mov2#opm2#seu23#oln252#par928" passing="true"/>
+        <LinkParameter id="mov2#opm2#opg12#scu11#kln141#par938" name="Username_PASSING" sourceLinkParameter="mov2#opm2#seu23#oln252#par929" passing="true"/>
+        <LinkParameter id="mov2#opm2#opg12#scu11#kln141#par949" name="oid_user_PASSING_oid" sourceLinkParameter="mov2#opm2#seu23#oln252#par948" target="mov2#opm2#seu33#su107#acond35"/>
+        <LinkParameter id="mov2#opm2#opg12#scu11#kln141#par955" name="datascadenza_PASSING" sourceLinkParameter="mov2#opm2#seu23#oln252#par954" passing="true"/>
+        <LinkParameter id="mov2#opm2#opg12#scu11#kln141#par957" name="datascadenza_PASSING_datascandenza" sourceLinkParameter="mov2#opm2#seu23#oln252#par954" target="mov2#opm2#seu33#su107#acond45"/>
+        <LinkParameter id="mov2#opm2#opg12#scu11#kln141#par972" name="oid_user_PASSING" sourceLinkParameter="mov2#opm2#seu23#oln252#par948" passing="true"/>
+      </KOLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

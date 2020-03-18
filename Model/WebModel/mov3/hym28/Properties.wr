@@ -1,0 +1,24 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym28" name="Inserisci skipass" gr:x="830" gr:y="30">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym28#icu30" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym28#icu30#oln115" name="OKFlow38" to="mov3#hym28#cru10">
+        <LinkParameter id="mov3#hym28#icu30#oln115#par440" name="durata_durata" source="mov3#hym28#icu30#icp141" target="mov3#hym28#cru10.ent8#att13"/>
+        <LinkParameter id="mov3#hym28#icu30#oln115#par441" name="prezzo_prezzo" source="mov3#hym28#icu30#icp142" target="mov3#hym28#cru10.ent8#att14"/>
+        <LinkParameter id="mov3#hym28#icu30#oln115#par442" name="punti_punti" source="mov3#hym28#icu30#icp143" target="mov3#hym28#cru10.ent8#att16"/>
+        <LinkParameter id="mov3#hym28#icu30#oln115#par443" name="targetutenza_targetutenza" source="mov3#hym28#icu30#icp144" target="mov3#hym28#cru10.ent8#att18"/>
+        <LinkParameter id="mov3#hym28#icu30#oln115#par444" name="tipologia_tipologia" source="mov3#hym28#icu30#icp140" target="mov3#hym28#cru10.ent8#att12"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym28#icu30#icp144" name="targetutenza"/>
+      <InputCollectorParameter id="mov3#hym28#icu30#icp143" name="punti"/>
+      <InputCollectorParameter id="mov3#hym28#icu30#icp142" name="prezzo"/>
+      <InputCollectorParameter id="mov3#hym28#icu30#icp141" name="durata"/>
+      <InputCollectorParameter id="mov3#hym28#icu30#icp140" name="tipologia"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym28#kocu30" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym28#okcu30" name="OK Port22" gr:x="550" gr:y="105"/>
+    <CreateUnit id="mov3#hym28#cru10" name="Create4" gr:x="370" gr:y="185" entity="ent8">
+      <OKLink id="mov3#hym28#cru10#oln116" name="OKFlow36" to="mov3#hym28#okcu30" automaticCoupling="true"/>
+      <KOLink id="mov3#hym28#cru10#kln79" name="KOFlow24" to="mov3#hym28#kocu30" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

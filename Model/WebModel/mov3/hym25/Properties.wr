@@ -1,0 +1,19 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym25" name="Inserisci faq" gr:x="840" gr:y="295">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym25#icu27" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym25#icu27#oln88" name="OKFlow38" to="mov3#hym25#cru9">
+        <LinkParameter id="mov3#hym25#icu27#oln88#par378" name="domanda_domanda" source="mov3#hym25#icu27#icp117" target="mov3#hym25#cru9.ent31#att38"/>
+        <LinkParameter id="mov3#hym25#icu27#oln88#par379" name="risposta_risposta" source="mov3#hym25#icu27#icp118" target="mov3#hym25#cru9.ent31#att39"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym25#icu27#icp118" name="risposta"/>
+      <InputCollectorParameter id="mov3#hym25#icu27#icp117" name="domanda"/>
+      <InputCollectorParameter id="mov3#hym25#icu27#icp116" name="id"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym25#kocu27" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym25#okcu27" name="OK Port22" gr:x="550" gr:y="105"/>
+    <CreateUnit id="mov3#hym25#cru9" name="Create4" gr:x="370" gr:y="185" entity="ent31">
+      <OKLink id="mov3#hym25#cru9#oln89" name="OKFlow36" to="mov3#hym25#okcu27" automaticCoupling="true"/>
+      <KOLink id="mov3#hym25#cru9#kln61" name="KOFlow24" to="mov3#hym25#kocu27" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

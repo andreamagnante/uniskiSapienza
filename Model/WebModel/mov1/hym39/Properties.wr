@@ -1,0 +1,31 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="385" gr:y="420" id="mov1#hym39" name="Elimina prenotazione in attesa">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="355" gr:y="260" id="mov1#hym39#icu40">
+      <OKLink id="mov1#hym39#icu40#oln147" name="OKFlow147" to="mov1#hym39#dlu10">
+        <LinkParameter id="mov1#hym39#icu40#oln147#par670" name="oidPrenotazione_KeyCondition49 [oid]" source="mov1#hym39#icu40#icp157" target="mov1#hym39#dlu10#su52#kcond49.ent6#att68"/>
+        <LinkParameter id="mov1#hym39#icu40#oln147#par696" name="coupon_PASSING" source="mov1#hym39#icu40#icp162" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#hym39#icu40#icp157" name="oidPrenotazione"/>
+      <InputCollectorParameter id="mov1#hym39#icu40#icp162" name="coupon"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1290" gr:y="140" id="mov1#hym39#okcu41" name="OK Port41"/>
+    <KOCollectorUnit gr:x="1290" gr:y="350" id="mov1#hym39#kocu41" name="KO Port41"/>
+    <DeleteUnit gr:x="765" gr:y="235" id="mov1#hym39#dlu10" name="Delete10" entity="ent6">
+      <Selector id="mov1#hym39#dlu10#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym39#dlu10#su52#kcond49" name="KeyCondition49" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym39#dlu10#oln150" name="OKFlow150" to="mov1#hym39#mfu18">
+        <LinkParameter id="mov1#hym39#dlu10#oln150#par695" name="0_utilizzato" sourceValue="0" target="mov1#hym39#mfu18.ent5#att67"/>
+        <LinkParameter id="mov1#hym39#dlu10#oln150#par697" name="coupon_PASSING_AttCondition7" sourceLinkParameter="mov1#hym39#icu40#oln147#par696" target="mov1#hym39#mfu18#su56#acond25"/>
+      </OKLink>
+      <KOLink id="mov1#hym39#dlu10#kln109" name="KOFlow109" to="mov1#hym39#kocu41" automaticCoupling="true"/>
+    </DeleteUnit>
+    <ModifyUnit id="mov1#hym39#mfu18" name="Update17" gr:x="960" gr:y="110" entity="ent5">
+      <Selector id="mov1#hym39#mfu18#su56" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym39#mfu18#su56#acond25" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att66"/>
+      </Selector>
+      <OKLink id="mov1#hym39#mfu18#oln153" name="OKFlow153" to="mov1#hym39#okcu41" automaticCoupling="true"/>
+      <KOLink id="mov1#hym39#mfu18#kln111" name="KOFlow111" to="mov1#hym39#kocu41" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

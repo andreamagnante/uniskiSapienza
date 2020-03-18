@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="860" gr:y="150" id="mov1#hym37#page66" name="Genera coupon">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="mov1#hym37#page66#enu51" name="Conferma generazione" fieldOrder="mov1#hym37#page66#enu51#fld109 mov1#hym37#page66#enu51#fld110 mov1#hym37#page66#enu51#fld149 mov1#hym37#page66#enu51#fld150 mov1#hym37#page66#enu51#fld151" linkOrder="mov1#hym37#page66#enu51#ln190">
+      <Field id="mov1#hym37#page66#enu51#fld150" name="Coupon" type="string" preloaded="true"/>
+      <Field id="mov1#hym37#page66#enu51#fld149" name="Punti rimasti" type="integer" preloaded="true"/>
+      <Field id="mov1#hym37#page66#enu51#fld110" name="Punti richiesti" type="integer" preloaded="true"/>
+      <Field id="mov1#hym37#page66#enu51#fld109" name="Punti totali" type="integer" preloaded="true"/>
+      <Link id="mov1#hym37#page66#enu51#ln190" name="Conferma" to="mov1#hym37#mfu19" type="normal" validate="true">
+        <LinkParameter id="mov1#hym37#page66#enu51#ln190#par728" name="Punti rimasti_punti" source="mov1#hym37#page66#enu51#fld149" target="mov1#hym37#mfu19.ent3#att60"/>
+        <LinkParameter id="mov1#hym37#page66#enu51#ln190#par730" name="id_socio_PASSING_AttCondition22" sourceLinkParameter="mov1#hym37#icu41#oln156#par729" target="mov1#hym37#mfu19#su57#acond22"/>
+        <LinkParameter id="mov1#hym37#page66#enu51#ln190#par731" name="Coupon_PASSING" source="mov1#hym37#page66#enu51#fld150" passing="true"/>
+        <LinkParameter id="mov1#hym37#page66#enu51#ln190#par732" name="id_socio_PASSING" sourceLinkParameter="mov1#hym37#icu41#oln156#par729" passing="true"/>
+      </Link>
+      <Field id="mov1#hym37#page66#enu51#fld151" name="idsocio" type="integer" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym37#page66#enu51">
+          <layout:Link link="mov1#hym37#page66#enu51#ln190"/>
+          <layout:Field field="mov1#hym37#page66#enu51#fld109"/>
+          <layout:Field field="mov1#hym37#page66#enu51#fld110"/>
+          <layout:Field field="mov1#hym37#page66#enu51#fld149"/>
+          <layout:Field field="mov1#hym37#page66#enu51#fld150"/>
+          <layout:Field field="mov1#hym37#page66#enu51#fld151"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym37#page66#ln192" name="Annulla" to="mov1#hym37#kocu39" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

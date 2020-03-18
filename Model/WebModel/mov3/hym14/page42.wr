@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym14#page42" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym14#page42#enu26" name="Vuoi davvero eliminare questo menu fisso?" linkOrder="mov3#hym14#page42#enu26#ln114" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov3#hym14#page42#enu26#fld69">
+      <Link id="mov3#hym14#page42#enu26#ln114" name="Conferma" to="mov3#hym14#dlu4" type="normal" validate="true">
+        <LinkParameter id="mov3#hym14#page42#enu26#ln114#par460" name="Key [nome]_KeyCondition12 [nome]" source="mov3#hym14#page42#enu26#fld69" target="mov3#hym14#dlu4#su39#kcond32.ent1#att1"/>
+        <LinkParameter id="mov3#hym14#page42#enu26#ln114#par462" name="Key [nome]_PASSING" source="key.ent1#att1" passing="true"/>
+      </Link>
+      <Field id="mov3#hym14#page42#enu26#fld69" name="Nome" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym14#page42#enu26">
+          <layout:Link link="mov3#hym14#page42#enu26#ln114"/>
+          <layout:Field field="mov3#hym14#page42#enu26#fld69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

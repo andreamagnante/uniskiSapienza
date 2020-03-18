@@ -1,0 +1,21 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym27" name="Elimina skipass" gr:x="845" gr:y="205">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym27#icu29" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym27#icu29#icp119" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym27#icu29#oln99" name="OKFlow30" to="mov3#hym27#page53#enu37">
+        <LinkParameter id="mov3#hym27#icu29#oln99#par399" name="Key Condition [oid]_PASSING" source="mov3#hym27#icu29#icp119" passing="true"/>
+        <LinkParameter id="mov3#hym27#icu29#oln99#par424" name="tipologia_Tipologia" source="mov3#hym27#icu29#icp128" target="mov3#hym27#page53#enu37#fld97_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym27#icu29#icp128" name="tipologia"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym27#kocu29" name="KO Port20" gr:x="800" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym27#okcu29" name="OK Port22" gr:x="800" gr:y="100"/>
+    <DeleteUnit id="mov3#hym27#dlu3" name="Delete1" gr:x="460" gr:y="310" entity="ent8">
+      <Selector id="mov3#hym27#dlu3#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym27#dlu3#su30#kcond14" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym27#dlu3#oln113" name="OKFlow31" to="mov3#hym27#okcu29" automaticCoupling="true"/>
+      <KOLink id="mov3#hym27#dlu3#kln65" name="KOFlow22" to="mov3#hym27#kocu29" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

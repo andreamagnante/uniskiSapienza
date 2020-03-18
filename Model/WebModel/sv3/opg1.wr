@@ -1,0 +1,29 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#opg1" name="Operation Group 3" transaction="true" gr:x="3480" gr:y="1430">
+  <OperationUnits>
+    <ScriptUnit id="sv3#opg1#scu1" name="Script3" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input  Date data,Time ora, Date[] datePrenotazioni, Time[] oraPrenotazioni
+#output String message
+
+if(datePrenotazioni!= null)
+{
+def int i = 0;  
+for (i=0;i&lt;datePrenotazioni.size() ;i++){
+		if((data.equals(datePrenotazioni[i])) &amp;&amp; (ora.equals(oraPrenotazioni[i]))){
+	 	    return ["resultCode":"error","message":"Attenzione! Hai gia effettuato una prenotazione all'orario del giorno selezionato!"]
+		}
+}
+}
+return ["resultCode":"success","message":"Effettuato con successo!"] 
+        </ScriptUnitText>
+      <OKLink id="sv3#opg1#scu1#oln143" name="OKFlow143" to="sv3#miu57">
+        <LinkParameter id="sv3#opg1#scu1#oln143#par533" name="Seleziona coupon_PASSING_coupon" sourceLinkParameter="sv3#area31#page68#enu52#ln21#par328" target="sv3#miu57.mov1#hym38#icu39#icp153"/>
+        <LinkParameter id="sv3#opg1#scu1#oln143#par534" name="Data prenotazione_PASSING_dataprenotazione" sourceLinkParameter="sv3#area31#page68#enu52#ln21#par347" target="sv3#miu57.mov1#hym38#icu39#icp132"/>
+        <LinkParameter id="sv3#opg1#scu1#oln143#par535" name="Ora prenotazione_PASSING_oraprenotazione" sourceLinkParameter="sv3#area31#page68#enu52#ln21#par476" target="sv3#miu57.mov1#hym38#icu39#icp138"/>
+        <LinkParameter id="sv3#opg1#scu1#oln143#par538" name="Numero persone_PASSING_persone" sourceLinkParameter="sv3#area31#page68#enu52#ln21#par475" target="sv3#miu57.mov1#hym38#icu39#icp139"/>
+        <LinkParameter id="sv3#opg1#scu1#oln143#par540" name="Tipo menu_PASSING_tipomenu" sourceLinkParameter="sv3#area31#page68#enu52#ln21#par501" target="sv3#miu57.mov1#hym38#icu39#icp149"/>
+        <LinkParameter id="sv3#opg1#scu1#oln143#par619" name="UserCtxParam.oid_user_PASSING_oiduser" sourceLinkParameter="sv3#area31#page68#seu13#ln116#par618" target="sv3#miu57.mov1#hym38#icu39#icp145"/>
+      </OKLink>
+      <KOLink id="sv3#opg1#scu1#kln104" name="KOFlow104" to="sv3#page19" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowClosable="true" ajaxWindowWidth="565" ajaxWindowHeight="150"/>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

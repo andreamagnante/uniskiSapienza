@@ -1,0 +1,26 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym20" name="Elimina sconto" gr:x="1320" gr:y="660">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym20#icu22" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym20#icu22#icp137" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym20#icu22#oln104" name="OKFlow30" to="mov3#hym20#page50#enu34">
+        <LinkParameter id="mov3#hym20#icu22#oln104#par635" name="Key Condition [oid]_PASSING" source="mov3#hym20#icu22#icp137" passing="true"/>
+        <LinkParameter id="mov3#hym20#icu22#oln104#par638" name="nome_Nome" source="mov3#hym20#icu22#icp146" target="mov3#hym20#page50#enu34#fld133_slot"/>
+        <LinkParameter id="mov3#hym20#icu22#oln104#par642" name="percentuale_Percentuale" source="mov3#hym20#icu22#icp151" target="mov3#hym20#page50#enu34#fld134_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym20#icu22#icp150" name="descrizione"/>
+      <InputCollectorParameter id="mov3#hym20#icu22#icp148" name="datafine"/>
+      <InputCollectorParameter id="mov3#hym20#icu22#icp147" name="datainizio"/>
+      <InputCollectorParameter id="mov3#hym20#icu22#icp146" name="nome"/>
+      <InputCollectorParameter id="mov3#hym20#icu22#icp151" name="percentuale"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym20#kocu22" name="KO Port20" gr:x="800" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym20#okcu22" name="OK Port22" gr:x="800" gr:y="100"/>
+    <DeleteUnit id="mov3#hym20#dlu6" name="Delete1" gr:x="460" gr:y="310" entity="ent35">
+      <Selector id="mov3#hym20#dlu6#su43" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym20#dlu6#su43#kcond36" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym20#dlu6#oln105" name="OKFlow31" to="mov3#hym20#okcu22" automaticCoupling="true"/>
+      <KOLink id="mov3#hym20#dlu6#kln72" name="KOFlow22" to="mov3#hym20#kocu22" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

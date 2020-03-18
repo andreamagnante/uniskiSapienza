@@ -1,0 +1,432 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area31#page68" name="Visualizza men&#249;" gr:x="0" gr:y="0" ajaxEnabled="true">
+  <ContentUnits>
+    <EntryUnit id="sv3#area31#page68#enu52" name="Prenota ristorante" linkOrder="sv3#area31#page68#enu52#ln21" gr:x="630" gr:y="290" fieldOrder="sv3#area31#page68#enu52#fld153 sv3#area31#page68#enu52#sfld13 sv3#area31#page68#enu52#fld152 sv3#area31#page68#enu52#sfld15 sv3#area31#page68#enu52#sfld14">
+      <Field id="sv3#area31#page68#enu52#fld152" name="Numero persone" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area31#page68#enu52#fld152#mnd54" name="Mandatory53"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area31#page68#enu52#fld153" name="Data prenotazione" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area31#page68#enu52#fld153#mnd55" name="Mandatory20"/>
+          <CompareValidationRule id="sv3#area31#page68#enu52#fld153#cmp4" name="Compare2" predicate="gteq" value="today()"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#area31#page68#enu52#sfld13" name="Ora prenotazione" type="time" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area31#page68#enu52#sfld13#mnd65" name="Mandatory65"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv3#area31#page68#enu52#sfld14" name="Seleziona coupon" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area31#page68#enu52#sfld15" name="Tipo menu" type="string" modifiable="true" slotOrder="sv3#area31#page68#enu52#sfld15#slot19">
+        <Slot id="sv3#area31#page68#enu52#sfld15#slot19" name="Menu" value="Entrambi|Menu fisso|Menu carta" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="sv3#area31#page68#enu52#sfld15#mnd66" name="Mandatory66"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#area31#page68#enu52#ln21" name="Prenota" to="sv3#opg1#scu1" type="normal" validate="true">
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par274" name="Data prenotazione_data" source="sv3#area31#page68#enu52#fld153" target="sv3#opg1#scu1.data"/>
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par320" name="Ora prenotazione_ora" source="sv3#area31#page68#enu52#sfld13" target="sv3#opg1#scu1.ora"/>
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par328" name="Seleziona coupon_PASSING" source="sv3#area31#page68#enu52#sfld14" passing="true"/>
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par347" name="Data prenotazione_PASSING" source="sv3#area31#page68#enu52#fld153" passing="true"/>
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par475" name="Numero persone_PASSING" source="sv3#area31#page68#enu52#fld152" passing="true"/>
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par476" name="Ora prenotazione_PASSING" source="sv3#area31#page68#enu52#sfld13" passing="true"/>
+        <LinkParameter id="sv3#area31#page68#enu52#ln21#par501" name="Tipo menu_PASSING" source="sv3#area31#page68#enu52#sfld15" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv3#area31#page68#seu24" name="Selector13" gr:x="285" gr:y="495" entity="ent5">
+      <Selector id="sv3#area31#page68#seu24#su80" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area31#page68#seu24#su80#acond36" name="AttCondition7" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role2.userOID"/>
+        <AttributesCondition id="sv3#area31#page68#seu24#su80#acond23" name="AttCondition23" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att67" value="false"/>
+      </Selector>
+      <Link id="sv3#area31#page68#seu24#ln200" name="Flow116" to="sv3#area31#page68#enu52" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#seu24#ln200#par719" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv3#area31#page68#gtu27#ln201#par734" passing="true"/>
+        <LinkParameter id="sv3#area31#page68#seu24#ln200#par741" name="coupon_Seleziona coupon [label]" source="ent5#att66Array" target="sv3#area31#page68#enu52#sfld14_label"/>
+        <LinkParameter id="sv3#area31#page68#seu24#ln200#par742" name="coupon_Seleziona coupon [output]" source="ent5#att66Array" target="sv3#area31#page68#enu52#sfld14_output"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv3#area31#page68#gtu27" name="User_Supporter ID" gr:x="345" gr:y="345" contextParameters="UserCtxParam">
+      <Link id="sv3#area31#page68#gtu27#ln201" name="Flow113" to="sv3#area31#page68#seu24" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#gtu27#ln201#par733" name="UserCtxParam.oid_user_AttCondition7" source="sv3#area31#page68#gtu27.UserCtxParam" target="sv3#area31#page68#seu24#su80#acond36"/>
+        <LinkParameter id="sv3#area31#page68#gtu27#ln201#par734" name="UserCtxParam.oid_user_PASSING" source="sv3#area31#page68#gtu27.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv3#area31#page68#gtu27#ln202" name="Flow181" to="sv3#area31#page68#pwu9" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#gtu27#ln202#par735" name="UserCtxParam.oid_user_AttCondition29" source="sv3#area31#page68#gtu27.UserCtxParam" target="sv3#area31#page68#pwu9#su81#acond39"/>
+      </Link>
+      <Link id="sv3#area31#page68#gtu27#ln203" name="Flow186" to="sv3#area31#page68#seu26" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#gtu27#ln203#par736" name="UserCtxParam.oid_user_AttCondition30" source="sv3#area31#page68#gtu27.UserCtxParam" target="sv3#area31#page68#seu26#su82#acond40"/>
+      </Link>
+      <Link id="sv3#area31#page68#gtu27#ln208" name="Flow208" to="sv3#miu57" type="transport" validate="true" gr:bendpoints="337,96,-458,191">
+        <LinkParameter id="sv3#area31#page68#gtu27#ln208#par744" name="UserCtxParam.oid_user_oiduser" source="sv3#area31#page68#gtu27.UserCtxParam" target="sv3#miu57.mov1#hym38#icu39#icp145"/>
+      </Link>
+      <Link id="sv3#area31#page68#gtu27#ln113" name="Flow113" to="sv3#area31#page68#seu13" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#gtu27#ln113#par541" name="UserCtxParam.oid_user_AttCondition50" source="sv3#area31#page68#gtu27.UserCtxParam" target="sv3#area31#page68#seu13#su48#acond10"/>
+        <LinkParameter id="sv3#area31#page68#gtu27#ln113#par594" name="UserCtxParam.oid_user_PASSING" source="sv3#area31#page68#gtu27.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv3#area31#page68#seu25" name="Ora (selector)" gr:x="530" gr:y="30" entity="ent2" distinctAttributes="ent2#att43">
+      <SortAttribute attribute="ent2#att33" order="ascending"/>
+      <Link id="sv3#area31#page68#seu25#ln204" name="Flow148" to="sv3#area31#page68#enu52" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#seu25#ln204#par737" name="ora_Ora prenotazione [label]" source="ent2#att43Array" target="sv3#area31#page68#enu52#sfld13_label"/>
+        <LinkParameter id="sv3#area31#page68#seu25#ln204#par739" name="ora_Ora prenotazione [output]" source="ent2#att43Array" target="sv3#area31#page68#enu52#sfld13_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv3#area31#page68#pwu9" name="Prenotazioni in attesa di conferma" gr:x="720" gr:y="465" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att69 ent6#att70 ent6#att74 ent6#att71 ent6#att72 ent6#att73" linkOrder="sv3#area31#page68#pwu9#ln151">
+      <Selector id="sv3#area31#page68#pwu9#su81" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area31#page68#pwu9#su81#acond38" name="AttCondition28" predicate="eq" booleanOperator="or" implied="false" attributes="ent6#att73" value="In attesa"/>
+        <AttributesCondition id="sv3#area31#page68#pwu9#su81#acond39" name="AttCondition29" predicate="eq" booleanOperator="or" implied="false" attributes="rel13#role26.userOID"/>
+      </Selector>
+      <SortAttribute attribute="ent6#att69" order="ascending"/>
+      <Link id="sv3#area31#page68#pwu9#ln151" name="Elimina" to="sv3#miu58" type="normal" validate="true">
+        <LinkParameter id="sv3#area31#page68#pwu9#ln151#par704" name="coupon_coupon" source="data[].ent6#att72" target="sv3#miu58.mov1#hym39#icu40#icp162"/>
+        <LinkParameter id="sv3#area31#page68#pwu9#ln151#par709" name="oid_oidPrenotazione" source="data[].ent6#att68" target="sv3#miu58.mov1#hym39#icu40#icp157"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit id="sv3#area31#page68#seu26" name="Prenota (selector)" gr:x="85" gr:y="145" entity="ent6">
+      <Selector id="sv3#area31#page68#seu26#su82" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area31#page68#seu26#su82#acond40" name="AttCondition30" predicate="eq" booleanOperator="and" implied="false" attributes="rel13#role26.userOID"/>
+        <AttributesCondition id="sv3#area31#page68#seu26#su82#acond41" name="AttCondition31" predicate="eq" booleanOperator="and" implied="false" attributes="ent6#att73" value="Confermata"/>
+      </Selector>
+      <Link id="sv3#area31#page68#seu26#ln205" name="Flow194" to="sv3#area31#page68#ecu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#seu26#ln205#par740" name="oid_KeyCondition41 [oid]" source="ent6#att68Array" target="sv3#area31#page68#ecu10#su83#kcond54.ent6#att68"/>
+      </Link>
+    </SelectorUnit>
+    <EventCalendarUnit id="sv3#area31#page68#ecu10" name="Calendario prenotazioni confermate" gr:x="40" gr:y="0" entityBased="true" entity="ent6" years="3" displayAttributes="ent6#att70" dateAttribute="ent6#att69" linkOrder="sv3#area31#page68#ecu10#ln154">
+      <Selector id="sv3#area31#page68#ecu10#su83" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area31#page68#ecu10#su83#kcond54" name="KeyCondition41" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area31#page68#ecu10#ln154" name="Flow154" to="sv3#miu59" type="normal" validate="true" gr:bendpoints="-743,81,-98,91" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowAutoResizing="true">
+        <LinkParameter id="sv3#area31#page68#ecu10#ln154#par749" name="coupon_coupon" source="date[].data[].ent6#att72" target="sv3#miu59.mov1#hym40#icu42#icp175"/>
+        <LinkParameter id="sv3#area31#page68#ecu10#ln154#par751" name="dataprenotazione_dataprenotazione" source="date[].data[].ent6#att69" target="sv3#miu59.mov1#hym40#icu42#icp164"/>
+        <LinkParameter id="sv3#area31#page68#ecu10#ln154#par752" name="numeropersone_numeropersone" source="date[].data[].ent6#att74" target="sv3#miu59.mov1#hym40#icu42#icp173"/>
+        <LinkParameter id="sv3#area31#page68#ecu10#ln154#par753" name="oid_oid" source="date[].data[].ent6#att68" target="sv3#miu59.mov1#hym40#icu42#icp163"/>
+        <LinkParameter id="sv3#area31#page68#ecu10#ln154#par754" name="oraprenotazione_oraprenotazione" source="date[].data[].ent6#att70" target="sv3#miu59.mov1#hym40#icu42#icp172"/>
+        <LinkParameter id="sv3#area31#page68#ecu10#ln154#par755" name="tipomenu_tipomenu" source="date[].data[].ent6#att71" target="sv3#miu59.mov1#hym40#icu42#icp174"/>
+      </Link>
+    </EventCalendarUnit>
+    <QueryUnit id="sv3#area31#page68#qu24" name="Menu a la carte" gr:x="0" gr:y="490" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">select menucarta.nome, menucarta.tipologia, menucarta.prezzo from menucarta order by case 
+when menucarta.tipologia = 'Primo' then 1
+when menucarta.tipologia = 'Secondo' then 2
+when menucarta.tipologia = 'Dolce' then 3
+else 4
+end</QueryText>
+      <QueryOutput id="sv3#area31#page68#qu24#qo96" name="nome" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu24#qo97" name="tipologia" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu24#qo98" name="prezzo" type="integer"/>
+    </QueryUnit>
+    <MultiMessageUnit id="sv3#area31#page68#mssu37" name="Informazioni coupon" gr:x="5" gr:y="580">
+      <Message xml:space="preserve">Per usufruire degli sconti tramite raccolta punti, da utilizzare nel nostro ristorante, recarsi nella sezione portafoglio dedicata!</Message>
+    </MultiMessageUnit>
+    <QueryUnit id="sv3#area31#page68#qu25" name="Visualizza sconti" gr:x="5" gr:y="310" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">select sconto.nome,sconto.datainizio,sconto.datafine,sconto.percentuale,sconto.descrizione from sconto</QueryText>
+      <QueryOutput id="sv3#area31#page68#qu25#qo99" name="nome" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu25#qo100" name="datainizio" type="date"/>
+      <QueryOutput id="sv3#area31#page68#qu25#qo101" name="datafine" type="date"/>
+      <QueryOutput id="sv3#area31#page68#qu25#qo102" name="percentuale" type="integer"/>
+      <QueryOutput id="sv3#area31#page68#qu25#qo103" name="descrizione" type="text"/>
+    </QueryUnit>
+    <QueryUnit id="sv3#area31#page68#qu26" name="Menu fisso" gr:x="10" gr:y="395" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">select menufisso.nome, menufisso.antipasto, menufisso.primo, menufisso.secondo, menufisso.contorno, menufisso.dessert, menufisso.bevanda, menufisso.costo from menufisso</QueryText>
+      <QueryOutput id="sv3#area31#page68#qu26#qo104" name="nome" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo105" name="antipasto" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo106" name="primo" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo107" name="secondo" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo108" name="contorno" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo109" name="dessert" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo110" name="bevanda" type="string"/>
+      <QueryOutput id="sv3#area31#page68#qu26#qo111" name="costo" type="integer"/>
+    </QueryUnit>
+    <SelectorUnit id="sv3#area31#page68#seu13" name="Selector27" gr:x="765" gr:y="105" entity="ent6">
+      <Selector id="sv3#area31#page68#seu13#su48" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area31#page68#seu13#su48#acond10" name="AttCondition50" predicate="eq" booleanOperator="and" implied="false" attributes="rel13#role26.userOID"/>
+      </Selector>
+      <Link id="sv3#area31#page68#seu13#ln116" name="Flow116" to="sv3#opg1#scu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area31#page68#seu13#ln116#par338" name="dataprenotazione_datePrenotazioni" source="ent6#att69Array" target="sv3#opg1#scu1.datePrenotazioni"/>
+        <LinkParameter id="sv3#area31#page68#seu13#ln116#par341" name="oraprenotazione_oraPrenotazioni" source="ent6#att70Array" target="sv3#opg1#scu1.oraPrenotazioni"/>
+        <LinkParameter id="sv3#area31#page68#seu13#ln116#par618" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv3#area31#page68#gtu27#ln113#par594" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area31#page68#enu52">
+          <layout:Field field="sv3#area31#page68#enu52#fld153"/>
+          <layout:Field field="sv3#area31#page68#enu52#sfld13"/>
+          <layout:Field field="sv3#area31#page68#enu52#fld152"/>
+          <layout:Field field="sv3#area31#page68#enu52#sfld15"/>
+          <layout:Field field="sv3#area31#page68#enu52#sfld14"/>
+          <layout:Link link="sv3#area31#page68#enu52#ln21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area31#page68#pwu9">
+          <layout:Attribute attribute="ent6#att69"/>
+          <layout:Attribute attribute="ent6#att70"/>
+          <layout:Attribute attribute="ent6#att74"/>
+          <layout:Attribute attribute="ent6#att71"/>
+          <layout:Attribute attribute="ent6#att72"/>
+          <layout:Attribute attribute="ent6#att73"/>
+          <layout:Link link="sv3#area31#page68#pwu9#ln151"/>
+          <layout:Link link="sv3#area31#page68#pwu9ent6#att69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area31#page68#ecu10">
+          <layout:Link link="sv3#area31#page68#ecu10#ln154"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-0"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-1"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-2"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-3"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-4"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-5"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-6"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-7"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-8"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-9"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-10"/>
+          <layout:Link link="sv3#area31#page68#ecu10-month-11"/>
+          <layout:Link link="sv3#area31#page68#ecu10-year"/>
+          <layout:Attribute attribute="ent6#att70"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Unit unitId="sv3#area31#page68#qu24"/>
+              <layout:Unit unitId="sv3#area31#page68#mssu37"/>
+              <layout:Unit unitId="sv3#area31#page68#qu25"/>
+              <layout:Unit unitId="sv3#area31#page68#qu26"/>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

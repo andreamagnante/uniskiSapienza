@@ -1,0 +1,31 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1695" gr:y="310" id="mov3#hym50" name="Annulla lezione ">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym50#icu52" gr:x="195" gr:y="225">
+      <OKLink id="mov3#hym50#icu52#oln251" name="OKFlow184" to="mov3#hym50#opg19#scu21">
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1373" name="oiddata_PASSING" source="mov3#hym50#icu52#icp264" passing="true"/>
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1436" name="data_PASSING" source="mov3#hym50#icu52#icp263" passing="true"/>
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1437" name="istruttoreoid_PASSING" source="mov3#hym50#icu52#icp265" passing="true"/>
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1438" name="ora_PASSING" source="mov3#hym50#icu52#icp262" passing="true"/>
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1439" name="utente_PASSING" source="mov3#hym50#icu52#icp261" passing="true"/>
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1440" name="utenteoid_PASSING" source="mov3#hym50#icu52#icp266" passing="true"/>
+        <LinkParameter id="mov3#hym50#icu52#oln251#par1447" name="tipo_tipo" source="mov3#hym50#icu52#icp267" target="mov3#hym50#opg19#scu21.tipo"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp261" name="utente"/>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp262" name="ora"/>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp263" name="data"/>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp264" name="oiddata"/>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp265" name="istruttoreoid"/>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp266" name="utenteoid"/>
+      <InputCollectorParameter id="mov3#hym50#icu52#icp267" name="tipo"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym50#kocu52" name="KO Port47" gr:x="1065" gr:y="290"/>
+    <OKCollectorUnit id="mov3#hym50#okcu52" name="OK Port45" gr:x="1065" gr:y="120"/>
+    <ModifyUnit gr:x="800" gr:y="315" id="mov3#hym50#mfu20" name="Update20" entity="ent11">
+      <Selector id="mov3#hym50#mfu20#su116" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym50#mfu20#su116#kcond64" name="KeyCondition64" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym50#mfu20#oln258" name="OKFlow258" to="mov3#hym50#okcu52" automaticCoupling="true"/>
+      <KOLink id="mov3#hym50#mfu20#kln161" name="KOFlow161" to="mov3#hym50#kocu52" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

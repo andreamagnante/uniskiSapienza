@@ -1,0 +1,34 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="45" gr:y="260" id="mov1#hym4" name="Modifica Pagamento">
+  <OperationUnits>
+    <KOCollectorUnit id="mov1#hym4#kocu6" name="KO Port20" gr:x="565" gr:y="250"/>
+    <ModifyUnit id="mov1#hym4#mfu2" name="Update5" gr:x="345" gr:y="270" entity="ent7">
+      <Selector id="mov1#hym4#mfu2#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym4#mfu2#su3#kcond3" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym4#mfu2#oln15" name="OKFlow70" to="mov1#hym4#okcu6"/>
+      <KOLink id="mov1#hym4#mfu2#kln12" name="KOFlow27" to="mov1#hym4#kocu6"/>
+    </ModifyUnit>
+    <InputCollectorUnit id="mov1#hym4#icu7" gr:x="5" gr:y="195">
+      <InputCollectorParameter id="mov1#hym4#icu7#icp24" name="Key Condition [oid]"/>
+      <OKLink id="mov1#hym4#icu7#oln16" name="OKFlow24" to="mov1#hym4#page8#enu5">
+        <LinkParameter id="mov1#hym4#icu7#oln16#par111" name="Key Condition [oid]_Key Condition [oid]" source="mov1#hym4#icu7#icp24" target="mov1#hym4#page8#enu5.userOID"/>
+        <LinkParameter id="mov1#hym4#icu7#oln16#par125" name="annoscadenza_Anno scadenza" source="mov1#hym4#icu7#icp60" target="mov1#hym4#page8#enu5#fld27_slot"/>
+        <LinkParameter id="mov1#hym4#icu7#oln16#par126" name="cvv_Cvv" source="mov1#hym4#icu7#icp61" target="mov1#hym4#page8#enu5#fld28_slot"/>
+        <LinkParameter id="mov1#hym4#icu7#oln16#par130" name="mesescadenza_Mese scadenza" source="mov1#hym4#icu7#icp59" target="mov1#hym4#page8#enu5#fld26_slot"/>
+        <LinkParameter id="mov1#hym4#icu7#oln16#par144" name="numerocarta_Numero carta" source="mov1#hym4#icu7#icp58" target="mov1#hym4#page8#enu5#fld25_slot"/>
+      </OKLink>
+      <Link id="mov1#hym4#icu7#ln110" name="Flow110" to="mov1#hym4#kocu6" type="transport" validate="true">
+        <LinkParameter id="mov1#hym4#icu7#ln110#par330" name="dataattivazione_datattivazione" source="mov1#hym4#icu7#icp27" target="mov1#hym4#kocu6#ocp21"/>
+        <LinkParameter id="mov1#hym4#icu7#ln110#par331" name="oraattivazione_oraattivazione" source="mov1#hym4#icu7#icp32" target="mov1#hym4#kocu6#ocp22"/>
+        <LinkParameter id="mov1#hym4#icu7#ln110#par332" name="prezzo_prezzo" source="mov1#hym4#icu7#icp34" target="mov1#hym4#kocu6#ocp23"/>
+        <LinkParameter id="mov1#hym4#icu7#ln110#par333" name="tipologiaskipass_tipologiaskipass" source="mov1#hym4#icu7#icp33" target="mov1#hym4#kocu6#ocp24"/>
+        <LinkParameter id="mov1#hym4#icu7#ln110#par300" name="punti_punti" source="mov1#hym4#icu7#icp36" target="mov1#hym4#kocu6#ocp25"/>
+      </Link>
+      <InputCollectorParameter id="mov1#hym4#icu7#icp61" name="cvv"/>
+      <InputCollectorParameter id="mov1#hym4#icu7#icp60" name="annoscadenza"/>
+      <InputCollectorParameter id="mov1#hym4#icu7#icp59" name="mesescadenza"/>
+      <InputCollectorParameter id="mov1#hym4#icu7#icp58" name="numerocarta"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#hym4#okcu6" name="OK Port22" gr:x="565" gr:y="110"/>
+  </OperationUnits>
+</HybridModule>

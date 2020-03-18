@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym50#page84" name="Dettagli lezione" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="515" gr:y="135">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym50#page84#enu54" name="Dettagli" gr:x="0" gr:y="0" fieldOrder="mov3#hym50#page84#enu54#fld172 mov3#hym50#page84#enu54#fld171 mov3#hym50#page84#enu54#fld170" linkOrder="mov3#hym50#page84#enu54#ln248">
+      <Field id="mov3#hym50#page84#enu54#fld170" name="Utente" type="string" preloaded="true"/>
+      <Field id="mov3#hym50#page84#enu54#fld171" name="Ora prenotazione" type="time" preloaded="true"/>
+      <Field id="mov3#hym50#page84#enu54#fld172" name="Data prenotazione" type="date" preloaded="true"/>
+      <Link id="mov3#hym50#page84#enu54#ln248" name="Disdici" to="mov3#hym50#mfu20" type="normal" validate="true">
+        <LinkParameter id="mov3#hym50#page84#enu54#ln248#par1435" name="Annullata_tipo" sourceValue="Annullata" target="mov3#hym50#mfu20.ent11#att32"/>
+        <LinkParameter id="mov3#hym50#page84#enu54#ln248#par1445" name="oiddata_PASSING_KeyCondition64 [id]" sourceLinkParameter="mov3#hym50#opg19#scu21#oln259#par1444" target="mov3#hym50#mfu20#su116#kcond64.ent11#att21"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym50#page84#enu54">
+          <layout:Field field="mov3#hym50#page84#enu54#fld172"/>
+          <layout:Field field="mov3#hym50#page84#enu54#fld171"/>
+          <layout:Field field="mov3#hym50#page84#enu54#fld170"/>
+          <layout:Link link="mov3#hym50#page84#enu54#ln248"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

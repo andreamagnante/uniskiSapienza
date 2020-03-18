@@ -1,0 +1,24 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym36" name="elimina indisponbilita" gr:x="1670" gr:y="215">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym36#icu38" gr:x="265" gr:y="200">
+      <InputCollectorParameter id="mov3#hym36#icu38#icp123" name="idIstruttore"/>
+      <InputCollectorParameter id="mov3#hym36#icu38#icp124" name="idIndisponibilita"/>
+      <InputCollectorParameter id="mov3#hym36#icu38#icp125" name="datafine"/>
+      <InputCollectorParameter id="mov3#hym36#icu38#icp126" name="datainizio"/>
+      <OKLink id="mov3#hym36#icu38#oln142" name="OKFlow140" to="mov3#hym36#page65#enu49">
+        <LinkParameter id="mov3#hym36#icu38#oln142#par636" name="datafine_Data fine" source="mov3#hym36#icu38#icp125" target="mov3#hym36#page65#enu49#fld106_slot"/>
+        <LinkParameter id="mov3#hym36#icu38#oln142#par637" name="datainizio_Data inizio" source="mov3#hym36#icu38#icp126" target="mov3#hym36#page65#enu49#fld107_slot"/>
+        <LinkParameter id="mov3#hym36#icu38#oln142#par643" name="idIndisponibilita_PASSING" source="mov3#hym36#icu38#icp124" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov3#hym36#okcu38" name="OK Port37" gr:x="980" gr:y="90"/>
+    <KOCollectorUnit id="mov3#hym36#kocu38" name="KO Port37" gr:x="980" gr:y="280"/>
+    <DeleteUnit gr:x="690" gr:y="285" id="mov3#hym36#dlu9" name="Delete9" entity="ent33">
+      <Selector id="mov3#hym36#dlu9#su66" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym36#dlu9#su66#kcond46" name="KeyCondition46" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym36#dlu9#oln144" name="OKFlow144" to="mov3#hym36#okcu38" automaticCoupling="true"/>
+      <KOLink id="mov3#hym36#dlu9#kln97" name="KOFlow97" to="mov3#hym36#kocu38" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

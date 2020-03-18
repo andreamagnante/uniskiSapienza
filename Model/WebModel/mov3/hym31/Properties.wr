@@ -1,0 +1,27 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym31" name="modifica stipendio istruttore" gr:x="815" gr:y="800">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym31#icu33" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym31#icu33#oln126" name="OKFlow30" to="mov3#hym31#page56#enu41">
+        <LinkParameter id="mov3#hym31#icu33#oln126#par551" name="cognome_Cognome" source="mov3#hym31#icu33#icp197" target="mov3#hym31#page56#enu41#fld119_slot"/>
+        <LinkParameter id="mov3#hym31#icu33#oln126#par552" name="nome_Nome" source="mov3#hym31#icu33#icp196" target="mov3#hym31#page56#enu41#fld118_slot"/>
+        <LinkParameter id="mov3#hym31#icu33#oln126#par553" name="stipendio_Stipendio" source="mov3#hym31#icu33#icp193" target="mov3#hym31#page56#enu41#fld116_slot"/>
+        <LinkParameter id="mov3#hym31#icu33#oln126#par554" name="username_Username" source="mov3#hym31#icu33#icp195" target="mov3#hym31#page56#enu41#fld120_slot"/>
+        <LinkParameter id="mov3#hym31#icu33#oln126#par555" name="oid_user_PASSING" source="mov3#hym31#icu33#icp194" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym31#icu33#icp193" name="stipendio"/>
+      <InputCollectorParameter id="mov3#hym31#icu33#icp194" name="oid_user"/>
+      <InputCollectorParameter id="mov3#hym31#icu33#icp197" name="cognome"/>
+      <InputCollectorParameter id="mov3#hym31#icu33#icp196" name="nome"/>
+      <InputCollectorParameter id="mov3#hym31#icu33#icp195" name="username"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym31#kocu33" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym31#okcu33" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit id="mov3#hym31#mfu15" name="Update7" gr:x="495" gr:y="310" entity="ent38">
+      <Selector id="mov3#hym31#mfu15#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym31#mfu15#su46#kcond39" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym31#mfu15#oln127" name="OKFlow76" to="mov3#hym31#okcu33" automaticCoupling="true"/>
+      <KOLink id="mov3#hym31#mfu15#kln87" name="KOFlow53" to="mov3#hym31#kocu33" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,63 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1300" gr:y="765" id="sv7#opg8" name="Operation Group 8" transaction="true">
+  <OperationUnits>
+    <ScriptUnit id="sv7#opg8#scu9" name="Script7" gr:x="10" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input Date[] dateInizio, Date[] dateFine, Date dateIndInizio, Date dateIndFine
+#output String message
+
+
+if(dateInizio!= null)
+{
+    def int i = 0;
+    for(i=0;i&lt;dateInizio.size();i++){
+        if((dateIndInizio.before(dateFine[i]) &amp;&amp; dateIndInizio.after(dateInizio[i])) || (dateIndFine.before(dateFine[i]) &amp;&amp; dateIndFine.after(dateInizio[i])) || dateIndInizio.equals(dateInizio[i]) || dateIndFine.equals(dateInizio[i]) || dateIndInizio.equals(dateFine[i]) || dateIndFine.equals(dateFine[i]) || (dateIndInizio.before(dateInizio[i]) &amp;&amp; dateIndFine.after(dateFine[i]))){
+             return ["resultCode":"error","message":"Attenzione!"]
+        } 
+    }    
+}
+return ["resultCode":"success","message":"Effettuato con successo!"] 
+        </ScriptUnitText>
+      <KOLink id="sv7#opg8#scu9#kln101" name="KOFlow101" to="sv7#page72" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="150" ajaxWindowClosable="true" ajaxWindowAutoResizing="false" ajaxWindowModal="false"/>
+      <OKLink id="sv7#opg8#scu9#oln162" name="OKFlow162" to="sv7#opg8#seu53">
+        <LinkParameter id="sv7#opg8#scu9#oln162#par1505" name="data fine_PASSING" sourceLinkParameter="sv7#area26#page61#enu47#ln161#par701" passing="true"/>
+        <LinkParameter id="sv7#opg8#scu9#oln162#par1506" name="data inizio_PASSING" sourceLinkParameter="sv7#area26#page61#enu47#ln161#par702" passing="true"/>
+        <LinkParameter id="sv7#opg8#scu9#oln162#par1507" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv7#area26#page61#enu47#ln161#par703" passing="true"/>
+        <LinkParameter id="sv7#opg8#scu9#oln162#par1517" name="data inizio_PASSING_AttCondition75" sourceLinkParameter="sv7#area26#page61#enu47#ln161#par702" target="sv7#opg8#seu53#su125#acond75"/>
+        <LinkParameter id="sv7#opg8#scu9#oln162#par1518" name="data fine_PASSING_AttCondition76" sourceLinkParameter="sv7#area26#page61#enu47#ln161#par701" target="sv7#opg8#seu53#su125#acond76"/>
+        <LinkParameter id="sv7#opg8#scu9#oln162#par1519" name="UserCtxParam.oid_user_PASSING_AttCondition77" sourceLinkParameter="sv7#area26#page61#enu47#ln161#par703" target="sv7#opg8#seu53#su125#acond77"/>
+      </OKLink>
+    </ScriptUnit>
+    <ScriptUnit gr:x="290" gr:y="120" id="sv7#opg8#scu24" name="Script24">
+      <OKLink id="sv7#opg8#scu24#oln269" name="OKFlow269" to="sv7#miu51">
+        <LinkParameter id="sv7#opg8#scu24#oln269#par1514" name="data fine_PASSING_datafine" sourceLinkParameter="sv7#opg8#seu53#oln270#par1511" target="sv7#miu51.mov3#hym33#icu35#icp36"/>
+        <LinkParameter id="sv7#opg8#scu24#oln269#par1515" name="data inizio_PASSING_datainizio" sourceLinkParameter="sv7#opg8#seu53#oln270#par1512" target="sv7#miu51.mov3#hym33#icu35#icp99"/>
+        <LinkParameter id="sv7#opg8#scu24#oln269#par1516" name="UserCtxParam.oid_user_PASSING_Istruttore_key" sourceLinkParameter="sv7#opg8#seu53#oln270#par1513" target="sv7#miu51.mov3#hym33#icu35#icp27"/>
+      </OKLink>
+      <KOLink id="sv7#opg8#scu24#kln167" name="KOFlow167" to="sv7#page93#mssu47" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="200" ajaxWindowClosable="true">
+        <LinkParameter id="sv7#opg8#scu24#kln167#par1521" name="message_Shown Messages" source="result(message)" target="sv7#page93#mssu47.shownMessages"/>
+      </KOLink>
+      <ScriptUnitText xml:space="preserve">#input int[] numerolezioni
+#output String message
+
+if(numerolezioni.size()!= 0)
+{
+       return ["resultCode":"error","message":"Non &#232; possibile inserire l'indisponibilita in quanto ci sono gia delle lezioni prenotate nel periodo richiesto!"]    
+}
+return ["resultCode":"success","message":"Effettuato con successo!"] 
+        </ScriptUnitText>
+    </ScriptUnit>
+    <SelectorUnit id="sv7#opg8#seu53" name="Selector52" gr:x="0" gr:y="105" entity="ent11">
+      <OKLink id="sv7#opg8#seu53#oln270" name="OKFlow270" to="sv7#opg8#scu24">
+        <LinkParameter id="sv7#opg8#seu53#oln270#par1511" name="data fine_PASSING" sourceLinkParameter="sv7#opg8#scu9#oln162#par1505" passing="true"/>
+        <LinkParameter id="sv7#opg8#seu53#oln270#par1512" name="data inizio_PASSING" sourceLinkParameter="sv7#opg8#scu9#oln162#par1506" passing="true"/>
+        <LinkParameter id="sv7#opg8#seu53#oln270#par1513" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv7#opg8#scu9#oln162#par1507" passing="true"/>
+        <LinkParameter id="sv7#opg8#seu53#oln270#par1520" name="id_numerolezioni" source="ent11#att21Array" target="sv7#opg8#scu24.numerolezioni"/>
+      </OKLink>
+      <Selector id="sv7#opg8#seu53#su125" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv7#opg8#seu53#su125#acond75" name="AttCondition75" predicate="gteq" booleanOperator="and" implied="false" attributes="ent11#att22"/>
+        <AttributesCondition id="sv7#opg8#seu53#su125#acond76" name="AttCondition76" predicate="lteq" booleanOperator="and" implied="false" attributes="ent11#att22"/>
+        <AttributesCondition id="sv7#opg8#seu53#su125#acond77" name="AttCondition77" predicate="eq" booleanOperator="and" implied="false" attributes="rel10#role19.userOID"/>
+        <AttributesCondition id="sv7#opg8#seu53#su125#acond78" name="AttCondition78" predicate="eq" booleanOperator="and" implied="false" attributes="ent11#att32" value="Lezione"/>
+      </Selector>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationGroup>

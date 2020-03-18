@@ -1,0 +1,131 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="450" gr:y="575" id="mov1#hym47" name="Prenota lezione data">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym47#icu49" gr:x="95" gr:y="295">
+      <InputCollectorParameter id="mov1#hym47#icu49#icp226" name="oraprenotazione"/>
+      <InputCollectorParameter id="mov1#hym47#icu49#icp227" name="dataprenotazione"/>
+      <InputCollectorParameter id="mov1#hym47#icu49#icp230" name="oidutente"/>
+      <OKLink id="mov1#hym47#icu49#oln189" name="OKFlow204" to="mov1#hym47#seu30">
+        <LinkParameter id="mov1#hym47#icu49#oln189#par936" name="dataprenotazione_PASSING" source="mov1#hym47#icu49#icp227" passing="true"/>
+        <LinkParameter id="mov1#hym47#icu49#oln189#par942" name="oidutente_PASSING" source="mov1#hym47#icu49#icp230" passing="true"/>
+        <LinkParameter id="mov1#hym47#icu49#oln189#par943" name="oraprenotazione_PASSING" source="mov1#hym47#icu49#icp226" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#hym47#kocu49" name="KO Port44" gr:x="1220" gr:y="435"/>
+    <CreateUnit id="mov1#hym47#cru17" name="Create16" gr:x="905" gr:y="360" entity="ent11">
+      <OKLink id="mov1#hym47#cru17#oln191" name="OKFlow190" to="mov1#hym47#okcu49" automaticCoupling="true"/>
+      <KOLink id="mov1#hym47#cru17#kln136" name="KOFlow131" to="mov1#hym47#kocu49" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit id="mov1#hym47#okcu49" name="OK Port42" gr:x="1220" gr:y="190"/>
+    <SelectorUnit gr:x="1140" gr:y="60" id="mov1#hym47#seu19" name="Selector19" entity="ent38">
+      <OKLink id="mov1#hym47#seu19#oln193" name="OKFlow193" to="mov1#hym47#page78#enu61" gr:bendpoints="-222,60,253,35">
+        <LinkParameter id="mov1#hym47#seu19#oln193#par984" name="oid_user_PASSING" source="userOIDArray" passing="true"/>
+      </OKLink>
+      <Selector id="mov1#hym47#seu19#su77" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym47#seu19#su77#acond31" name="AttCondition31" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+      </Selector>
+    </SelectorUnit>
+    <ScriptUnit gr:x="435" gr:y="415" id="mov1#hym47#scu10" name="Script10">
+      <KOLink id="mov1#hym47#scu10#kln138" name="KOFlow138" to="mov1#hym47#page79#mssu42" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="150" ajaxWindowClosable="true"/>
+      <OKLink id="mov1#hym47#scu10#oln194" name="OKFlow194" to="mov1#hym47#seu36">
+        <LinkParameter id="mov1#hym47#scu10#oln194#par976" name="oidutente_PASSING" sourceLinkParameter="mov1#hym47#seu32#oln198#par970" passing="true"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1206" name="dataprenotazione_PASSING" sourceLinkParameter="mov1#hym47#seu32#oln198#par969" passing="true"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1207" name="oraprenotazione_PASSING" sourceLinkParameter="mov1#hym47#seu32#oln198#par971" passing="true"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1208" name="usernameIstr_PASSING" source="result(usernameIstr)" passing="true"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1209" name="oidIstr_PASSING" source="result(oidIstr)" passing="true"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1224" name="dataprenotazione_PASSING_AttCondition20" sourceLinkParameter="mov1#hym47#seu32#oln198#par969" target="mov1#hym47#seu36#su103#acond56"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1225" name="oraprenotazione_PASSING_AttCondition32" sourceLinkParameter="mov1#hym47#seu32#oln198#par971" target="mov1#hym47#seu36#su103#acond57"/>
+        <LinkParameter id="mov1#hym47#scu10#oln194#par1235" name="numeroDisp_PASSING" source="result(numeroDisp)" passing="true"/>
+      </OKLink>
+      <ScriptUnitText xml:space="preserve">#input String[] usernameIstruttore, int[] oidIstruttore, int[] oidIstrInd
+#output String[] message, String[] usernameIstr, int[] oidIstr, int numeroDisp
+
+def int x = oidIstruttore.size() - oidIstrInd.size();
+if(oidIstrInd.size() != 0){
+ if(oidIstrInd.size() == oidIstruttore.size()){
+      return["resultCode":"error","message":"Tutti indisponibili"]
+ }
+ def int i = 0;
+ def int j = 0;
+ for(i=0;i&lt;oidIstrInd.size();i++){
+    for(j=0;j&lt;oidIstruttore.size();j++){
+       if(oidIstrInd[i] == oidIstruttore[j]){
+          usernameIstruttore[j] = null;
+          oidIstruttore[j] = null;
+       }
+    }
+ }
+}
+return["resultCode":"success","message":"Lezioni disponibili","usernameIstr":usernameIstruttore,"oidIstr":oidIstruttore,"numeroDisp":x]
+ </ScriptUnitText>
+    </ScriptUnit>
+    <SelectorUnit gr:x="365" gr:y="240" id="mov1#hym47#seu30" name="Selector30" entity="ent38">
+      <OKLink id="mov1#hym47#seu30#oln195" name="OKFlow195" to="mov1#hym47#seu32">
+        <LinkParameter id="mov1#hym47#seu30#oln195#par962" name="oid_user_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu30#oln195#par963" name="username_PASSING" source="userNameArray" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu30#oln195#par966" name="dataprenotazione_PASSING" sourceLinkParameter="mov1#hym47#icu49#oln189#par936" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu30#oln195#par967" name="oidutente_PASSING" sourceLinkParameter="mov1#hym47#icu49#oln189#par942" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu30#oln195#par968" name="oraprenotazione_PASSING" sourceLinkParameter="mov1#hym47#icu49#oln189#par943" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu30#oln195#par980" name="dataprenotazione_PASSING_AttCondition21" sourceLinkParameter="mov1#hym47#icu49#oln189#par936" target="mov1#hym47#seu32#su76#acond21"/>
+        <LinkParameter id="mov1#hym47#seu30#oln195#par981" name="dataprenotazione_PASSING_AttCondition26" sourceLinkParameter="mov1#hym47#icu49#oln189#par936" target="mov1#hym47#seu32#su76#acond26"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#hym47#seu32" name="Selector30" gr:x="425" gr:y="95" entity="ent33">
+      <OKLink id="mov1#hym47#seu32#oln198" name="OKFlow198" to="mov1#hym47#scu10">
+        <LinkParameter id="mov1#hym47#seu32#oln198#par964" name="oid_user_PASSING_oidIstruttore" sourceLinkParameter="mov1#hym47#seu30#oln195#par962" target="mov1#hym47#scu10.oidIstruttore"/>
+        <LinkParameter id="mov1#hym47#seu32#oln198#par965" name="username_PASSING_usernameIstruttore" sourceLinkParameter="mov1#hym47#seu30#oln195#par963" target="mov1#hym47#scu10.usernameIstruttore"/>
+        <LinkParameter id="mov1#hym47#seu32#oln198#par969" name="dataprenotazione_PASSING" sourceLinkParameter="mov1#hym47#seu30#oln195#par966" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu32#oln198#par970" name="oidutente_PASSING" sourceLinkParameter="mov1#hym47#seu30#oln195#par967" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu32#oln198#par971" name="oraprenotazione_PASSING" sourceLinkParameter="mov1#hym47#seu30#oln195#par968" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu32#oln198#par982" name="IndisponibileistrToIstruttore.oid_user_oidIstrInd" source="rel11#role21_userOIDArray" target="mov1#hym47#scu10.oidIstrInd"/>
+      </OKLink>
+      <Selector id="mov1#hym47#seu32#su76" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym47#seu32#su76#acond21" name="AttCondition21" predicate="lteq" booleanOperator="and" implied="false" attributes="ent33#att40"/>
+        <AttributesCondition id="mov1#hym47#seu32#su76#acond26" name="AttCondition26" predicate="gteq" booleanOperator="and" implied="false" attributes="ent33#att42"/>
+      </Selector>
+    </SelectorUnit>
+    <ScriptUnit id="mov1#hym47#scu18" name="Script12" gr:x="585" gr:y="330">
+      <ScriptUnitText xml:space="preserve">#input String[] usernIstruttore, int[] oidIstruttore, int[] oidIstrLezioni, int numeroDisponibili
+#output String[] message, String[] usernIstr
+
+if(oidIstrLezioni.size() != 0){
+      if(numeroDisponibili == oidIstrLezioni.size()){
+         return["resultCode":"error","message":"Tutti indisponibili"]
+      }
+      def int i = 0;
+      def int j = 0;
+      for(i=0;i&lt;oidIstrLezioni.size();i++){
+          for(j=0;j&lt;oidIstruttore.size();j++){
+              if(oidIstrLezioni[i] == oidIstruttore[j]){
+                 usernIstruttore[j] = null;
+              }
+          }
+      }
+}
+return["resultCode":"success","message":"Lezioni disponibili","usernIstr":usernIstruttore]
+ </ScriptUnitText>
+      <KOLink id="mov1#hym47#scu18#kln155" name="KOFlow116" to="mov1#hym47#page76#mssu6" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="200" ajaxWindowClosable="true"/>
+      <OKLink id="mov1#hym47#scu18#oln241" name="OKFlow241" to="mov1#hym47#page78#enu61">
+        <LinkParameter id="mov1#hym47#scu18#oln241#par1216" name="usernIstr_Istruttore username [label]" source="result(usernIstr)" target="mov1#hym47#page78#enu61#sfld23_label"/>
+        <LinkParameter id="mov1#hym47#scu18#oln241#par1217" name="usernIstr_Istruttore username [output]" source="result(usernIstr)" target="mov1#hym47#page78#enu61#sfld23_output"/>
+        <LinkParameter id="mov1#hym47#scu18#oln241#par1231" name="dataprenotazione_PASSING_Data lezione" sourceLinkParameter="mov1#hym47#seu36#oln240#par1229" target="mov1#hym47#page78#enu61#fld194_slot"/>
+        <LinkParameter id="mov1#hym47#scu18#oln241#par1232" name="oraprenotazione_PASSING_Ora lezione" sourceLinkParameter="mov1#hym47#seu36#oln240#par1230" target="mov1#hym47#page78#enu61#fld200_slot"/>
+        <LinkParameter id="mov1#hym47#scu18#oln241#par1238" name="oidutente_PASSING" sourceLinkParameter="mov1#hym47#seu36#oln240#par1237" passing="true"/>
+      </OKLink>
+    </ScriptUnit>
+    <SelectorUnit id="mov1#hym47#seu36" name="Selector18" gr:x="680" gr:y="540" entity="ent11">
+      <OKLink id="mov1#hym47#seu36#oln240" name="OKFlow179" to="mov1#hym47#scu18">
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1200" name="LezioneToIstruttore.oid_user_oidIstrLezioni" source="rel10#role19_userOIDArray" target="mov1#hym47#scu18.oidIstrLezioni"/>
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1227" name="oidIstr_PASSING_oidIstruttore" sourceLinkParameter="mov1#hym47#scu10#oln194#par1209" target="mov1#hym47#scu18.oidIstruttore"/>
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1228" name="usernameIstr_PASSING_usernIstruttore" sourceLinkParameter="mov1#hym47#scu10#oln194#par1208" target="mov1#hym47#scu18.usernIstruttore"/>
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1229" name="dataprenotazione_PASSING" sourceLinkParameter="mov1#hym47#scu10#oln194#par1206" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1230" name="oraprenotazione_PASSING" sourceLinkParameter="mov1#hym47#scu10#oln194#par1207" passing="true"/>
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1236" name="numeroDisp_PASSING_numeroDisponibili" sourceLinkParameter="mov1#hym47#scu10#oln194#par1235" target="mov1#hym47#scu18.numeroDisponibili"/>
+        <LinkParameter id="mov1#hym47#seu36#oln240#par1237" name="oidutente_PASSING" sourceLinkParameter="mov1#hym47#scu10#oln194#par976" passing="true"/>
+      </OKLink>
+      <Selector id="mov1#hym47#seu36#su103" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym47#seu36#su103#acond56" name="AttCondition20" predicate="eq" booleanOperator="and" implied="false" attributes="ent11#att22"/>
+        <AttributesCondition id="mov1#hym47#seu36#su103#acond57" name="AttCondition32" predicate="eq" booleanOperator="and" implied="false" attributes="ent11#att19"/>
+      </Selector>
+    </SelectorUnit>
+  </OperationUnits>
+</HybridModule>

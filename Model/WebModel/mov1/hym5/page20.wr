@@ -1,0 +1,69 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym5#page20" name=" " linkOrder="mov1#hym5#page20#ln34" gr:x="330" gr:y="30">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym5#page20#enu7" name="Iscrizione socio" linkOrder="mov1#hym5#page20#enu7#ln33" gr:x="0" gr:y="0" entity="ent7" fieldOrder="mov1#hym5#page20#enu7#fld31 mov1#hym5#page20#enu7#fld36">
+      <Field id="mov1#hym5#page20#enu7#fld29" name="Email" type="string" attribute="email" hidden="true" preloaded="true">
+        <VRules>
+          <EMailValidationRule id="mov1#hym5#page20#enu7#fld29#email4" name="EMail2"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym5#page20#enu7#ln33" name="Conferma" to="mov1#hym5#mfu4" type="normal" validate="true">
+        <LinkParameter id="mov1#hym5#page20#enu7#ln33#par136" name="Key [oid]_KeyCondition19 [oid]" source="key.userOID" target="mov1#hym5#mfu4#su9#kcond8.userOID"/>
+        <LinkParameter id="mov1#hym5#page20#enu7#ln33#par137" name="User Object_User Object" source="entityBean" target="mov1#hym5#mfu4.entityBeans"/>
+        <LinkParameter id="mov1#hym5#page20#enu7#ln33#par140" name="Socio_socio" source="mov1#hym5#page20#enu7#fld30" target="mov1#hym5#mfu4.ent7#att11"/>
+        <LinkParameter id="mov1#hym5#page20#enu7#ln33#par141" name="Group_Group.oid_group(defaultGroup)" source="mov1#hym5#page20#enu7#fld32" target="mov1#hym5#mfu4.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#hym5#page20#enu7#ln33#par150" name="data_PASSING" source="mov1#hym5#page20#enu7#fld36" passing="true"/>
+        <LinkParameter id="mov1#hym5#page20#enu7#ln33#par1414" name="Key Condition [oid]_PASSING" sourceLinkParameter="mov1#hym5#icu8#oln21#par1413" passing="true"/>
+      </Link>
+      <Field id="mov1#hym5#page20#enu7#fld30" name="Socio" type="string" slotOrder="mov1#hym5#page20#enu7#fld30#slot4" hidden="true" preloaded="true">
+        <VRules>
+          <ValueLengthValidationRule id="mov1#hym5#page20#enu7#fld30#vl9" name="Value Length1" predicate="max" value="10" errorMessage="Errore! numero di telefono troppo lungo"/>
+        </VRules>
+        <Slot id="mov1#hym5#page20#enu7#fld30#slot4" name="Socio" value="1" label="true" output="true"/>
+      </Field>
+      <Field id="mov1#hym5#page20#enu7#fld31" name="Costo Iscrizione" type="string" preloaded="true" slotOrder="mov1#hym5#page20#enu7#fld31#slot6">
+        <Slot id="mov1#hym5#page20#enu7#fld31#slot6" name="Costo" value="10 euro" label="true" output="true"/>
+      </Field>
+      <Field id="mov1#hym5#page20#enu7#fld32" name="Group" type="integer" preloaded="true" hidden="true" slotOrder="mov1#hym5#page20#enu7#fld32#slot7">
+        <Slot id="mov1#hym5#page20#enu7#fld32#slot7" name="Group" value="2" label="true" output="true"/>
+      </Field>
+      <Field id="mov1#hym5#page20#enu7#fld36" name="Data iscrizione" type="date" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym5#page20#enu7">
+          <layout:Link link="mov1#hym5#page20#enu7#ln33"/>
+          <layout:Field field="mov1#hym5#page20#enu7#fld31"/>
+          <layout:Field field="mov1#hym5#page20#enu7#fld36"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym5#page20#ln34" name="Annulla" to="mov1#hym5#kocu7" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

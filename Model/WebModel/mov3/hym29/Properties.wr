@@ -1,0 +1,25 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym29" name="Elimina utente" gr:x="835" gr:y="545">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym29#icu31" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym29#icu31#oln118" name="OKFlow30" to="mov3#hym29#page54#enu39">
+        <LinkParameter id="mov3#hym29#icu31#oln118#par470" name="username_Username" source="mov3#hym29#icu31#icp154" target="mov3#hym29#page54#enu39#fld104_slot"/>
+        <LinkParameter id="mov3#hym29#icu31#oln118#par471" name="oid_user_PASSING" source="mov3#hym29#icu31#icp155" passing="true"/>
+        <LinkParameter id="mov3#hym29#icu31#oln118#par1170" name="cognome_Cognome" source="mov3#hym29#icu31#icp183" target="mov3#hym29#page54#enu39#fld115_slot"/>
+        <LinkParameter id="mov3#hym29#icu31#oln118#par1171" name="nome_Nome" source="mov3#hym29#icu31#icp182" target="mov3#hym29#page54#enu39#fld114_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym29#icu31#icp154" name="username"/>
+      <InputCollectorParameter id="mov3#hym29#icu31#icp155" name="oid_user"/>
+      <InputCollectorParameter id="mov3#hym29#icu31#icp183" name="cognome"/>
+      <InputCollectorParameter id="mov3#hym29#icu31#icp182" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym29#kocu31" name="KO Port20" gr:x="800" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym29#okcu31" name="OK Port22" gr:x="800" gr:y="100"/>
+    <DeleteUnit id="mov3#hym29#dlu7" name="Delete1" gr:x="460" gr:y="310" entity="ent7">
+      <Selector id="mov3#hym29#dlu7#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym29#dlu7#su45#kcond38" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym29#dlu7#oln119" name="OKFlow31" to="mov3#hym29#okcu31" automaticCoupling="true"/>
+      <KOLink id="mov3#hym29#dlu7#kln81" name="KOFlow22" to="mov3#hym29#kocu31" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv7#page72" name="Attenzione" layout:pageLayout="WRDefault/Empty" gr:x="1740" gr:y="785" ajaxEnabled="true">
+  <ContentUnits>
+    <MultiMessageUnit id="sv7#page72#mssu4" name="Indisponibilita gia inserita!" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">La nuova indisponibilita non deve coincidere con i periodi gi&#224; inseriti!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv7#page72#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

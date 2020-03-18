@@ -1,0 +1,27 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1670" gr:y="135" id="mov3#hym35" name="modifica indisponbilita">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="265" gr:y="200" id="mov3#hym35#icu37">
+      <InputCollectorParameter id="mov3#hym35#icu37#icp106" name="idIstruttore"/>
+      <InputCollectorParameter id="mov3#hym35#icu37#icp102" name="idIndisponibilita"/>
+      <InputCollectorParameter id="mov3#hym35#icu37#icp101" name="datafine"/>
+      <InputCollectorParameter id="mov3#hym35#icu37#icp100" name="datainizio"/>
+      <OKLink id="mov3#hym35#icu37#oln140" name="OKFlow140" to="mov3#hym35#page64#enu48">
+        <LinkParameter id="mov3#hym35#icu37#oln140#par621" name="datafine_Data fine" source="mov3#hym35#icu37#icp101" target="mov3#hym35#page64#enu48#fld105_slot"/>
+        <LinkParameter id="mov3#hym35#icu37#oln140#par622" name="datainizio_Data inizio" source="mov3#hym35#icu37#icp100" target="mov3#hym35#page64#enu48#fld103_slot"/>
+        <LinkParameter id="mov3#hym35#icu37#oln140#par623" name="idIndisponibilita_PASSING" source="mov3#hym35#icu37#icp102" passing="true"/>
+        <LinkParameter id="mov3#hym35#icu37#oln140#par717" name="idIstruttore_PASSING" source="mov3#hym35#icu37#icp106" passing="true"/>
+        <LinkParameter id="mov3#hym35#icu37#oln140#par828" name="datafine_PASSING" source="mov3#hym35#icu37#icp101" passing="true"/>
+        <LinkParameter id="mov3#hym35#icu37#oln140#par831" name="datainizio_PASSING" source="mov3#hym35#icu37#icp100" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1290" gr:y="125" id="mov3#hym35#okcu37" name="OK Port37"/>
+    <KOCollectorUnit gr:x="1290" gr:y="280" id="mov3#hym35#kocu37" name="KO Port37"/>
+    <ModifyUnit gr:x="955" gr:y="355" id="mov3#hym35#mfu16" name="Update16" entity="ent33">
+      <Selector id="mov3#hym35#mfu16#su64" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym35#mfu16#su64#kcond43" name="KeyCondition43" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym35#mfu16#oln141" name="OKFlow141" to="mov3#hym35#okcu37" automaticCoupling="true"/>
+      <KOLink id="mov3#hym35#mfu16#kln95" name="KOFlow95" to="mov3#hym35#kocu37" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

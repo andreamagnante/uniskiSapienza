@@ -1,0 +1,82 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym4#page8" name=" " gr:x="265" gr:y="35">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym4#page8#enu5" name="Inserisci nuova modalita di pagamento" linkOrder="mov1#hym4#page8#enu5#ln17" gr:x="0" gr:y="0" entity="ent7" fieldOrder="mov1#hym4#page8#enu5#fld25 mov1#hym4#page8#enu5#fld26 mov1#hym4#page8#enu5#fld27 mov1#hym4#page8#enu5#fld28">
+      <Field id="mov1#hym4#page8#enu5#fld20" name="Email" type="string" attribute="email" hidden="true" preloaded="true">
+        <VRules>
+          <EMailValidationRule id="mov1#hym4#page8#enu5#fld20#email3" name="EMail2"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym4#page8#enu5#ln17" name="Conferma" to="mov1#hym4#mfu2" type="normal" validate="true">
+        <LinkParameter id="mov1#hym4#page8#enu5#ln17#par108" name="Key [oid]_KeyCondition19 [oid]" source="key.userOID" target="mov1#hym4#mfu2#su3#kcond3.userOID"/>
+        <LinkParameter id="mov1#hym4#page8#enu5#ln17#par109" name="User Object_User Object" source="entityBean" target="mov1#hym4#mfu2.entityBeans"/>
+        <LinkParameter id="mov1#hym4#page8#enu5#ln17#par117" name="Anno scadenza_annoscadenza" source="mov1#hym4#page8#enu5#fld27" target="mov1#hym4#mfu2.ent7#att29"/>
+        <LinkParameter id="mov1#hym4#page8#enu5#ln17#par118" name="Cvv_cvv" source="mov1#hym4#page8#enu5#fld28" target="mov1#hym4#mfu2.ent7#att31"/>
+        <LinkParameter id="mov1#hym4#page8#enu5#ln17#par119" name="Mese scadenza_mesescadenza" source="mov1#hym4#page8#enu5#fld26" target="mov1#hym4#mfu2.ent7#att30"/>
+        <LinkParameter id="mov1#hym4#page8#enu5#ln17#par120" name="Numero carta_numerocarta" source="mov1#hym4#page8#enu5#fld25" target="mov1#hym4#mfu2.ent7#att20"/>
+      </Link>
+      <Field id="mov1#hym4#page8#enu5#fld28" name="Cvv" type="integer" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym4#page8#enu5#fld28#mnd11" name="Mandatory11"/>
+          <ValueLengthValidationRule id="mov1#hym4#page8#enu5#fld28#vl7" name="Value Length7" predicate="eq" value="3"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#hym4#page8#enu5#fld27" name="Anno scadenza" type="integer" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym4#page8#enu5#fld27#mnd14" name="Mandatory14"/>
+          <ValueLengthValidationRule id="mov1#hym4#page8#enu5#fld27#vl6" name="Value Length6" predicate="eq" value="2"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#hym4#page8#enu5#fld26" name="Mese scadenza" type="integer" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym4#page8#enu5#fld26#mnd12" name="Mandatory12"/>
+          <ValueLengthValidationRule id="mov1#hym4#page8#enu5#fld26#vl8" name="Value Length8" predicate="eq" value="2"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#hym4#page8#enu5#fld25" name="Numero carta" type="string" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym4#page8#enu5#fld25#mnd13" name="Mandatory13"/>
+          <CreditCardValidationRule id="mov1#hym4#page8#enu5#fld25#crcn2" name="Credit Card2"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym4#page8#enu5">
+          <layout:Field field="mov1#hym4#page8#enu5#fld25"/>
+          <layout:Field field="mov1#hym4#page8#enu5#fld26"/>
+          <layout:Field field="mov1#hym4#page8#enu5#fld27"/>
+          <layout:Field field="mov1#hym4#page8#enu5#fld28"/>
+          <layout:Link link="mov1#hym4#page8#enu5#ln17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym4#page8#ln109" name="Annulla" to="mov1#hym4#kocu6" type="normal" validate="true"/>
+</Page>

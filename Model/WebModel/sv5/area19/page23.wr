@@ -1,0 +1,76 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area19#page23" name="FAQ">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv5#area19#page23#inu3" name="Lista FAQ" entity="ent31" displayAttributes="ent31#att38 ent31#att39" linkOrder="sv5#area19#page23#inu3#ln38 sv5#area19#page23#inu3#ln53">
+      <Link id="sv5#area19#page23#inu3#ln38" name="Elimina" to="sv5#miu41" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#page23#inu3#ln38#par323" name="domanda_domanda" source="data[].ent31#att38" target="sv5#miu41.mov3#hym23#icu25#icp75"/>
+        <LinkParameter id="sv5#area19#page23#inu3#ln38#par324" name="id_id" source="data[].ent31#att37" target="sv5#miu41.mov3#hym23#icu25#icp86"/>
+        <LinkParameter id="sv5#area19#page23#inu3#ln38#par325" name="risposta_risposta" source="data[].ent31#att39" target="sv5#miu41.mov3#hym23#icu25#icp85"/>
+      </Link>
+      <Link id="sv5#area19#page23#inu3#ln53" name="Modifica" to="sv5#miu42" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#page23#inu3#ln53#par362" name="domanda_domanda" source="data[].ent31#att38" target="sv5#miu42.mov3#hym24#icu26#icp104"/>
+        <LinkParameter id="sv5#area19#page23#inu3#ln53#par363" name="id_id" source="data[].ent31#att37" target="sv5#miu42.mov3#hym24#icu26#icp103"/>
+        <LinkParameter id="sv5#area19#page23#inu3#ln53#par364" name="risposta_risposta" source="data[].ent31#att39" target="sv5#miu42.mov3#hym24#icu26#icp105"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit gr:x="175" gr:y="5" id="sv5#area19#page23#enu29" name="Inserisci nuova FAQ" entity="ent31" fieldOrder="sv5#area19#page23#enu29#fld91 sv5#area19#page23#enu29#fld92" linkOrder="sv5#area19#page23#enu29#ln54">
+      <Field id="sv5#area19#page23#enu29#fld92" name="Risposta" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area19#page23#enu29#fld92#mnd51" name="Mandatory51"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area19#page23#enu29#fld91" name="Domanda" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area19#page23#enu29#fld91#mnd41" name="Mandatory41"/>
+        </VRules>
+      </Field>
+      <Link id="sv5#area19#page23#enu29#ln54" name="Conferma" to="sv5#miu43" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#page23#enu29#ln54#par380" name="Domanda_domanda" source="sv5#area19#page23#enu29#fld91" target="sv5#miu43.mov3#hym25#icu27#icp117"/>
+        <LinkParameter id="sv5#area19#page23#enu29#ln54#par381" name="Key [id]_id" source="key.ent31#att37" target="sv5#miu43.mov3#hym25#icu27#icp116"/>
+        <LinkParameter id="sv5#area19#page23#enu29#ln54#par386" name="Risposta_risposta" source="sv5#area19#page23#enu29#fld92" target="sv5#miu43.mov3#hym25#icu27#icp118"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#page23#inu3">
+          <layout:Attribute attribute="ent31#att38"/>
+          <layout:Attribute attribute="ent31#att39"/>
+          <layout:Link link="sv5#area19#page23#inu3#ln38"/>
+          <layout:Link link="sv5#area19#page23#inu3#ln53"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#page23#enu29">
+          <layout:Field field="sv5#area19#page23#enu29#fld91"/>
+          <layout:Field field="sv5#area19#page23#enu29#fld92"/>
+          <layout:Link link="sv5#area19#page23#enu29#ln54"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

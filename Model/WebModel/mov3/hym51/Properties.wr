@@ -1,0 +1,30 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym51" name="modifica disponibilita impiantoD" gr:x="370" gr:y="395">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym51#icu2" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym51#icu2#icp2" name="Key Condition [oid]"/>
+      <InputCollectorParameter id="mov3#hym51#icu2#icp3" name="disponibilita"/>
+      <InputCollectorParameter id="mov3#hym51#icu2#icp5" name="tipologia"/>
+      <InputCollectorParameter id="mov3#hym51#icu2#icp6" name="nome"/>
+      <OKLink id="mov3#hym51#icu2#oln180" name="OKFlow30" to="mov3#hym51#page83#enu62">
+        <LinkParameter id="mov3#hym51#icu2#oln180#par47" name="disponibilita_PASSING" source="mov3#hym51#icu2#icp3" passing="true"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par48" name="nome_PASSING" source="mov3#hym51#icu2#icp6" passing="true"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par49" name="tipologia_PASSING" source="mov3#hym51#icu2#icp5" passing="true"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par50" name="nome_Nome" source="mov3#hym51#icu2#icp6" target="mov3#hym51#page83#enu62#fld187_slot"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par64" name="tipologia_Tipologia" source="mov3#hym51#icu2#icp5" target="mov3#hym51#page83#enu62#fld177_slot"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par83" name="difficolta_Difficolt&#224;" source="mov3#hym51#icu2#icp7" target="mov3#hym51#page83#enu62#fld189_slot"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par84" name="difficolta_PASSING" source="mov3#hym51#icu2#icp7" passing="true"/>
+        <LinkParameter id="mov3#hym51#icu2#oln180#par102" name="Key Condition [oid]_PASSING" source="mov3#hym51#icu2#icp2" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym51#icu2#icp7" name="difficolta"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym51#kocu2" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym51#okcu2" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit gr:x="545" gr:y="325" id="mov3#hym51#mfu27" name="Updateimpiantodiscesa" entity="ent9">
+      <Selector id="mov3#hym51#mfu27#su61" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym51#mfu27#su61#kcond56" name="KeyCondition56" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym51#mfu27#oln183" name="OKFlow183" to="mov3#hym51#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov3#hym51#mfu27#kln130" name="KOFlow130" to="mov3#hym51#kocu2" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

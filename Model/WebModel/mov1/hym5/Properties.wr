@@ -1,0 +1,45 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym5" name="Iscrizione socio" gr:x="420" gr:y="70">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym5#icu8" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov1#hym5#icu8#icp25" name="Key Condition [oid]"/>
+      <OKLink id="mov1#hym5#icu8#oln21" name="OKFlow24" to="mov1#hym5#page20#enu7">
+        <LinkParameter id="mov1#hym5#icu8#oln21#par135" name="Key Condition [oid]_Key Condition [oid]" source="mov1#hym5#icu8#icp25" target="mov1#hym5#page20#enu7.userOID"/>
+        <LinkParameter id="mov1#hym5#icu8#oln21#par148" name="data_data" source="mov1#hym5#icu8#icp35" target="mov1#hym5#page20#enu7#fld36_slot"/>
+        <LinkParameter id="mov1#hym5#icu8#oln21#par1413" name="Key Condition [oid]_PASSING" source="mov1#hym5#icu8#icp25" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#hym5#icu8#icp35" name="data"/>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#hym5#mfu4" name="Update5" gr:x="345" gr:y="205" entity="ent7">
+      <Selector id="mov1#hym5#mfu4#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym5#mfu4#su9#kcond8" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym5#mfu4#oln22" name="OKFlow70" to="mov1#hym5#cru12">
+        <LinkParameter id="mov1#hym5#mfu4#oln22#par671" name="0_punti" sourceValue="0" target="mov1#hym5#cru12.ent3#att60"/>
+        <LinkParameter id="mov1#hym5#mfu4#oln22#par672" name="oid_user_UserRegistrato.oid_user(PortafoglioToUserRegistrato)" source="userOIDArray" target="mov1#hym5#cru12.rel8#role16.userOID"/>
+        <LinkParameter id="mov1#hym5#mfu4#oln22#par687" name="oid_user_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#hym5#mfu4#oln22#par688" name="data_PASSING" sourceLinkParameter="mov1#hym5#page20#enu7#ln33#par150" passing="true"/>
+        <LinkParameter id="mov1#hym5#mfu4#oln22#par1415" name="Key Condition [oid]_PASSING" sourceLinkParameter="mov1#hym5#page20#enu7#ln33#par1414" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#hym5#mfu4#kln17" name="KOFlow27" to="mov1#hym5#kocu7" automaticCoupling="true"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov1#hym5#kocu7" name="KO Port20" gr:x="755" gr:y="205"/>
+    <OKCollectorUnit id="mov1#hym5#okcu7" name="OK Port22" gr:x="755" gr:y="105">
+      <OutputCollectorParameter id="mov1#hym5#okcu7#ocp1" name="oidsocio"/>
+    </OKCollectorUnit>
+    <CreateUnit gr:x="525" gr:y="330" id="mov1#hym5#cru1" name="Create1" entity="ent39">
+      <OKLink id="mov1#hym5#cru1#oln25" name="OKFlow25" to="mov1#hym5#okcu7">
+        <LinkParameter id="mov1#hym5#cru1#oln25#par1417" name="oid_user_PASSING" sourceLinkParameter="mov1#hym5#cru12#oln146#par1416" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#hym5#cru1#kln18" name="KOFlow18" to="mov1#hym5#kocu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="360" gr:y="390" id="mov1#hym5#cru12" name="Create12" entity="ent3">
+      <OKLink id="mov1#hym5#cru12#oln146" name="OKFlow146" to="mov1#hym5#cru1">
+        <LinkParameter id="mov1#hym5#cru12#oln146#par689" name="10_costo" sourceValue="10" target="mov1#hym5#cru1.ent39#att58"/>
+        <LinkParameter id="mov1#hym5#cru12#oln146#par690" name="data_PASSING_dataAcquisto" sourceLinkParameter="mov1#hym5#mfu4#oln22#par688" target="mov1#hym5#cru1.ent39#att57"/>
+        <LinkParameter id="mov1#hym5#cru12#oln146#par691" name="oid_user_PASSING_UserRegistrato.oid_user(QuotasocioToUserRegistrato)" sourceLinkParameter="mov1#hym5#mfu4#oln22#par687" target="mov1#hym5#cru1.rel15#role30.userOID"/>
+        <LinkParameter id="mov1#hym5#cru12#oln146#par1416" name="oid_user_PASSING" sourceLinkParameter="mov1#hym5#mfu4#oln22#par687" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#hym5#cru12#kln102" name="KOFlow102" to="mov1#hym5#kocu7" automaticCoupling="true" gr:bendpoints="107,-131,-353,54"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,181 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page1" name="Home" landmark="true" customURLName="home" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <SelectorUnit id="sv2#page1#seu2" name="Group (selector)" gr:x="0" gr:y="0" entity="Group" distinctAttributes="groupName">
+      <Link id="sv2#page1#seu2#ln1" name="loadGroup" to="sv2#page1#enu1" type="transport" validate="true">
+        <LinkParameter id="sv2#page1#seu2#ln1#par1" name="groupName_Group [label]" source="groupNameArray" target="sv2#page1#enu1#sfld1_label"/>
+        <LinkParameter id="sv2#page1#seu2#ln1#par2" name="oid_group_Group [output]" source="groupOIDArray" target="sv2#page1#enu1#sfld1_output"/>
+        <LinkParameter id="sv2#page1#seu2#ln1#par3" name="groupName_PASSING" source="groupNameArray" passing="true"/>
+        <LinkParameter id="sv2#page1#seu2#ln1#par4" name="oid_group_PASSING" source="groupOIDArray" passing="true"/>
+        <LinkParameter id="sv2#page1#seu2#ln1#par5" name="_Key Condition [oid_user]" target="sv2#page1#enu1.userOID" blank="true"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv2#page1#enu1" name="Register (form)" gr:x="175" gr:y="0" entity="ent7" fieldOrder="sv2#page1#enu1#fld2 sv2#page1#enu1#fld1 sv2#page1#enu1#fld3 sv2#page1#enu1#fld7 sv2#page1#enu1#fld8 sv2#page1#enu1#fld9 sv2#page1#enu1#fld10 sv2#page1#enu1#fld14 sv2#page1#enu1#fld17 sv2#page1#enu1#fld18 sv2#page1#enu1#fld19" ajaxEnableExpandedLinks="false" linkOrder="sv2#page1#enu1#ln188">
+      <Field id="sv2#page1#enu1#fld1" name="Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld1#mnd2" name="Mandatory2"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld2" name="Username" type="string" modifiable="true" ajaxEventEnabled="false">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld2#mnd1" name="Mandatory1"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld3" name="Email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv2#page1#enu1#fld11" name="Group" type="string" preloaded="true" hidden="true" slotOrder="sv2#page1#enu1#fld11#slot2">
+        <Slot id="sv2#page1#enu1#fld11#slot2" name="Utente" value="1" label="true" output="true"/>
+      </Field>
+      <Field id="sv2#page1#enu1#fld10" name="Telefono" type="string" modifiable="true"/>
+      <Field id="sv2#page1#enu1#fld9" name="Cognome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld9#mnd4" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld8" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld8#mnd3" name="Mandatory3"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld7" name="Codice Fiscale " type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld7#mnd5" name="Mandatory5"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld4" name="Socio" type="string" preloaded="true" hidden="true" slotOrder="sv2#page1#enu1#fld4#slot5">
+        <Slot id="sv2#page1#enu1#fld4#slot5" name="Socio" value="0" label="true" output="true"/>
+      </Field>
+      <Field id="sv2#page1#enu1#fld14" name="Numero carta" type="string" modifiable="true">
+        <VRules>
+          <CreditCardValidationRule id="sv2#page1#enu1#fld14#crcn1" name="Credit Card1"/>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld14#mnd8" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld19" name="Cvv" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld19#mnd7" name="Mandatory7"/>
+          <ValueLengthValidationRule id="sv2#page1#enu1#fld19#vl4" name="Value Length4" predicate="eq" value="3"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld18" name="Anno scadenza" type="integer" modifiable="true">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page1#enu1#fld18#vl3" name="Value Length3" predicate="eq" value="2"/>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld18#mnd9" name="Mandatory9"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld17" name="Mese scadenza" type="integer" modifiable="true">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page1#enu1#fld17#vl2" name="Value Length2" predicate="eq" value="2"/>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld17#mnd10" name="Mandatory10"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#page1#enu1#ln188" name="Register" to="sv2#miu68" type="normal" validate="true">
+        <LinkParameter id="sv2#page1#enu1#ln188#par994" name="Anno scadenza_annoscadenza" source="sv2#page1#enu1#fld18" target="sv2#miu68.mov2#hym45#icu48#icp232"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par995" name="Codice Fiscale _codicefiscale" source="sv2#page1#enu1#fld7" target="sv2#miu68.mov2#hym45#icu48#icp240"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par996" name="Cognome_cognome" source="sv2#page1#enu1#fld9" target="sv2#miu68.mov2#hym45#icu48#icp223"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par997" name="Cvv_cvv" source="sv2#page1#enu1#fld19" target="sv2#miu68.mov2#hym45#icu48#icp224"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par998" name="Email_email" source="sv2#page1#enu1#fld3" target="sv2#miu68.mov2#hym45#icu48#icp222"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par999" name="Group_Group.oid(defaultGroup)" source="sv2#page1#enu1#fld11" target="sv2#miu68.mov2#hym45#icu48#icp228"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1000" name="Mese scadenza_mesescadenza" source="sv2#page1#enu1#fld17" target="sv2#miu68.mov2#hym45#icu48#icp233"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1001" name="Nome_nome" source="sv2#page1#enu1#fld8" target="sv2#miu68.mov2#hym45#icu48#icp234"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1002" name="Numero carta_numerocarta" source="sv2#page1#enu1#fld14" target="sv2#miu68.mov2#hym45#icu48#icp225"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1003" name="Key [oid_user]_oid" source="key.userOID" target="sv2#miu68.mov2#hym45#icu48#icp239"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1004" name="Password_password" source="sv2#page1#enu1#fld1" target="sv2#miu68.mov2#hym45#icu48#icp238"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1005" name="Socio_Socio" source="sv2#page1#enu1#fld4" target="sv2#miu68.mov2#hym45#icu48#icp231"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1006" name="Telefono_telefono" source="sv2#page1#enu1#fld10" target="sv2#miu68.mov2#hym45#icu48#icp235"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1007" name="UserRegistrato Object_User objects" source="entityBean" target="sv2#miu68.mov2#hym45#icu48#icp236"/>
+        <LinkParameter id="sv2#page1#enu1#ln188#par1008" name="Username_username" source="sv2#page1#enu1#fld2" target="sv2#miu68.mov2#hym45#icu48#icp237"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit id="sv2#page1#enu2" name="Login" gr:x="175" gr:y="115" entity="ent7" fieldOrder="sv2#page1#enu2#fld6 sv2#page1#enu2#fld5" linkOrder="sv2#page1#enu2#ln7">
+      <Field id="sv2#page1#enu2#fld5" name="Password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv2#page1#enu2#fld6" name="Username" type="string" modifiable="true" attribute="userName"/>
+      <Link id="sv2#page1#enu2#ln7" name="Login" to="sv2#miu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page1#enu2#ln7#par56" name="Password_Password" source="sv2#page1#enu2#fld5" target="sv2#miu2.mov2#opm2#icu1#icp16"/>
+        <LinkParameter id="sv2#page1#enu2#ln7#par57" name="Username_Username" source="sv2#page1#enu2#fld6" target="sv2#miu2.mov2#opm2#icu1#icp17"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit gr:x="110" gr:y="405" id="sv2#page1#tmu15" name="Time15">
+      <Link id="sv2#page1#tmu15#ln236" name="Flow236" to="sv2#miu2" type="transport" validate="true">
+        <LinkParameter id="sv2#page1#tmu15#ln236#par952" name="Current/Input Date_datascadenza" source="currentDate" target="sv2#miu2.mov2#opm2#icu1#icp48"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page1#enu2">
+          <layout:Field field="sv2#page1#enu2#fld6"/>
+          <layout:Field field="sv2#page1#enu2#fld5"/>
+          <layout:Link link="sv2#page1#enu2#ln7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page1#enu1">
+          <layout:Field field="sv2#page1#enu1#fld2"/>
+          <layout:Field field="sv2#page1#enu1#fld1"/>
+          <layout:Field field="sv2#page1#enu1#fld3"/>
+          <layout:Field field="sv2#page1#enu1#fld7"/>
+          <layout:Field field="sv2#page1#enu1#fld8"/>
+          <layout:Field field="sv2#page1#enu1#fld9"/>
+          <layout:Field field="sv2#page1#enu1#fld10"/>
+          <layout:Field field="sv2#page1#enu1#fld14"/>
+          <layout:Field field="sv2#page1#enu1#fld17"/>
+          <layout:Field field="sv2#page1#enu1#fld18"/>
+          <layout:Field field="sv2#page1#enu1#fld19"/>
+          <layout:Link link="sv2#page1#enu1#ln188"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

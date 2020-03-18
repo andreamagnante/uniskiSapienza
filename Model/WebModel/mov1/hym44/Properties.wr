@@ -1,0 +1,83 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="430" gr:y="495" id="mov1#hym44" name="Prenota lezione istruttore">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="105" gr:y="220" id="mov1#hym44#icu44">
+      <InputCollectorParameter id="mov1#hym44#icu44#icp260" name="useroid"/>
+      <InputCollectorParameter id="mov1#hym44#icu44#icp259" name="istruttoreoid"/>
+      <InputCollectorParameter id="mov1#hym44#icu44#icp258" name="datalezione"/>
+      <OKLink id="mov1#hym44#icu44#oln247" name="OKFlow247" to="mov1#hym44#seu42">
+        <LinkParameter id="mov1#hym44#icu44#oln247#par1260" name="datalezione_PASSING" source="mov1#hym44#icu44#icp258" passing="true"/>
+        <LinkParameter id="mov1#hym44#icu44#oln247#par1261" name="istruttoreoid_PASSING" source="mov1#hym44#icu44#icp259" passing="true"/>
+        <LinkParameter id="mov1#hym44#icu44#oln247#par1262" name="useroid_PASSING" source="mov1#hym44#icu44#icp260" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1810" gr:y="110" id="mov1#hym44#okcu42" name="OK Port42"/>
+    <KOCollectorUnit gr:x="1810" gr:y="355" id="mov1#hym44#kocu44" name="KO Port44"/>
+    <CreateUnit gr:x="1620" gr:y="370" id="mov1#hym44#cru16" name="Create16" entity="ent11">
+      <OKLink id="mov1#hym44#cru16#oln190" name="OKFlow190" to="mov1#hym44#okcu42" automaticCoupling="true"/>
+      <KOLink id="mov1#hym44#cru16#kln131" name="KOFlow131" to="mov1#hym44#kocu44" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="mov1#hym44#seu37" name="Selector42" gr:x="1275" gr:y="275" entity="ent38">
+      <Selector id="mov1#hym44#seu37#su104" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym44#seu37#su104#kcond59" name="KeyCondition47" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym44#seu37#oln248" name="OKFlow248" to="mov1#hym44#page74#enu56">
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1354" name="datalezione_PASSING_Data lezione" sourceLinkParameter="mov1#hym44#opg17#scu19#oln243#par1352" target="mov1#hym44#page74#enu56#fld181_slot"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1355" name="brevetto_Istruttore brevetto" source="ent38#att53Array" target="mov1#hym44#page74#enu56#fld182_slot"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1356" name="cognome_Istruttore cognome" source="User#att63Array" target="mov1#hym44#page74#enu56#fld183_slot"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1357" name="nome_Istruttore nome" source="User#att62Array" target="mov1#hym44#page74#enu56#fld184_slot"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1358" name="username_Istruttore username" source="userNameArray" target="mov1#hym44#page74#enu56#fld185_slot"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1359" name="risultato_PASSING_Ora lezione [label]" sourceLinkParameter="mov1#hym44#opg17#scu19#oln243#par1244" target="mov1#hym44#page74#enu56#sfld18_label"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1360" name="risultato_PASSING_Ora lezione [output]" sourceLinkParameter="mov1#hym44#opg17#scu19#oln243#par1244" target="mov1#hym44#page74#enu56#sfld18_output"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1361" name="datalezione_PASSING" sourceLinkParameter="mov1#hym44#opg17#scu19#oln243#par1352" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1362" name="oid_user_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1363" name="useroid_PASSING" sourceLinkParameter="mov1#hym44#opg17#scu19#oln243#par1353" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu37#oln248#par1367" name="istruttoreoid_PASSING" sourceLinkParameter="mov1#hym44#opg17#scu19#oln243#par1365" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#hym44#seu38" name="Selector36" gr:x="945" gr:y="260" entity="ent11">
+      <Selector id="mov1#hym44#seu38#su105" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym44#seu38#su105#acond58" name="AttCondition45" predicate="eq" booleanOperator="and" implied="false" attributes="rel10#role19.userOID"/>
+        <AttributesCondition id="mov1#hym44#seu38#su105#acond59" name="AttCondition32" predicate="eq" booleanOperator="and" implied="false" attributes="ent11#att22"/>
+      </Selector>
+      <OKLink id="mov1#hym44#seu38#oln242" name="OKFlow197" to="mov1#hym44#opg17#scu19">
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1240" name="data_dateLezioni" source="ent11#att22Array" target="mov1#hym44#opg17#scu19.dateLezioni"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1241" name="ora_oraLezioni" source="ent11#att19Array" target="mov1#hym44#opg17#scu19.oraLezioni"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1242" name="oid_PASSING_oid" sourceLinkParameter="mov1#hym44#opg18#scu20#oln245#par1247" target="mov1#hym44#opg17#scu19.oid"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1243" name="ora_PASSING_orario" sourceLinkParameter="mov1#hym44#opg18#scu20#oln245#par1248" target="mov1#hym44#opg17#scu19.orario"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1346" name="datalezione_PASSING_dateScelta" sourceLinkParameter="mov1#hym44#opg18#scu20#oln245#par1343" target="mov1#hym44#opg17#scu19.dateScelta"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1348" name="datalezione_PASSING" sourceLinkParameter="mov1#hym44#opg18#scu20#oln245#par1343" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1349" name="istruttoreoid_PASSING" sourceLinkParameter="mov1#hym44#opg18#scu20#oln245#par1344" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu38#oln242#par1350" name="useroid_PASSING" sourceLinkParameter="mov1#hym44#opg18#scu20#oln245#par1345" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#hym44#seu42" name="Selector33" gr:x="510" gr:y="165" entity="ent2" distinctAttributes="ent2#att33 ent2#att43">
+      <OKLink id="mov1#hym44#seu42#oln244" name="OKFlow200" to="mov1#hym44#seu43">
+        <LinkParameter id="mov1#hym44#seu42#oln244#par1245" name="oid_PASSING" source="ent2#att33Array" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu42#oln244#par1246" name="ora_PASSING" source="ent2#att43Array" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu42#oln244#par1263" name="istruttoreoid_PASSING_AttCondition26" sourceLinkParameter="mov1#hym44#icu44#oln247#par1261" target="mov1#hym44#seu43#su106#acond60"/>
+        <LinkParameter id="mov1#hym44#seu42#oln244#par1264" name="datalezione_PASSING" sourceLinkParameter="mov1#hym44#icu44#oln247#par1260" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu42#oln244#par1335" name="istruttoreoid_PASSING" sourceLinkParameter="mov1#hym44#icu44#oln247#par1261" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu42#oln244#par1336" name="useroid_PASSING" sourceLinkParameter="mov1#hym44#icu44#oln247#par1262" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#hym44#seu43" name="Selector30" gr:x="575" gr:y="335" entity="ent33">
+      <Selector id="mov1#hym44#seu43#su106" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym44#seu43#su106#acond60" name="AttCondition26" predicate="eq" booleanOperator="or" implied="false" attributes="rel11#role21.userOID"/>
+      </Selector>
+      <OKLink id="mov1#hym44#seu43#oln246" name="OKFlow183" to="mov1#hym44#opg18#scu20">
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1249" name="datafine_PASSING" source="ent33#att42Array" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1250" name="datainizio_PASSING" source="ent33#att40Array" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1251" name="datafine_dateFine" source="ent33#att42Array" target="mov1#hym44#opg18#scu20.dateFine"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1252" name="datainizio_dateInizio" source="ent33#att40Array" target="mov1#hym44#opg18#scu20.dateInizio"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1253" name="id_oid" source="ent33#att41Array" target="mov1#hym44#opg18#scu20.oid"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1254" name="ora_PASSING_orario" sourceLinkParameter="mov1#hym44#seu42#oln244#par1246" target="mov1#hym44#opg18#scu20.orario"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1255" name="oid_PASSING" sourceLinkParameter="mov1#hym44#seu42#oln244#par1245" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1256" name="ora_PASSING" sourceLinkParameter="mov1#hym44#seu42#oln244#par1246" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1337" name="datalezione_PASSING_dateScelta" sourceLinkParameter="mov1#hym44#seu42#oln244#par1264" target="mov1#hym44#opg18#scu20.dateScelta"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1338" name="datalezione_PASSING" sourceLinkParameter="mov1#hym44#seu42#oln244#par1264" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1339" name="istruttoreoid_PASSING" sourceLinkParameter="mov1#hym44#seu42#oln244#par1335" passing="true"/>
+        <LinkParameter id="mov1#hym44#seu43#oln246#par1340" name="useroid_PASSING" sourceLinkParameter="mov1#hym44#seu42#oln244#par1336" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym23#page28" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym23#page28#enu10" name="Vuoi davvero eliminare questa faq?" linkOrder="mov3#hym23#page28#enu10#ln35" gr:x="0" gr:y="0" entity="ent31" fieldOrder="mov3#hym23#page28#enu10#fld45 mov3#hym23#page28#enu10#fld48">
+      <Link id="mov3#hym23#page28#enu10#ln35" name="Conferma" to="mov3#hym23#dlu2" type="normal" validate="true">
+        <LinkParameter id="mov3#hym23#page28#enu10#ln35#par155" name="Key [id]_KeyCondition12 [id]" source="key.ent31#att37" target="mov3#hym23#dlu2#su12#kcond10.ent31#att37"/>
+      </Link>
+      <Field id="mov3#hym23#page28#enu10#fld48" name="Risposta" type="text" preloaded="true"/>
+      <Field id="mov3#hym23#page28#enu10#fld45" name="Domanda" type="text" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym23#page28#enu10">
+          <layout:Link link="mov3#hym23#page28#enu10#ln35"/>
+          <layout:Field field="mov3#hym23#page28#enu10#fld45"/>
+          <layout:Field field="mov3#hym23#page28#enu10#fld48"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

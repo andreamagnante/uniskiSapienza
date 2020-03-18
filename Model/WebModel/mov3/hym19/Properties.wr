@@ -1,0 +1,22 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym19" name="Inserisci menucarta" gr:x="1265" gr:y="270">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym19#icu21" gr:x="0" gr:y="150">
+      <OKLink id="mov3#hym19#icu21#oln101" name="OKFlow38" to="mov3#hym19#cru7">
+        <LinkParameter id="mov3#hym19#icu21#oln101#par630" name="Key Condition [oid]_Amristorazione.oid_user(MenucartaToAmristorazione)" source="mov3#hym19#icu21#icp136" target="mov3#hym19#cru7.rel23#role34.userOID"/>
+        <LinkParameter id="mov3#hym19#icu21#oln101#par631" name="Nome_nome" source="mov3#hym19#icu21#icp133" target="mov3#hym19#cru7.ent37#att50"/>
+        <LinkParameter id="mov3#hym19#icu21#oln101#par632" name="Prezzo_prezzo" source="mov3#hym19#icu21#icp135" target="mov3#hym19#cru7.ent37#att51"/>
+        <LinkParameter id="mov3#hym19#icu21#oln101#par633" name="Tipologia_tipologia" source="mov3#hym19#icu21#icp134" target="mov3#hym19#cru7.ent37#att52"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym19#icu21#icp135" name="Prezzo"/>
+      <InputCollectorParameter id="mov3#hym19#icu21#icp134" name="Tipologia"/>
+      <InputCollectorParameter id="mov3#hym19#icu21#icp133" name="Nome"/>
+      <InputCollectorParameter id="mov3#hym19#icu21#icp136" name="Key Condition [oid]"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym19#kocu21" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym19#okcu21" name="OK Port22" gr:x="550" gr:y="105"/>
+    <CreateUnit id="mov3#hym19#cru7" name="Create4" gr:x="370" gr:y="185" entity="ent37">
+      <OKLink id="mov3#hym19#cru7#oln102" name="OKFlow36" to="mov3#hym19#okcu21" automaticCoupling="true"/>
+      <KOLink id="mov3#hym19#cru7#kln70" name="KOFlow24" to="mov3#hym19#kocu21" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</HybridModule>

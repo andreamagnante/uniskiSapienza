@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area20#page44" name="Elimina account utenti">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv5#area20#page44#inu4" name="Lista utenti registrati" entity="ent7" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64 ent7#att11 ent7#att20 ent7#att29 ent7#att30 ent7#att31" linkOrder="sv5#area20#page44#inu4#ln125">
+      <Link id="sv5#area20#page44#inu4#ln125" name="Elimina" to="sv5#miu48" type="normal" validate="true">
+        <LinkParameter id="sv5#area20#page44#inu4#ln125#par469" name="username_username" source="data[].userName" target="sv5#miu48.mov3#hym29#icu31#icp154"/>
+        <LinkParameter id="sv5#area20#page44#inu4#ln125#par472" name="oid_user_oid_user" source="data[].userOID" target="sv5#miu48.mov3#hym29#icu31#icp155"/>
+        <LinkParameter id="sv5#area20#page44#inu4#ln125#par549" name="cognome_cognome" source="data[].User#att63" target="sv5#miu48.mov3#hym29#icu31#icp183"/>
+        <LinkParameter id="sv5#area20#page44#inu4#ln125#par550" name="nome_nome" source="data[].User#att62" target="sv5#miu48.mov3#hym29#icu31#icp182"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area20#page44#inu4">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="ent7#att11"/>
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Attribute attribute="ent7#att29"/>
+          <layout:Attribute attribute="ent7#att30"/>
+          <layout:Attribute attribute="ent7#att31"/>
+          <layout:Link link="sv5#area20#page44#inu4#ln125"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

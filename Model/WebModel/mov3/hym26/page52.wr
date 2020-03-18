@@ -1,0 +1,60 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym26#page52" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym26#page52#enu30" name="Modifica skipass" linkOrder="mov3#hym26#page52#enu30#ln55" gr:x="0" gr:y="0" fieldOrder="mov3#hym26#page52#enu30#fld70 mov3#hym26#page52#enu30#fld71 mov3#hym26#page52#enu30#fld93 mov3#hym26#page52#enu30#fld94 mov3#hym26#page52#enu30#sfld2" entity="ent8">
+      <Link id="mov3#hym26#page52#enu30#ln55" name="Conferma" to="mov3#hym26#mfu6" type="normal" validate="true">
+        <LinkParameter id="mov3#hym26#page52#enu30#ln55#par390" name="Durata_durata" source="mov3#hym26#page52#enu30#fld71" target="mov3#hym26#mfu6.ent8#att13"/>
+        <LinkParameter id="mov3#hym26#page52#enu30#ln55#par391" name="Tipologia_KeyCondition15 [tipologia]" source="mov3#hym26#page52#enu30#fld70" target="mov3#hym26#mfu6#su15#kcond13.ent8#att12"/>
+        <LinkParameter id="mov3#hym26#page52#enu30#ln55#par392" name="Prezzo_prezzo" source="mov3#hym26#page52#enu30#fld93" target="mov3#hym26#mfu6.ent8#att14"/>
+        <LinkParameter id="mov3#hym26#page52#enu30#ln55#par397" name="Punti_punti" source="mov3#hym26#page52#enu30#fld94" target="mov3#hym26#mfu6.ent8#att16"/>
+        <LinkParameter id="mov3#hym26#page52#enu30#ln55#par398" name="Target Utenza_targetutenza" source="mov3#hym26#page52#enu30#sfld2" target="mov3#hym26#mfu6.ent8#att18"/>
+      </Link>
+      <Field id="mov3#hym26#page52#enu30#fld94" name="Punti" type="integer" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym26#page52#enu30#fld94#mnd58" name="Mandatory58"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym26#page52#enu30#fld93" name="Prezzo" type="integer" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym26#page52#enu30#fld93#mnd57" name="Mandatory57"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym26#page52#enu30#fld71" name="Durata" type="string" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym26#page52#enu30#fld71#mnd56" name="Mandatory56"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym26#page52#enu30#fld70" name="Tipologia" type="string" preloaded="true"/>
+      <SelectionField id="mov3#hym26#page52#enu30#sfld2" name="Target Utenza" type="string" modifiable="true" slotOrder="mov3#hym26#page52#enu30#sfld2#slot3">
+        <Slot id="mov3#hym26#page52#enu30#sfld2#slot3" name="Target" value="Entrambi|Solo socio" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym26#page52#enu30#sfld2#mnd59" name="Mandatory59"/>
+        </VRules>
+      </SelectionField>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym26#page52#enu30">
+          <layout:Link link="mov3#hym26#page52#enu30#ln55"/>
+          <layout:Field field="mov3#hym26#page52#enu30#fld70"/>
+          <layout:Field field="mov3#hym26#page52#enu30#fld71"/>
+          <layout:Field field="mov3#hym26#page52#enu30#fld93"/>
+          <layout:Field field="mov3#hym26#page52#enu30#fld94"/>
+          <layout:Field field="mov3#hym26#page52#enu30#sfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

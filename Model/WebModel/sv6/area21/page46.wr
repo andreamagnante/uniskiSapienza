@@ -1,0 +1,105 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area21#page46" name="Menu" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv6#area21#page46#inu5" name="Menu a la carte" gr:x="0" gr:y="100" entity="ent37" displayAttributes="ent37#att50 ent37#att51 ent37#att52" linkOrder="sv6#area21#page46#inu5#ln132 sv6#area21#page46#inu5#ln135">
+      <SortAttribute attribute="ent37#att52" order="ascending"/>
+      <Link id="sv6#area21#page46#inu5#ln132" name="Elimina" to="sv6#miu35" type="normal" validate="true">
+        <LinkParameter id="sv6#area21#page46#inu5#ln132#par586" name="nome_nome" source="data[].ent37#att50" target="sv6#miu35.mov3#hym17#icu19#icp108"/>
+        <LinkParameter id="sv6#area21#page46#inu5#ln132#par587" name="prezzo_prezzo" source="data[].ent37#att51" target="sv6#miu35.mov3#hym17#icu19#icp110"/>
+        <LinkParameter id="sv6#area21#page46#inu5#ln132#par588" name="tipologia_tipologia" source="data[].ent37#att52" target="sv6#miu35.mov3#hym17#icu19#icp109"/>
+      </Link>
+      <Link id="sv6#area21#page46#inu5#ln135" name="Modifica" to="sv6#miu36" type="normal" validate="true">
+        <LinkParameter id="sv6#area21#page46#inu5#ln135#par608" name="nome_nome" source="data[].ent37#att50" target="sv6#miu36.mov3#hym18#icu20#icp120"/>
+        <LinkParameter id="sv6#area21#page46#inu5#ln135#par609" name="prezzo_prezzo" source="data[].ent37#att51" target="sv6#miu36.mov3#hym18#icu20#icp122"/>
+        <LinkParameter id="sv6#area21#page46#inu5#ln135#par610" name="tipologia_tipologia" source="data[].ent37#att52" target="sv6#miu36.mov3#hym18#icu20#icp121"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv6#area21#page46#enu31" name="Inserisci menu a la carte" gr:x="170" gr:y="110" fieldOrder="sv6#area21#page46#enu31#fld129 sv6#area21#page46#enu31#sfld9 sv6#area21#page46#enu31#fld131" entity="ent37" linkOrder="sv6#area21#page46#enu31#ln136">
+      <VRules/>
+      <Field id="sv6#area21#page46#enu31#fld131" name="Prezzo" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area21#page46#enu31#fld131#mnd88" name="Mandatory88"/>
+        </VRules>
+      </Field>
+      <Field id="sv6#area21#page46#enu31#fld129" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv6#area21#page46#enu31#fld129#mnd87" name="Mandatory87"/>
+        </VRules>
+      </Field>
+      <Link id="sv6#area21#page46#enu31#ln136" name="Conferma" to="sv6#miu37" type="normal" validate="true">
+        <LinkParameter id="sv6#area21#page46#enu31#ln136#par627" name="Nome_Nome" source="sv6#area21#page46#enu31#fld129" target="sv6#miu37.mov3#hym19#icu21#icp133"/>
+        <LinkParameter id="sv6#area21#page46#enu31#ln136#par628" name="Prezzo_Prezzo" source="sv6#area21#page46#enu31#fld131" target="sv6#miu37.mov3#hym19#icu21#icp135"/>
+        <LinkParameter id="sv6#area21#page46#enu31#ln136#par629" name="Tipolgia_Tipologia" source="sv6#area21#page46#enu31#sfld9" target="sv6#miu37.mov3#hym19#icu21#icp134"/>
+      </Link>
+      <SelectionField id="sv6#area21#page46#enu31#sfld9" name="Tipologia" type="string" role="rel23#role34" attribute="ent37#att52">
+        <Slot id="sv6#area21#page46#enu31#sfld9#slot23" name="tipologia piatto" label="true" output="true" value="Antipasto|Primo|Secondo|Contorno|Dessert|Bevanda"/>
+        <VRules>
+          <MandatoryValidationRule id="sv6#area21#page46#enu31#sfld9#mnd89" name="Mandatory89"/>
+        </VRules>
+      </SelectionField>
+    </EntryUnit>
+    <GetUnit id="sv6#area21#page46#gtu18" name="User_Supporter ID" gr:x="210" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv6#area21#page46#gtu18#ln137" name="Flow137" to="sv6#miu37" type="transport" validate="true">
+        <LinkParameter id="sv6#area21#page46#gtu18#ln137#par634" name="UserCtxParam.oid_user_Key Condition [oid]" source="sv6#area21#page46#gtu18.UserCtxParam" target="sv6#miu37.mov3#hym19#icu21#icp136"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area21#page46#inu5">
+          <layout:Attribute attribute="ent37#att50"/>
+          <layout:Attribute attribute="ent37#att51"/>
+          <layout:Attribute attribute="ent37#att52"/>
+          <layout:Link link="sv6#area21#page46#inu5#ln132"/>
+          <layout:Link link="sv6#area21#page46#inu5#ln135"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area21#page46#enu31">
+          <layout:Link link="sv6#area21#page46#enu31#ln136"/>
+          <layout:Field field="sv6#area21#page46#enu31#fld129"/>
+          <layout:Field field="sv6#area21#page46#enu31#sfld9"/>
+          <layout:Field field="sv6#area21#page46#enu31#fld131"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

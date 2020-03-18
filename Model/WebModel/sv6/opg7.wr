@@ -1,0 +1,19 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#opg7" name="Operation Group 4" transaction="true" gr:x="2440" gr:y="15">
+  <OperationUnits>
+    <ScriptUnit id="sv6#opg7#scu7" name="Script3" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input  Date[] datePrenotazioni
+#output String message
+
+if(datePrenotazioni!= null)
+{
+            return ["resultCode":"success","message":"Effettuato con successo!"] 
+}
+return ["resultCode":"error","message":"Attenzione! Hai gia effettuato una prenotazione all'orario del giorno selezionato!"]
+		</ScriptUnitText>
+      <KOLink id="sv6#opg7#scu7#kln119" name="KOFlow119" to="sv6#page71" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="150" ajaxWindowClosable="true" ajaxWindowModal="false"/>
+      <OKLink id="sv6#opg7#scu7#oln167" name="OKFlow166" to="sv6#area30#page63#pwu5">
+        <LinkParameter id="sv6#opg7#scu7#oln167#par788" name="In attesa_AttCondition34" target="sv6#area30#page63#pwu5#su85#acond42" sourceValue="In attesa"/>
+      </OKLink>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

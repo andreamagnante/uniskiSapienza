@@ -1,0 +1,22 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="880" gr:y="970" id="mov3#hym49" name="Elimina Admin">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym49#icu51" gr:x="215" gr:y="155">
+      <InputCollectorParameter id="mov3#hym49#icu51#icp20" name="cognome"/>
+      <InputCollectorParameter id="mov3#hym49#icu51#icp21" name="GruppoOid"/>
+      <InputCollectorParameter id="mov3#hym49#icu51#icp22" name="GruppoNome"/>
+      <InputCollectorParameter id="mov3#hym49#icu51#icp23" name="nome"/>
+      <InputCollectorParameter id="mov3#hym49#icu51#icp247" name="username"/>
+      <InputCollectorParameter id="mov3#hym49#icu51#icp249" name="oid"/>
+      <OKLink id="mov3#hym49#icu51#oln237" name="OKFlow237" to="mov3#hym49#page67#enu45">
+        <LinkParameter id="mov3#hym49#icu51#oln237#par1071" name="cognome_Cognome" source="mov3#hym49#icu51#icp20" target="mov3#hym49#page67#enu45#fld168_slot"/>
+        <LinkParameter id="mov3#hym49#icu51#oln237#par1126" name="nome_Nome" source="mov3#hym49#icu51#icp23" target="mov3#hym49#page67#enu45#fld166_slot"/>
+        <LinkParameter id="mov3#hym49#icu51#oln237#par1161" name="username_Username" source="mov3#hym49#icu51#icp247" target="mov3#hym49#page67#enu45#fld157_slot"/>
+        <LinkParameter id="mov3#hym49#icu51#oln237#par1162" name="GruppoOid_PASSING" source="mov3#hym49#icu51#icp21" passing="true"/>
+        <LinkParameter id="mov3#hym49#icu51#oln237#par1163" name="oid_PASSING" source="mov3#hym49#icu51#icp249" passing="true"/>
+        <LinkParameter id="mov3#hym49#icu51#oln237#par1164" name="GruppoNome_Tipologia amministratore" source="mov3#hym49#icu51#icp22" target="mov3#hym49#page67#enu45#fld169_slot"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov3#hym49#okcu51" name="OK Port42" gr:x="1295" gr:y="105"/>
+    <KOCollectorUnit id="mov3#hym49#kocu51" name="KO Port4" gr:x="1295" gr:y="470"/>
+  </OperationUnits>
+</HybridModule>

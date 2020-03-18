@@ -1,0 +1,59 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="505" gr:y="30" id="mov3#hym35#page64" name="Modifica indisponbilita">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="80" id="mov3#hym35#page64#enu48" name="Modifica" fieldOrder="mov3#hym35#page64#enu48#fld103 mov3#hym35#page64#enu48#fld105" linkOrder="mov3#hym35#page64#enu48#ln180">
+      <Field id="mov3#hym35#page64#enu48#fld105" name="Data fine" type="date" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym35#page64#enu48#fld105#mnd82" name="Mandatory82"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym35#page64#enu48#fld103" name="Data inizio" type="date" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym35#page64#enu48#fld103#mnd83" name="Mandatory83"/>
+        </VRules>
+      </Field>
+      <Link id="mov3#hym35#page64#enu48#ln180" name="Conferma" to="mov3#hym35#opg10#scu8" type="normal" validate="true">
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par620" name="Data fine_PASSING" source="mov3#hym35#page64#enu48#fld105" passing="true"/>
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par624" name="Data inizio_PASSING" source="mov3#hym35#page64#enu48#fld103" passing="true"/>
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par625" name="idIndisponibilita_PASSING" sourceLinkParameter="mov3#hym35#icu37#oln140#par623" passing="true"/>
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par790" name="Data fine_dateIndFine" source="mov3#hym35#page64#enu48#fld105" target="mov3#hym35#opg10#scu8.dateIndFine"/>
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par827" name="Data inizio_dateIndInizio" source="mov3#hym35#page64#enu48#fld103" target="mov3#hym35#opg10#scu8.dateIndInizio"/>
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par832" name="datafine_PASSING_vecchiaFine" sourceLinkParameter="mov3#hym35#icu37#oln140#par828" target="mov3#hym35#opg10#scu8.vecchiaFine"/>
+        <LinkParameter id="mov3#hym35#page64#enu48#ln180#par834" name="datainizio_PASSING_vecchioInizio" sourceLinkParameter="mov3#hym35#icu37#oln140#par831" target="mov3#hym35#opg10#scu8.vecchioInizio"/>
+      </Link>
+      <Link id="mov3#hym35#page64#enu48#ln186" name="Flow186" to="mov3#hym35#page64#seu31" type="transport" validate="true">
+        <LinkParameter id="mov3#hym35#page64#enu48#ln186#par718" name="idIstruttore_PASSING_AttCondition14" sourceLinkParameter="mov3#hym35#icu37#oln140#par717" target="mov3#hym35#page64#seu31#su74#acond29"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov3#hym35#page64#seu31" name="Selector20" gr:x="135" gr:y="0" entity="ent33">
+      <Selector id="mov3#hym35#page64#seu31#su74" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov3#hym35#page64#seu31#su74#acond29" name="AttCondition14" predicate="eq" booleanOperator="or" implied="false" attributes="rel11#role21.userOID"/>
+      </Selector>
+      <Link id="mov3#hym35#page64#seu31#ln194" name="Flow194" to="mov3#hym35#opg10#scu8" type="transport" validate="true">
+        <LinkParameter id="mov3#hym35#page64#seu31#ln194#par787" name="datafine_dateFine" source="ent33#att42Array" target="mov3#hym35#opg10#scu8.dateFine"/>
+        <LinkParameter id="mov3#hym35#page64#seu31#ln194#par789" name="datainizio_dateInizio" source="ent33#att40Array" target="mov3#hym35#opg10#scu8.dateInizio"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym35#page64#enu48">
+          <layout:Field field="mov3#hym35#page64#enu48#fld103"/>
+          <layout:Field field="mov3#hym35#page64#enu48#fld105"/>
+          <layout:Link link="mov3#hym35#page64#enu48#ln180"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,69 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#opm2" name="Login" gr:x="40" gr:y="95">
+  <OperationUnits>
+    <KOCollectorUnit id="mov2#opm2#kocu1" name="Error Logging in" gr:x="1610" gr:y="200">
+      <OutputCollectorParameter id="mov2#opm2#kocu1#ocp2" name="id"/>
+    </KOCollectorUnit>
+    <InputCollectorUnit id="mov2#opm2#icu1" gr:x="15" gr:y="40">
+      <OKLink id="mov2#opm2#icu1#oln2" name="OKFlow1" to="mov2#opm2#seu23">
+        <LinkParameter id="mov2#opm2#icu1#oln2#par918" name="Username_username" source="mov2#opm2#icu1#icp17" target="mov2#opm2#seu23#su102#acond16"/>
+        <LinkParameter id="mov2#opm2#icu1#oln2#par926" name="Password_PASSING" source="mov2#opm2#icu1#icp16" passing="true"/>
+        <LinkParameter id="mov2#opm2#icu1#oln2#par927" name="Username_PASSING" source="mov2#opm2#icu1#icp17" passing="true"/>
+        <LinkParameter id="mov2#opm2#icu1#oln2#par953" name="datascadenza_PASSING" source="mov2#opm2#icu1#icp48" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#opm2#icu1#icp16" name="Password"/>
+      <InputCollectorParameter id="mov2#opm2#icu1#icp17" name="Username"/>
+      <InputCollectorParameter id="mov2#opm2#icu1#icp48" name="datascadenza"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#opm2#okcu1" name="Logged in" gr:x="1610" gr:y="10">
+      <OutputCollectorParameter id="mov2#opm2#okcu1#ocp10" name="username"/>
+    </OKCollectorUnit>
+    <LoginUnit id="mov2#opm2#lgu1" name="Login" gr:x="645" gr:y="70">
+      <KOLink id="mov2#opm2#lgu1#kln3" name="KOFlow1" to="mov2#opm2#kocu1">
+        <LinkParameter id="mov2#opm2#lgu1#kln3#par958" name="1_id" sourceValue="1" target="mov2#opm2#kocu1#ocp2"/>
+      </KOLink>
+      <OKLink id="mov2#opm2#lgu1#oln5" name="OKFlow14" to="mov2#opm2#okcu1">
+        <LinkParameter id="mov2#opm2#lgu1#oln5#par53" name="Username_oid" source="username" target="mov2#opm2#okcu1#ocp10"/>
+      </OKLink>
+    </LoginUnit>
+    <SelectorUnit gr:x="360" gr:y="50" id="mov2#opm2#seu23" name="Selector23" entity="ent7" distinctAttributes="rel15#role29.ent39#att56">
+      <Selector id="mov2#opm2#seu23#su102" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm2#seu23#su102#acond16" name="username" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu23#oln252" name="OKFlow252" to="mov2#opm2#opg12#scu11">
+        <LinkParameter id="mov2#opm2#seu23#oln252#par920" name="defaultGroup.oid_group_tipoutente" source="User2DefaultGroup_groupOIDArray" target="mov2#opm2#opg12#scu11.tipoutente"/>
+        <LinkParameter id="mov2#opm2#seu23#oln252#par928" name="Password_PASSING" sourceLinkParameter="mov2#opm2#icu1#oln2#par926" passing="true"/>
+        <LinkParameter id="mov2#opm2#seu23#oln252#par929" name="Username_PASSING" sourceLinkParameter="mov2#opm2#icu1#oln2#par927" passing="true"/>
+        <LinkParameter id="mov2#opm2#seu23#oln252#par948" name="oid_user_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov2#opm2#seu23#oln252#par954" name="datascadenza_PASSING" sourceLinkParameter="mov2#opm2#icu1#oln2#par953" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="530" gr:y="490" id="mov2#opm2#seu33" name="Selector33" entity="ent39">
+      <Selector id="mov2#opm2#seu33#su107" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm2#seu33#su107#acond35" name="oid" predicate="eq" booleanOperator="and" implied="false" attributes="rel15#role30.userOID"/>
+        <AttributesCondition id="mov2#opm2#seu33#su107#acond45" name="datascandenza" predicate="gt" booleanOperator="and" implied="false" attributes="ent39#att56"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu33#oln254" name="OKFlow254" to="mov2#opm2#opg14#scu14">
+        <LinkParameter id="mov2#opm2#seu33#oln254#par939" name="Password_PASSING" sourceLinkParameter="mov2#opm2#opg12#scu11#kln141#par937" passing="true"/>
+        <LinkParameter id="mov2#opm2#seu33#oln254#par940" name="Username_PASSING" sourceLinkParameter="mov2#opm2#opg12#scu11#kln141#par938" passing="true"/>
+        <LinkParameter id="mov2#opm2#seu33#oln254#par946" name="oid_user_id" source="ent39#att59Array" target="mov2#opm2#opg14#scu14.id"/>
+        <LinkParameter id="mov2#opm2#seu33#oln254#par973" name="oid_user_PASSING" sourceLinkParameter="mov2#opm2#opg12#scu11#kln141#par972" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModifyUnit gr:x="1350" gr:y="670" id="mov2#opm2#mfu32" name="Update32" entity="ent7">
+      <Selector id="mov2#opm2#mfu32#su108" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#mfu32#su108#kcond67" name="KeyCondition67" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm2#mfu32#oln260" name="OKFlow260" to="mov2#opm2#dlu18">
+        <LinkParameter id="mov2#opm2#mfu32#oln260#par987" name="oid_user_utente" source="userOIDArray" target="mov2#opm2#dlu18#su109#acond51"/>
+      </OKLink>
+    </ModifyUnit>
+    <DeleteUnit gr:x="1310" gr:y="355" id="mov2#opm2#dlu18" name="Delete18" entity="ent39">
+      <Selector id="mov2#opm2#dlu18#su109" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm2#dlu18#su109#acond51" name="utente" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.userOID"/>
+      </Selector>
+      <OKLink id="mov2#opm2#dlu18#oln261" name="OKFlow261" to="mov2#opm2#kocu1">
+        <LinkParameter id="mov2#opm2#dlu18#oln261#par988" name="2_id" sourceValue="2" target="mov2#opm2#kocu1#ocp2"/>
+      </OKLink>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page26" name="Home" landmark="true" customURLName="supporter" gr:x="130" gr:y="55">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page26#mssu20" name="Benvenuto Socio" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Ciao Socio. Questa area &#232; dedicata solo a cui ha effettuato l'iscrizione come socio </Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv3#page26#gtu5" name="User_Supporter ID" gr:x="0" gr:y="85" contextParameters="UserCtxParam">
+      <Link id="sv3#page26#gtu5#ln66" name="Flow8" to="sv3#page26#dau6" type="transport" validate="true">
+        <LinkParameter id="sv3#page26#gtu5#ln66#par204" name="UserCtxParam.oid_user_PASSING" source="sv3#page26#gtu5.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv3#page26#gtu5#ln66#par205" name="UserCtxParam.oid_user_KeyCondition5 [oid_user]" source="sv3#page26#gtu5.UserCtxParam" target="sv3#page26#dau6#su21#kcond19.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit id="sv3#page26#dau6" name="Details Supporter" gr:x="5" gr:y="225" entity="ent7" displayAttributes="userName password email User#att61 User#att62 User#att63 User#att64 ent7#att20 ent7#att11 ent7#att29 ent7#att30 ent7#att31">
+      <Selector id="sv3#page26#dau6#su21" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page26#dau6#su21#kcond19" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page26#mssu20"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page26#dau6">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att61"/>
+          <layout:Attribute attribute="User#att62"/>
+          <layout:Attribute attribute="User#att63"/>
+          <layout:Attribute attribute="User#att64"/>
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Attribute attribute="ent7#att11"/>
+          <layout:Attribute attribute="ent7#att29"/>
+          <layout:Attribute attribute="ent7#att30"/>
+          <layout:Attribute attribute="ent7#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

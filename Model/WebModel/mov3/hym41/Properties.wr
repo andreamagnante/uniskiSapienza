@@ -1,0 +1,20 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1290" gr:y="760" id="mov3#hym41" name="Conferma prenotazione">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="345" gr:y="265" id="mov3#hym41#icu43">
+      <InputCollectorParameter id="mov3#hym41#icu43#icp176" name="oidprenotazione"/>
+      <OKLink id="mov3#hym41#icu43#oln170" name="OKFlow170" to="mov3#hym41#mfu22">
+        <LinkParameter id="mov3#hym41#icu43#oln170#par792" name="oidprenotazione_KeyCondition51 [oid]" source="mov3#hym41#icu43#icp176" target="mov3#hym41#mfu22#su89#kcond51.ent6#att68"/>
+        <LinkParameter id="mov3#hym41#icu43#oln170#par793" name="Confermata_stato" sourceValue="Confermata" target="mov3#hym41#mfu22.ent6#att73"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1245" gr:y="140" id="mov3#hym41#okcu44" name="OK Port44"/>
+    <KOCollectorUnit gr:x="1245" gr:y="320" id="mov3#hym41#kocu43" name="KO Port43"/>
+    <ModifyUnit gr:x="875" gr:y="245" id="mov3#hym41#mfu22" name="Update22" entity="ent6">
+      <Selector id="mov3#hym41#mfu22#su89" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym41#mfu22#su89#kcond51" name="KeyCondition51" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym41#mfu22#oln168" name="OKFlow168" to="mov3#hym41#okcu44" automaticCoupling="true"/>
+      <KOLink id="mov3#hym41#mfu22#kln120" name="KOFlow120" to="mov3#hym41#kocu43" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

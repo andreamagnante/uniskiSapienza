@@ -1,0 +1,82 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Area Admin Struttura" protected="true" landmarks="sv5#page32 sv5#area23 sv5#area20 sv5#area15 sv5#area24 sv5#area19 sv5#area10 sv5#lou3" homePage="sv5#page32">
+  <OperationUnits>
+    <LogoutUnit id="sv5#lou3" name="Logout" landmark="true" gr:x="415" gr:y="35" siteView="sv2"/>
+    <ModuleInstanceUnit gr:x="1045" gr:y="385" id="sv5#miu17" action="false" moduleId="mov3#hym10">
+      <OKLink id="sv5#miu17#oln60" name="OKFlow60" to="sv5#area10#page33" automaticCoupling="true"/>
+      <KOLink id="sv5#miu17#kln40" name="KOFlow40" to="sv5#area10#page33" automaticCoupling="true" gr:bendpoints="-61,-116,69,224"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="705" gr:y="390" id="sv5#miu18" action="false" moduleId="mov3#hym11">
+      <OKLink id="sv5#miu18#oln61" name="OKFlow61" to="sv5#area10#page33" automaticCoupling="true"/>
+      <KOLink id="sv5#miu18#kln41" name="KOFlow41" to="sv5#area10#page33" automaticCoupling="true" gr:bendpoints="57,-81,-83,194"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="370" gr:y="395" id="sv5#miu19" action="false" moduleId="mov3#hym12">
+      <KOLink id="sv5#miu19#kln42" name="KOFlow42" to="sv5#area10#page33" automaticCoupling="true"/>
+      <OKLink id="sv5#miu19#oln62" name="OKFlow62" to="sv5#area10#page33" automaticCoupling="true" gr:bendpoints="149,-38,-201,87"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv5#miu41" gr:x="130" gr:y="815" action="false" moduleId="mov3#hym23">
+      <OKLink id="sv5#miu41#oln34" name="OKFlow34" to="sv5#area19#page23" automaticCoupling="true"/>
+      <KOLink id="sv5#miu41#kln23" name="KOFlow23" to="sv5#area19#page23" automaticCoupling="true" gr:bendpoints="21,-77,6,113"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv5#miu42" gr:x="380" gr:y="800" action="false" moduleId="mov3#hym24">
+      <OKLink id="sv5#miu42#oln87" name="OKFlow87" to="sv5#area19#page23" automaticCoupling="true"/>
+      <KOLink id="sv5#miu42#kln60" name="KOFlow60" to="sv5#area19#page23" automaticCoupling="true" gr:bendpoints="-110,-61,135,114"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv5#miu43" gr:x="580" gr:y="695" action="false" moduleId="mov3#hym25">
+      <OKLink id="sv5#miu43#oln90" name="OKFlow90" to="sv5#area19#page23" automaticCoupling="true"/>
+      <KOLink id="sv5#miu43#kln62" name="KOFlow62" to="sv5#area19#page23" automaticCoupling="true" gr:bendpoints="-152,-1,243,39"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1395" gr:y="770" id="sv5#miu45" action="false" moduleId="mov3#hym26">
+      <OKLink id="sv5#miu45#oln95" name="OKFlow95" to="sv5#area23#page45" automaticCoupling="true"/>
+      <KOLink id="sv5#miu45#kln64" name="KOFlow64" to="sv5#area23#page45" automaticCoupling="true" gr:bendpoints="34,-95,-11,130"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1745" gr:y="755" id="sv5#miu46" action="false" moduleId="mov3#hym27">
+      <OKLink id="sv5#miu46#oln114" name="OKFlow114" to="sv5#area23#page45" automaticCoupling="true" gr:bendpoints="-166,-91,139,109"/>
+      <KOLink id="sv5#miu46#kln78" name="KOFlow78" to="sv5#area23#page45" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1950" gr:y="645" id="sv5#miu47" action="false" moduleId="mov3#hym28">
+      <OKLink id="sv5#miu47#oln117" name="OKFlow117" to="sv5#area23#page45" automaticCoupling="true"/>
+      <KOLink id="sv5#miu47#kln80" name="KOFlow80" to="sv5#area23#page45" automaticCoupling="true" gr:bendpoints="-154,5,241,30"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1095" gr:y="790" id="sv5#miu48" action="false" moduleId="mov3#hym29">
+      <OKLink id="sv5#miu48#oln120" name="OKFlow120" to="sv5#area20#page44" automaticCoupling="true"/>
+      <KOLink id="sv5#miu48#kln82" name="KOFlow82" to="sv5#area20#page44" automaticCoupling="true" gr:bendpoints="-32,-75,8,110"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv5#miu50" gr:x="1335" gr:y="330" action="false" moduleId="mov3#hym32">
+      <OKLink id="sv5#miu50#oln122" name="OKFlow34" to="sv5#area24#page55" automaticCoupling="true"/>
+      <KOLink id="sv5#miu50#kln84" name="KOFlow23" to="sv5#area24#page55" automaticCoupling="true" gr:bendpoints="21,-77,6,113"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1625" gr:y="330" id="sv5#miu52" action="false" moduleId="mov3#hym31">
+      <OKLink id="sv5#miu52#oln130" name="OKFlow130" to="sv5#area24#page55" automaticCoupling="true" gr:bendpoints="-196,-23,139,42"/>
+      <KOLink id="sv5#miu52#kln89" name="KOFlow89" to="sv5#area24#page55" automaticCoupling="true" gr:bendpoints="-190,-53,145,12"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1895" gr:y="25" id="sv5#miu53" action="false" moduleId="mov3#hym30">
+      <OKLink id="sv5#miu53#oln131" name="OKFlow131" to="sv5#area24#page55" automaticCoupling="true" gr:bendpoints="-175,25,150,5"/>
+      <KOLink id="sv5#miu53#kln90" name="KOFlow90" to="sv5#page86" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="825" gr:y="1405" id="sv5#miu70" action="false" moduleId="mov3#hym48">
+      <KOLink id="sv5#miu70#kln150" name="KOFlow150" to="sv5#page88" automaticCoupling="true"/>
+      <OKLink id="sv5#miu70#oln219" name="OKFlow219" to="sv5#area15#page81" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <SelectorUnit gr:x="530" gr:y="1395" id="sv5#seu39" name="Selector39" entity="Module">
+      <Selector id="sv5#seu39#su71" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#seu39#su71#acond53" name="AttCondition53" predicate="eq" booleanOperator="or" implied="false" attributes="moduleName"/>
+      </Selector>
+      <OKLink id="sv5#seu39#oln238" name="OKFlow238" to="sv5#miu70">
+        <LinkParameter id="sv5#seu39#oln238#par1182" name="Codice Fiscale _PASSING_codicefiscale" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1173" target="sv5#miu70.mov3#hym48#icu50#icp256"/>
+        <LinkParameter id="sv5#seu39#oln238#par1183" name="Cognome_PASSING_cognome" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1174" target="sv5#miu70.mov3#hym48#icu50#icp242"/>
+        <LinkParameter id="sv5#seu39#oln238#par1184" name="Email_PASSING_email" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1175" target="sv5#miu70.mov3#hym48#icu50#icp241"/>
+        <LinkParameter id="sv5#seu39#oln238#par1185" name="oid_module_Group.oid(defaultGroup)" source="moduleOIDArray" target="sv5#miu70.mov3#hym48#icu50#icp245"/>
+        <LinkParameter id="sv5#seu39#oln238#par1186" name="oid_module_Group.oid(groups)" source="moduleOIDArray" target="sv5#miu70.mov3#hym48#icu50#icp246"/>
+        <LinkParameter id="sv5#seu39#oln238#par1187" name="Nome_PASSING_nome" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1177" target="sv5#miu70.mov3#hym48#icu50#icp250"/>
+        <LinkParameter id="sv5#seu39#oln238#par1188" name="Key [oid_user]_PASSING_oid" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1176" target="sv5#miu70.mov3#hym48#icu50#icp255"/>
+        <LinkParameter id="sv5#seu39#oln238#par1189" name="Password_PASSING_password" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1178" target="sv5#miu70.mov3#hym48#icu50#icp254"/>
+        <LinkParameter id="sv5#seu39#oln238#par1190" name="Telefono_PASSING_telefono" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1179" target="sv5#miu70.mov3#hym48#icu50#icp251"/>
+        <LinkParameter id="sv5#seu39#oln238#par1191" name="Username_PASSING_username" sourceLinkParameter="sv5#area15#page81#enu50#ln209#par1181" target="sv5#miu70.mov3#hym48#icu50#icp253"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModuleInstanceUnit gr:x="265" gr:y="1080" id="sv5#miu1" action="false" moduleId="mov3#hym49">
+      <OKLink id="sv5#miu1#oln1" name="OKFlow1" to="sv5#area15#page81" automaticCoupling="true"/>
+      <KOLink id="sv5#miu1#kln1" name="KOFlow1" to="sv5#area15#page81" automaticCoupling="true" gr:bendpoints="152,-22,-308,-37"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

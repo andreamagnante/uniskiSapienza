@@ -1,0 +1,174 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area16#page21" name="Portafoglio elettonico">
+  <ContentUnits>
+    <QueryUnit gr:x="210" gr:y="110" id="sv3#area16#page21#qu15" name="Disponibilita portafoglio" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">select portafoglio.punti from portafoglio where userregistrato_oid_user = :idsocio</QueryText>
+      <QueryInput id="sv3#area16#page21#qu15#qi4" name="idsocio" required="true" type="integer"/>
+      <QueryOutput id="sv3#area16#page21#qu15#qo47" name="Punti accumulati" type="integer"/>
+    </QueryUnit>
+    <GetUnit id="sv3#area16#page21#gtu16" name="User_Supporter ID" gr:x="430" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv3#area16#page21#gtu16#ln94" name="Flow47" to="sv3#area16#page21#seu5" type="transport" validate="true">
+        <LinkParameter id="sv3#area16#page21#gtu16#ln94#par307" name="UserCtxParam.oid_user_PASSING" source="sv3#area16#page21#gtu16.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv3#area16#page21#gtu16#ln94#par312" name="UserCtxParam.oid_user_AttCondition8" source="sv3#area16#page21#gtu16.UserCtxParam" target="sv3#area16#page21#seu5#su16#acond9"/>
+      </Link>
+      <Link id="sv3#area16#page21#gtu16#ln107" name="Flow107" to="sv3#area16#page21#qu15" type="transport" validate="true">
+        <LinkParameter id="sv3#area16#page21#gtu16#ln107#par313" name="UserCtxParam.oid_user_idsocio" source="sv3#area16#page21#gtu16.UserCtxParam" target="sv3#area16#page21#qu15.sv3#area16#page21#qu15#qi4"/>
+      </Link>
+      <Link id="sv3#area16#page21#gtu16#ln173" name="Flow173" to="sv3#area16#page21#pwu4" type="transport" validate="true" gr:bendpoints="-252,29,98,-211">
+        <LinkParameter id="sv3#area16#page21#gtu16#ln173#par693" name="UserCtxParam.oid_user_AttCondition13" source="sv3#area16#page21#gtu16.UserCtxParam" target="sv3#area16#page21#pwu4#su54#acond13"/>
+      </Link>
+      <Link id="sv3#area16#page21#gtu16#ln175" name="Flow175" to="sv3#miu44" type="transport" validate="true">
+        <LinkParameter id="sv3#area16#page21#gtu16#ln175#par708" name="UserCtxParam.oid_user_id_socio" source="sv3#area16#page21#gtu16.UserCtxParam" target="sv3#miu44.mov1#hym37#icu41#icp127"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv3#area16#page21#seu5" name="Selector4" gr:x="360" gr:y="195" entity="ent3">
+      <Selector id="sv3#area16#page21#seu5#su16" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area16#page21#seu5#su16#acond9" name="AttCondition8" predicate="eq" booleanOperator="or" implied="false" attributes="rel8#role16.userOID"/>
+      </Selector>
+      <Link id="sv3#area16#page21#seu5#ln156" name="Flow156" to="sv3#area16#page21#mathu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area16#page21#seu5#ln156#par536" name="5_puntisottrarre" sourceValue="5" target="sv3#area16#page21#mathu1#mathv2"/>
+        <LinkParameter id="sv3#area16#page21#seu5#ln156#par537" name="punti_totalepunti" source="ent3#att60Array" target="sv3#area16#page21#mathu1#mathv1"/>
+        <LinkParameter id="sv3#area16#page21#seu5#ln156#par645" name="punti_PASSING" source="ent3#att60Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit gr:x="785" gr:y="160" id="sv3#area16#page21#enu13" name="Genera Coupon" fieldOrder="sv3#area16#page21#enu13#fld68" linkOrder="sv3#area16#page21#enu13#ln157">
+      <Field id="sv3#area16#page21#enu13#fld42" name="Punti totali" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Field id="sv3#area16#page21#enu13#fld68" name="Punti richiesti" type="integer" preloaded="true" slotOrder="sv3#area16#page21#enu13#fld68#slot10">
+        <Slot id="sv3#area16#page21#enu13#fld68#slot10" name="Punti" value="5" label="true" output="true"/>
+      </Field>
+      <Link id="sv3#area16#page21#enu13#ln157" name="Genera coupon" to="sv3#opg3#scu3" type="normal" validate="true">
+        <LinkParameter id="sv3#area16#page21#enu13#ln157#par512" name="Punti totali_punti" source="sv3#area16#page21#enu13#fld42" target="sv3#opg3#scu3.punti"/>
+        <LinkParameter id="sv3#area16#page21#enu13#ln157#par713" name="Result_PASSING" sourceLinkParameter="sv3#area16#page21#mathu1#ln171#par712" passing="true"/>
+        <LinkParameter id="sv3#area16#page21#enu13#ln157#par720" name="Punti richiesti_PASSING" source="sv3#area16#page21#enu13#fld68" passing="true"/>
+        <LinkParameter id="sv3#area16#page21#enu13#ln157#par721" name="Punti totali_PASSING" source="sv3#area16#page21#enu13#fld42" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="725" gr:y="295" id="sv3#area16#page21#mssu14" name="Impossibile generare coupon"/>
+    <MathUnit gr:x="710" gr:y="0" id="sv3#area16#page21#mathu1" name="Math1" resultType="integer" defaultExpression="totalepunti - puntisottrarre">
+      <MathVariable id="sv3#area16#page21#mathu1#mathv1" name="totalepunti"/>
+      <MathVariable id="sv3#area16#page21#mathu1#mathv2" name="puntisottrarre"/>
+      <Link id="sv3#area16#page21#mathu1#ln171" name="Flow171" to="sv3#area16#page21#enu13" type="transport" validate="true">
+        <LinkParameter id="sv3#area16#page21#mathu1#ln171#par646" name="punti_PASSING_Punti totali" sourceLinkParameter="sv3#area16#page21#seu5#ln156#par645" target="sv3#area16#page21#enu13#fld42_slot"/>
+        <LinkParameter id="sv3#area16#page21#mathu1#ln171#par712" name="Result_PASSING" source="result" passing="true"/>
+      </Link>
+    </MathUnit>
+    <PowerIndexUnit gr:x="0" gr:y="210" id="sv3#area16#page21#pwu4" name="Coupon generati" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att66 ent5#att67">
+      <Selector id="sv3#area16#page21#pwu4#su54" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area16#page21#pwu4#su54#acond13" name="AttCondition13" predicate="eq" booleanOperator="or" implied="false" attributes="rel1#role2.userOID"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area16#page21#qu15"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area16#page21#enu13">
+          <layout:Link link="sv3#area16#page21#enu13#ln157"/>
+          <layout:Field field="sv3#area16#page21#enu13#fld68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area16#page21#mssu14"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area16#page21#pwu4">
+          <layout:Attribute attribute="ent5#att66"/>
+          <layout:Attribute attribute="ent5#att67"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

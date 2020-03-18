@@ -1,0 +1,29 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym21" name="modifica sconto" gr:x="1310" gr:y="585">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym21#icu23" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym21#icu23#icp152" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym21#icu23#oln107" name="OKFlow30" to="mov3#hym21#page51#enu35">
+        <LinkParameter id="mov3#hym21#icu23#oln107#par649" name="datafine_Data Fine" source="mov3#hym21#icu23#icp159" target="mov3#hym21#page51#enu35#fld140_slot"/>
+        <LinkParameter id="mov3#hym21#icu23#oln107#par650" name="datainizio_Data Inizio" source="mov3#hym21#icu23#icp158" target="mov3#hym21#page51#enu35#fld139_slot"/>
+        <LinkParameter id="mov3#hym21#icu23#oln107#par651" name="descrizione_Descrizione" source="mov3#hym21#icu23#icp161" target="mov3#hym21#page51#enu35#fld142_slot"/>
+        <LinkParameter id="mov3#hym21#icu23#oln107#par652" name="nome_Key Condition [nome]" source="mov3#hym21#icu23#icp156" target="mov3#hym21#page51#enu35.ent35#att45"/>
+        <LinkParameter id="mov3#hym21#icu23#oln107#par653" name="nome_Nome" source="mov3#hym21#icu23#icp156" target="mov3#hym21#page51#enu35#fld138_slot"/>
+        <LinkParameter id="mov3#hym21#icu23#oln107#par654" name="percentuale_Percentuale" source="mov3#hym21#icu23#icp160" target="mov3#hym21#page51#enu35#fld141_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym21#icu23#icp161" name="descrizione"/>
+      <InputCollectorParameter id="mov3#hym21#icu23#icp160" name="percentuale"/>
+      <InputCollectorParameter id="mov3#hym21#icu23#icp159" name="datafine"/>
+      <InputCollectorParameter id="mov3#hym21#icu23#icp158" name="datainizio"/>
+      <InputCollectorParameter id="mov3#hym21#icu23#icp156" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym21#kocu23" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym21#okcu23" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit id="mov3#hym21#mfu14" name="Update7" gr:x="495" gr:y="310" entity="ent35">
+      <Selector id="mov3#hym21#mfu14#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym21#mfu14#su44#kcond37" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym21#mfu14#oln108" name="OKFlow76" to="mov3#hym21#okcu23" automaticCoupling="true"/>
+      <KOLink id="mov3#hym21#mfu14#kln74" name="KOFlow53" to="mov3#hym21#kocu23" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

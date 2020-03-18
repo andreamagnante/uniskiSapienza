@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym52#page87" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym52#page87#enu64" name="Vuoi davvero eliminare questo impianto?" linkOrder="mov3#hym52#page87#enu64#ln177" gr:x="0" gr:y="0" fieldOrder="mov3#hym52#page87#enu64#fld201 mov3#hym52#page87#enu64#fld198 mov3#hym52#page87#enu64#fld202">
+      <Field id="mov3#hym52#page87#enu64#fld198" name="Tipologia" type="string" preloaded="true"/>
+      <Field id="mov3#hym52#page87#enu64#fld201" name="Nome" type="string" preloaded="true"/>
+      <Link id="mov3#hym52#page87#enu64#ln177" name="Conferma" to="mov3#hym52#dlu14" type="normal" validate="true">
+        <LinkParameter id="mov3#hym52#page87#enu64#ln177#par431" name="disponibilita_PASSING" sourceLinkParameter="mov3#hym52#icu47#oln185#par384" passing="true"/>
+        <LinkParameter id="mov3#hym52#page87#enu64#ln177#par432" name="nome_PASSING" sourceLinkParameter="mov3#hym52#icu47#oln185#par385" passing="true"/>
+        <LinkParameter id="mov3#hym52#page87#enu64#ln177#par433" name="tipologia_PASSING" sourceLinkParameter="mov3#hym52#icu47#oln185#par393" passing="true"/>
+        <LinkParameter id="mov3#hym52#page87#enu64#ln177#par563" name="difficolta_PASSING" sourceLinkParameter="mov3#hym52#icu47#oln185#par510" passing="true"/>
+        <LinkParameter id="mov3#hym52#page87#enu64#ln177#par564" name="nome_PASSING_KeyCondition12 [nome]" sourceLinkParameter="mov3#hym52#icu47#oln185#par385" target="mov3#hym52#dlu14#su68#kcond60.ent9#att78"/>
+      </Link>
+      <Field id="mov3#hym52#page87#enu64#fld202" name="DIfficolt&#224;" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym52#page87#enu64">
+          <layout:Link link="mov3#hym52#page87#enu64#ln177"/>
+          <layout:Field field="mov3#hym52#page87#enu64#fld201"/>
+          <layout:Field field="mov3#hym52#page87#enu64#fld198"/>
+          <layout:Field field="mov3#hym52#page87#enu64#fld202"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

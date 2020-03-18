@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym3#page12" name=" " linkOrder="mov1#hym3#page12#ln16" gr:x="265" gr:y="5">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym3#page12#enu6" name="Inserisci nuovo numero di telefono" linkOrder="mov1#hym3#page12#enu6#ln12" gr:x="0" gr:y="0" entity="ent7" fieldOrder="mov1#hym3#page12#enu6#fld16">
+      <Field id="mov1#hym3#page12#enu6#fld15" name="Email" type="string" attribute="email" hidden="true" preloaded="true">
+        <VRules>
+          <EMailValidationRule id="mov1#hym3#page12#enu6#fld15#email2" name="EMail2"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym3#page12#enu6#ln12" name="Conferma" to="mov1#hym3#mfu3" type="normal" validate="true">
+        <LinkParameter id="mov1#hym3#page12#enu6#ln12#par85" name="Key [oid]_KeyCondition19 [oid]" source="key.userOID" target="mov1#hym3#mfu3#su4#kcond4.userOID"/>
+        <LinkParameter id="mov1#hym3#page12#enu6#ln12#par86" name="User Object_User Object" source="entityBean" target="mov1#hym3#mfu3.entityBeans"/>
+        <LinkParameter id="mov1#hym3#page12#enu6#ln12#par87" name="Telefono_telefono" source="mov1#hym3#page12#enu6#fld16" target="mov1#hym3#mfu3.User#att61"/>
+      </Link>
+      <Field id="mov1#hym3#page12#enu6#fld16" name="Telefono" type="string" modifiable="true" preloaded="true">
+        <VRules>
+          <ValueLengthValidationRule id="mov1#hym3#page12#enu6#fld16#vl1" name="Value Length1" predicate="max" value="10" errorMessage="Errore! numero di telefono troppo lungo"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym3#page12#enu6">
+          <layout:Link link="mov1#hym3#page12#enu6#ln12"/>
+          <layout:Field field="mov1#hym3#page12#enu6#fld16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym3#page12#ln16" name="Annulla" to="mov1#hym3#kocu5" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

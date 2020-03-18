@@ -1,0 +1,40 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="380" gr:y="350" id="mov1#hym40" name="Elimina prenotazione confermata">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="440" gr:y="245" id="mov1#hym40#icu42">
+      <InputCollectorParameter id="mov1#hym40#icu42#icp175" name="coupon"/>
+      <InputCollectorParameter id="mov1#hym40#icu42#icp174" name="tipomenu"/>
+      <InputCollectorParameter id="mov1#hym40#icu42#icp173" name="numeropersone"/>
+      <InputCollectorParameter id="mov1#hym40#icu42#icp172" name="oraprenotazione"/>
+      <InputCollectorParameter id="mov1#hym40#icu42#icp164" name="dataprenotazione"/>
+      <InputCollectorParameter id="mov1#hym40#icu42#icp163" name="oid"/>
+      <OKLink id="mov1#hym40#icu42#oln157" name="OKFlow157" to="mov1#hym40#page69#enu53" gr:bendpoints="203,-42,-122,48">
+        <LinkParameter id="mov1#hym40#icu42#oln157#par743" name="coupon_Coupon" source="mov1#hym40#icu42#icp175" target="mov1#hym40#page69#enu53#fld156_slot"/>
+        <LinkParameter id="mov1#hym40#icu42#oln157#par745" name="dataprenotazione_Data prenotazione" source="mov1#hym40#icu42#icp164" target="mov1#hym40#page69#enu53#fld67_slot"/>
+        <LinkParameter id="mov1#hym40#icu42#oln157#par746" name="numeropersone_Numero persone" source="mov1#hym40#icu42#icp173" target="mov1#hym40#page69#enu53#fld154_slot"/>
+        <LinkParameter id="mov1#hym40#icu42#oln157#par747" name="oraprenotazione_Ora prenotazione" source="mov1#hym40#icu42#icp172" target="mov1#hym40#page69#enu53#fld108_slot"/>
+        <LinkParameter id="mov1#hym40#icu42#oln157#par748" name="tipomenu_Tipo menu" source="mov1#hym40#icu42#icp174" target="mov1#hym40#page69#enu53#fld155_slot"/>
+        <LinkParameter id="mov1#hym40#icu42#oln157#par758" name="oid_PASSING" source="mov1#hym40#icu42#icp163" passing="true"/>
+        <LinkParameter id="mov1#hym40#icu42#oln157#par760" name="coupon_PASSING" source="mov1#hym40#icu42#icp175" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1605" gr:y="110" id="mov1#hym40#okcu43" name="OK Port43"/>
+    <KOCollectorUnit gr:x="1605" gr:y="420" id="mov1#hym40#kocu42" name="KO Port42"/>
+    <ModifyUnit id="mov1#hym40#mfu21" name="Update17" gr:x="980" gr:y="315" entity="ent5">
+      <Selector id="mov1#hym40#mfu21#su72" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym40#mfu21#su72#acond28" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att66"/>
+      </Selector>
+      <KOLink id="mov1#hym40#mfu21#kln115" name="KOFlow115" to="mov1#hym40#kocu42" automaticCoupling="true"/>
+      <OKLink id="mov1#hym40#mfu21#oln163" name="OKFlow163" to="mov1#hym40#okcu43" automaticCoupling="true"/>
+    </ModifyUnit>
+    <DeleteUnit id="mov1#hym40#dlu11" name="Delete10" gr:x="735" gr:y="435" entity="ent6">
+      <Selector id="mov1#hym40#dlu11#su73" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym40#dlu11#su73#kcond50" name="KeyCondition49" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym40#dlu11#oln160" name="OKFlow150" to="mov1#hym40#mfu21">
+        <LinkParameter id="mov1#hym40#dlu11#oln160#par756" name="0_utilizzato" target="mov1#hym40#mfu21.ent5#att67" sourceValue="0"/>
+        <LinkParameter id="mov1#hym40#dlu11#oln160#par757" name="coupon_PASSING_AttCondition7" sourceLinkParameter="mov1#hym40#page69#enu53#ln170#par761" target="mov1#hym40#mfu21#su72#acond28"/>
+      </OKLink>
+      <KOLink id="mov1#hym40#dlu11#kln114" name="KOFlow114" to="mov1#hym40#kocu42" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

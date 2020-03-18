@@ -1,0 +1,37 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym44#opg18" name="Operation Group 14" transaction="true" gr:x="790" gr:y="75">
+  <OperationUnits>
+    <ScriptUnit id="mov1#hym44#opg18#scu20" name="Script12" gr:x="0" gr:y="0">
+      <ScriptUnitText xml:space="preserve">#input Date dateScelta, Date[] dateInizio, Date[] dateFine, Time[] orario, int[] oid
+#output String message, Time[] risultato
+
+if(dateInizio != null)
+{
+  def int i = 0;
+  def int j = 0;
+  for(i=0;i&lt;dateInizio.size();i++){
+    if((dateScelta.before(dateFine[i]) &amp;&amp; dateScelta.after(dateInizio[i])) || (dateScelta.equals(dateInizio[i])) || (dateScelta.equals(dateFine[i]))){
+            for(j=0;j&lt;13;j++){
+                orario[j] = null;
+            }
+	 	    return["resultCode":"error","message":"Tutti gli orari gia prenotati","risultato":orario]
+    }
+  }
+  
+}
+
+return["resultCode":"success","message":"Lezioni disponibili"]
+ 
+        </ScriptUnitText>
+      <OKLink id="mov1#hym44#opg18#scu20#oln245" name="OKFlow196" to="mov1#hym44#seu38">
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1247" name="oid_PASSING" sourceLinkParameter="mov1#hym44#seu43#oln246#par1255" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1248" name="ora_PASSING" sourceLinkParameter="mov1#hym44#seu43#oln246#par1256" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1341" name="datalezione_PASSING_AttCondition32" sourceLinkParameter="mov1#hym44#seu43#oln246#par1338" target="mov1#hym44#seu38#su105#acond59"/>
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1342" name="istruttoreoid_PASSING_AttCondition45" sourceLinkParameter="mov1#hym44#seu43#oln246#par1339" target="mov1#hym44#seu38#su105#acond58"/>
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1343" name="datalezione_PASSING" sourceLinkParameter="mov1#hym44#seu43#oln246#par1338" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1344" name="istruttoreoid_PASSING" sourceLinkParameter="mov1#hym44#seu43#oln246#par1339" passing="true"/>
+        <LinkParameter id="mov1#hym44#opg18#scu20#oln245#par1345" name="useroid_PASSING" sourceLinkParameter="mov1#hym44#seu43#oln246#par1340" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#hym44#opg18#scu20#kln157" name="KOFlow132" to="mov1#hym44#page82#mssu39" ajaxOpenWindow="true" ajaxWindowWidth="565" ajaxWindowHeight="200" ajaxWindowClosable="true"/>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationGroup>

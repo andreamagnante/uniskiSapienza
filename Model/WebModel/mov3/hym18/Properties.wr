@@ -1,0 +1,24 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym18" name="modifica menucarta" gr:x="1270" gr:y="415">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym18#icu20" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym18#icu20#icp111" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym18#icu20#oln97" name="OKFlow30" to="mov3#hym18#page48#enu33">
+        <LinkParameter id="mov3#hym18#icu20#oln97#par611" name="nome_Nome" source="mov3#hym18#icu20#icp120" target="mov3#hym18#page48#enu33#fld126_slot"/>
+        <LinkParameter id="mov3#hym18#icu20#oln97#par612" name="prezzo_Prezzo" source="mov3#hym18#icu20#icp122" target="mov3#hym18#page48#enu33#fld128_slot"/>
+        <LinkParameter id="mov3#hym18#icu20#oln97#par613" name="tipologia_TIpologia" source="mov3#hym18#icu20#icp121" target="mov3#hym18#page48#enu33#fld127_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym18#icu20#icp122" name="prezzo"/>
+      <InputCollectorParameter id="mov3#hym18#icu20#icp121" name="tipologia"/>
+      <InputCollectorParameter id="mov3#hym18#icu20#icp120" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym18#kocu20" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym18#okcu20" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit id="mov3#hym18#mfu13" name="Update7" gr:x="495" gr:y="310" entity="ent37">
+      <Selector id="mov3#hym18#mfu13#su42" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym18#mfu13#su42#kcond35" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym18#mfu13#oln98" name="OKFlow76" to="mov3#hym18#okcu20" automaticCoupling="true"/>
+      <KOLink id="mov3#hym18#mfu13#kln68" name="KOFlow53" to="mov3#hym18#kocu20" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

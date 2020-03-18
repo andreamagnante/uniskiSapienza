@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym27#page53" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym27#page53#enu37" name="Vuoi davvero eliminare questo skipass?" linkOrder="mov3#hym27#page53#enu37#ln121" gr:x="0" gr:y="0" entity="ent8" fieldOrder="mov3#hym27#page53#enu37#fld97">
+      <Link id="mov3#hym27#page53#enu37#ln121" name="Conferma" to="mov3#hym27#dlu3" type="normal" validate="true">
+        <LinkParameter id="mov3#hym27#page53#enu37#ln121#par423" name="Tipologia_KeyCondition12 [tipologia]" source="mov3#hym27#page53#enu37#fld97" target="mov3#hym27#dlu3#su30#kcond14.ent8#att12"/>
+      </Link>
+      <Field id="mov3#hym27#page53#enu37#fld97" name="Tipologia" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym27#page53#enu37">
+          <layout:Link link="mov3#hym27#page53#enu37#ln121"/>
+          <layout:Field field="mov3#hym27#page53#enu37#fld97"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

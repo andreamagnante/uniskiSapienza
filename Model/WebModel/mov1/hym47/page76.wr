@@ -1,0 +1,5 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym47#page76" name="Lezioni terminate" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="875" gr:y="535">
+  <ContentUnits>
+    <MultiMessageUnit id="mov1#hym47#page76#mssu6" name="Lezioni gia prenotate" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Per la seguente data e orario tutti gli istruttori sono gia prenotati o/e indisponibili!
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="mov1#hym47#page76#mssu6"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

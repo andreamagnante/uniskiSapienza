@@ -1,0 +1,5 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#page71" name="Attenzione" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="2475" gr:y="210">
+  <ContentUnits>
+    <MultiMessageUnit id="sv6#page71#mssu27" name="Nessuna prenotazione" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Non ci sono prenotazioni per questo giorno!
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv6#page71#mssu27"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

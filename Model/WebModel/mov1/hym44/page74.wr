@@ -1,0 +1,72 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym44#page74" name="Prenota lezione" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="1485" gr:y="45">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym44#page74#enu56" name="Dettagli prenotazione" gr:x="0" gr:y="0" fieldOrder="mov1#hym44#page74#enu56#fld185 mov1#hym44#page74#enu56#fld184 mov1#hym44#page74#enu56#fld183 mov1#hym44#page74#enu56#fld182 mov1#hym44#page74#enu56#fld181 mov1#hym44#page74#enu56#fld186 mov1#hym44#page74#enu56#sfld18" linkOrder="mov1#hym44#page74#enu56#ln217">
+      <Field id="mov1#hym44#page74#enu56#fld181" name="Data lezione" type="date" preloaded="true"/>
+      <Field id="mov1#hym44#page74#enu56#fld182" name="Istruttore brevetto" type="string" preloaded="true"/>
+      <Field id="mov1#hym44#page74#enu56#fld183" name="Istruttore cognome" type="string" preloaded="true"/>
+      <Field id="mov1#hym44#page74#enu56#fld184" name="Istruttore nome" type="string" preloaded="true"/>
+      <Field id="mov1#hym44#page74#enu56#fld185" name="Istruttore username" type="string" preloaded="true"/>
+      <SelectionField id="mov1#hym44#page74#enu56#sfld18" name="Ora lezione" type="time" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym44#page74#enu56#sfld18#mnd85" name="Mandatory103"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#hym44#page74#enu56#ln217" name="Conferma" to="mov1#hym44#cru16" type="normal" validate="true">
+        <LinkParameter id="mov1#hym44#page74#enu56#ln217#par899" name="oraprenotazione_PASSING_ora" target="mov1#hym44#cru16.ent11#att19" source="mov1#hym44#page74#enu56#sfld18"/>
+        <LinkParameter id="mov1#hym44#page74#enu56#ln217#par900" name="Lezione_tipo" sourceValue="Lezione" target="mov1#hym44#cru16.ent11#att32"/>
+        <LinkParameter id="mov1#hym44#page74#enu56#ln217#par1364" name="datalezione_PASSING_data" sourceLinkParameter="mov1#hym44#seu37#oln248#par1361" target="mov1#hym44#cru16.ent11#att22"/>
+        <LinkParameter id="mov1#hym44#page74#enu56#ln217#par1366" name="useroid_PASSING_UserRegistrato.oid_user(LezioneToUserRegistrato)" sourceLinkParameter="mov1#hym44#seu37#oln248#par1363" target="mov1#hym44#cru16.rel4#role8.userOID"/>
+        <LinkParameter id="mov1#hym44#page74#enu56#ln217#par1368" name="istruttoreoid_PASSING_Istruttore.oid_user(LezioneToIstruttore)" sourceLinkParameter="mov1#hym44#seu37#oln248#par1367" target="mov1#hym44#cru16.rel10#role19.userOID"/>
+      </Link>
+      <Field id="mov1#hym44#page74#enu56#fld186" name="Durata lezione" type="string" preloaded="true" slotOrder="mov1#hym44#page74#enu56#fld186#slot13">
+        <Slot id="mov1#hym44#page74#enu56#fld186#slot13" name="durata" value="1 ora" label="true" output="true"/>
+      </Field>
+    </EntryUnit>
+    <TimeUnit id="mov1#hym44#page74#tmu9" name="data oggi" gr:x="10" gr:y="150">
+      <Link id="mov1#hym44#page74#tmu9#ln216" name="Flow216" to="mov1#hym44#cru16" type="transport" validate="true">
+        <LinkParameter id="mov1#hym44#page74#tmu9#ln216#par873" name="Current/Input Date_prenotazione" source="currentDate" target="mov1#hym44#cru16.ent11#att23"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym44#page74#enu56">
+          <layout:Link link="mov1#hym44#page74#enu56#ln217"/>
+          <layout:Field field="mov1#hym44#page74#enu56#fld185"/>
+          <layout:Field field="mov1#hym44#page74#enu56#fld184"/>
+          <layout:Field field="mov1#hym44#page74#enu56#fld183"/>
+          <layout:Field field="mov1#hym44#page74#enu56#fld182"/>
+          <layout:Field field="mov1#hym44#page74#enu56#fld181"/>
+          <layout:Field field="mov1#hym44#page74#enu56#fld186"/>
+          <layout:Field field="mov1#hym44#page74#enu56#sfld18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

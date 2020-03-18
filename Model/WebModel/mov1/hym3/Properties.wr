@@ -1,0 +1,21 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym3" name="Modifica Telefono" gr:x="45" gr:y="185">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym3#icu6" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov1#hym3#icu6#icp11" name="Key Condition [oid]"/>
+      <OKLink id="mov1#hym3#icu6#oln13" name="OKFlow24" to="mov1#hym3#page12#enu6">
+        <LinkParameter id="mov1#hym3#icu6#oln13#par74" name="Key Condition [oid]_Key Condition [oid]" source="mov1#hym3#icu6#icp11" target="mov1#hym3#page12#enu6.userOID"/>
+        <LinkParameter id="mov1#hym3#icu6#oln13#par232" name="numerotelefono_Telefono" source="mov1#hym3#icu6#icp72" target="mov1#hym3#page12#enu6#fld16_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#hym3#icu6#icp72" name="numerotelefono"/>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#hym3#mfu3" name="Update5" gr:x="345" gr:y="205" entity="ent7">
+      <Selector id="mov1#hym3#mfu3#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym3#mfu3#su4#kcond4" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym3#mfu3#oln14" name="OKFlow70" to="mov1#hym3#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov1#hym3#mfu3#kln10" name="KOFlow27" to="mov1#hym3#kocu5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov1#hym3#kocu5" name="KO Port20" gr:x="550" gr:y="200"/>
+    <OKCollectorUnit id="mov1#hym3#okcu5" name="OK Port22" gr:x="550" gr:y="105"/>
+  </OperationUnits>
+</HybridModule>

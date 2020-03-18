@@ -1,0 +1,32 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym12#opg5" name="Operation Group 1" transaction="true" gr:x="745" gr:y="-50">
+  <OperationUnits>
+    <ScriptUnit id="mov3#hym12#opg5#scu5" name="Script Password" gr:x="0" gr:y="145">
+      <ScriptUnitText xml:space="preserve">#input String pass1, String pass2
+
+if (pass1 == pass2)
+{
+	return ["resultCode":"success"]
+}
+else
+{
+	return ["resultCode":"error"]
+}</ScriptUnitText>
+      <OKLink id="mov3#hym12#opg5#scu5#oln57" name="OKFlow6" to="mov3#hym12#opg5#inn5">
+        <LinkParameter id="mov3#hym12#opg5#scu5#oln57#par246" name="Result_Input" source="result" target="mov3#hym12#opg5#inn5.isnotnull"/>
+      </OKLink>
+      <KOLink id="mov3#hym12#opg5#scu5#kln38" name="KOFlow4" to="mov3#hym12#page31#mssu24">
+        <LinkParameter id="mov3#hym12#opg5#scu5#kln38#par247" name="Password errata, riprova._Shown Messages" target="mov3#hym12#page31#mssu24.shownMessages" sourceValue="Password errata, riprova."/>
+      </KOLink>
+    </ScriptUnit>
+    <IsNotNullUnit id="mov3#hym12#opg5#inn5" name="ControlloPassword" gr:x="20" gr:y="300">
+      <OKLink id="mov3#hym12#opg5#inn5#oln58" name="OKFlow7" to="mov3#hym12#opg5#mfu12" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit id="mov3#hym12#opg5#mfu12" name="UpdateUser1" gr:x="15" gr:y="0" entity="User">
+      <Selector id="mov3#hym12#opg5#mfu12#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym12#opg5#mfu12#su28#kcond25" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym12#opg5#mfu12#oln59" name="OKFlow55" to="mov3#hym12#okcu15" automaticCoupling="true"/>
+      <KOLink id="mov3#hym12#opg5#mfu12#kln39" name="KOFlow24" to="mov3#hym12#kocu15" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationGroup>

@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym46#page91" name="Dettagli lezione" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="535" gr:y="145">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym46#page91#enu63" name="Dettagli" gr:x="0" gr:y="0" fieldOrder="mov1#hym46#page91#enu63#fld180 mov1#hym46#page91#enu63#fld179 mov1#hym46#page91#enu63#fld178" linkOrder="mov1#hym46#page91#enu63#ln264">
+      <Field id="mov1#hym46#page91#enu63#fld178" name="Istruttore" type="string" preloaded="true"/>
+      <Field id="mov1#hym46#page91#enu63#fld179" name="Ora prenotazione" type="time" preloaded="true"/>
+      <Field id="mov1#hym46#page91#enu63#fld180" name="Data prenotazione" type="date" preloaded="true"/>
+      <Link id="mov1#hym46#page91#enu63#ln264" name="Elimina" to="mov1#hym46#dlu20" type="normal" validate="true">
+        <LinkParameter id="mov1#hym46#page91#enu63#ln264#par1498" name="oiddata_PASSING_KeyCondition68 [id]" sourceLinkParameter="mov1#hym46#opg20#scu23#oln267#par1497" target="mov1#hym46#dlu20#su123#kcond68.ent11#att21"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym46#page91#enu63">
+          <layout:Field field="mov1#hym46#page91#enu63#fld180"/>
+          <layout:Field field="mov1#hym46#page91#enu63#fld179"/>
+          <layout:Field field="mov1#hym46#page91#enu63#fld178"/>
+          <layout:Link link="mov1#hym46#page91#enu63#ln264"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

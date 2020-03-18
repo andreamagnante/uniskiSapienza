@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym44#page82" name="Istruttore indisponibile" layout:pageLayout="WRDefault/Empty" ajaxEnabled="true" gr:x="1090" gr:y="60">
+  <ContentUnits>
+    <MultiMessageUnit id="mov1#hym44#page82#mssu39" name="Istruttore indisponibile" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">L'istruttore selezionato &#232; indisponibile nella data richiesta!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym44#page82#mssu39"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

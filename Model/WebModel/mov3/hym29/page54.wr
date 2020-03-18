@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym29#page54" name="Attenzione" gr:x="345" gr:y="100">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym29#page54#enu39" name="Vuoi davvero eliminare questo utente?" linkOrder="mov3#hym29#page54#enu39#ln124" gr:x="0" gr:y="0" entity="ent7" fieldOrder="mov3#hym29#page54#enu39#fld104 mov3#hym29#page54#enu39#fld114 mov3#hym29#page54#enu39#fld115">
+      <Link id="mov3#hym29#page54#enu39#ln124" name="Conferma" to="mov3#hym29#dlu7" type="normal" validate="true">
+        <LinkParameter id="mov3#hym29#page54#enu39#ln124#par468" name="Username_KeyCondition12 [oid_user]" target="mov3#hym29#dlu7#su45#kcond38.userOID" sourceLinkParameter="mov3#hym29#icu31#oln118#par471"/>
+      </Link>
+      <Field id="mov3#hym29#page54#enu39#fld104" name="Username" type="string" preloaded="true"/>
+      <Field id="mov3#hym29#page54#enu39#fld115" name="Cognome" type="string" preloaded="true"/>
+      <Field id="mov3#hym29#page54#enu39#fld114" name="Nome" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym29#page54#enu39">
+          <layout:Link link="mov3#hym29#page54#enu39#ln124"/>
+          <layout:Field field="mov3#hym29#page54#enu39#fld104"/>
+          <layout:Field field="mov3#hym29#page54#enu39#fld114"/>
+          <layout:Field field="mov3#hym29#page54#enu39#fld115"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

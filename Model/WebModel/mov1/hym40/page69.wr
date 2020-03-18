@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="825" gr:y="145" id="mov1#hym40#page69" name="Eliminazione prenotazione ristorante" ajaxEnabled="false" layout:pageLayout="WRDefault/Empty" linkOrder="mov1#hym40#page69#ln162">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="mov1#hym40#page69#enu53" name="Elimina prenotazione" ajaxTooltipEnabled="false" fieldOrder="mov1#hym40#page69#enu53#fld67 mov1#hym40#page69#enu53#fld108 mov1#hym40#page69#enu53#fld154 mov1#hym40#page69#enu53#fld155 mov1#hym40#page69#enu53#fld156" linkOrder="mov1#hym40#page69#enu53#ln170">
+      <Field id="mov1#hym40#page69#enu53#fld156" name="Coupon" type="string" preloaded="true"/>
+      <Field id="mov1#hym40#page69#enu53#fld155" name="Tipo menu" type="string" preloaded="true"/>
+      <Field id="mov1#hym40#page69#enu53#fld154" name="Numero persone" type="integer" preloaded="true"/>
+      <Field id="mov1#hym40#page69#enu53#fld108" name="Ora prenotazione" type="time" preloaded="true"/>
+      <Field id="mov1#hym40#page69#enu53#fld67" name="Data prenotazione" type="date" preloaded="true"/>
+      <Link id="mov1#hym40#page69#enu53#ln170" name="Elimina" to="mov1#hym40#dlu11" type="normal" validate="true">
+        <LinkParameter id="mov1#hym40#page69#enu53#ln170#par759" name="oid_PASSING_KeyCondition49 [oid]" sourceLinkParameter="mov1#hym40#icu42#oln157#par758" target="mov1#hym40#dlu11#su73#kcond50.ent6#att68"/>
+        <LinkParameter id="mov1#hym40#page69#enu53#ln170#par761" name="coupon_PASSING" sourceLinkParameter="mov1#hym40#icu42#oln157#par760" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym40#page69#enu53">
+          <layout:Link link="mov1#hym40#page69#enu53#ln170"/>
+          <layout:Field field="mov1#hym40#page69#enu53#fld67"/>
+          <layout:Field field="mov1#hym40#page69#enu53#fld108"/>
+          <layout:Field field="mov1#hym40#page69#enu53#fld154"/>
+          <layout:Field field="mov1#hym40#page69#enu53#fld155"/>
+          <layout:Field field="mov1#hym40#page69#enu53#fld156"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym40#page69#ln162" name="Annulla" to="mov1#hym40#kocu42" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

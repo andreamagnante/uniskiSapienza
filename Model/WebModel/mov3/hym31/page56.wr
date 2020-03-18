@@ -1,0 +1,43 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym31#page56" name="Attenzione" gr:x="345" gr:y="100" linkOrder="mov3#hym31#page56#ln146">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym31#page56#enu41" name="Modifica stipendio  istruttore" linkOrder="mov3#hym31#page56#enu41#ln129" gr:x="0" gr:y="0" fieldOrder="mov3#hym31#page56#enu41#fld120 mov3#hym31#page56#enu41#fld118 mov3#hym31#page56#enu41#fld119 mov3#hym31#page56#enu41#fld116" entity="ent38">
+      <Link id="mov3#hym31#page56#enu41#ln129" name="Conferma" to="mov3#hym31#mfu15" type="normal" validate="true">
+        <LinkParameter id="mov3#hym31#page56#enu41#ln129#par556" name="oid_user_PASSING_KeyCondition15 [oid_user]" sourceLinkParameter="mov3#hym31#icu33#oln126#par555" target="mov3#hym31#mfu15#su46#kcond39.userOID"/>
+        <LinkParameter id="mov3#hym31#page56#enu41#ln129#par557" name="Stipendio_stipendio" source="mov3#hym31#page56#enu41#fld116" target="mov3#hym31#mfu15.ent38#att54"/>
+      </Link>
+      <Field id="mov3#hym31#page56#enu41#fld116" name="Stipendio" type="float" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov3#hym31#page56#enu41#fld116#mnd71" name="Mandatory71"/>
+        </VRules>
+      </Field>
+      <Field id="mov3#hym31#page56#enu41#fld119" name="Cognome" type="string" preloaded="true"/>
+      <Field id="mov3#hym31#page56#enu41#fld118" name="Nome" type="string" preloaded="true"/>
+      <Field id="mov3#hym31#page56#enu41#fld120" name="Username" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym31#page56#enu41">
+          <layout:Link link="mov3#hym31#page56#enu41#ln129"/>
+          <layout:Field field="mov3#hym31#page56#enu41#fld120"/>
+          <layout:Field field="mov3#hym31#page56#enu41#fld118"/>
+          <layout:Field field="mov3#hym31#page56#enu41#fld119"/>
+          <layout:Field field="mov3#hym31#page56#enu41#fld116"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov3#hym31#page56#ln146" name="Annulla" to="mov3#hym31#kocu33" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

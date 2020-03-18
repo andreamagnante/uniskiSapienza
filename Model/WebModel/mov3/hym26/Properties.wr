@@ -1,0 +1,28 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym26" name="modifica skipass" gr:x="840" gr:y="120">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym26#icu28" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym26#icu28#icp88" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym26#icu28#oln33" name="OKFlow30" to="mov3#hym26#page52#enu30">
+        <LinkParameter id="mov3#hym26#icu28#oln33#par375" name="tipologia_Tipologia" source="mov3#hym26#icu28#icp107" target="mov3#hym26#page52#enu30#fld70_slot"/>
+        <LinkParameter id="mov3#hym26#icu28#oln33#par376" name="durata_Durata" source="mov3#hym26#icu28#icp112" target="mov3#hym26#page52#enu30#fld71_slot"/>
+        <LinkParameter id="mov3#hym26#icu28#oln33#par377" name="prezzo_Prezzo" source="mov3#hym26#icu28#icp113" target="mov3#hym26#page52#enu30#fld93_slot"/>
+        <LinkParameter id="mov3#hym26#icu28#oln33#par387" name="punti_Punti" source="mov3#hym26#icu28#icp114" target="mov3#hym26#page52#enu30#fld94_slot"/>
+        <LinkParameter id="mov3#hym26#icu28#oln33#par389" name="targetutenza_Target Utenza - Preselection" source="mov3#hym26#icu28#icp115" target="mov3#hym26#page52#enu30#sfld2_presel"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym26#icu28#icp115" name="targetutenza"/>
+      <InputCollectorParameter id="mov3#hym26#icu28#icp114" name="punti"/>
+      <InputCollectorParameter id="mov3#hym26#icu28#icp113" name="prezzo"/>
+      <InputCollectorParameter id="mov3#hym26#icu28#icp112" name="durata"/>
+      <InputCollectorParameter id="mov3#hym26#icu28#icp107" name="tipologia"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym26#kocu28" name="KO Port20" gr:x="865" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym26#okcu28" name="OK Port22" gr:x="865" gr:y="95"/>
+    <ModifyUnit id="mov3#hym26#mfu6" name="Update7" gr:x="495" gr:y="310" entity="ent8">
+      <Selector id="mov3#hym26#mfu6#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym26#mfu6#su15#kcond13" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym26#mfu6#oln91" name="OKFlow76" to="mov3#hym26#okcu28" automaticCoupling="true"/>
+      <KOLink id="mov3#hym26#mfu6#kln63" name="KOFlow53" to="mov3#hym26#kocu28" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

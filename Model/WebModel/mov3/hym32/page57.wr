@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov3#hym32#page57" name="Attenzione" gr:x="345" gr:y="100" linkOrder="mov3#hym32#page57#ln144">
+  <ContentUnits>
+    <EntryUnit id="mov3#hym32#page57#enu42" name="Vuoi davvero eliminare questo istruttore?" linkOrder="mov3#hym32#page57#enu42#ln134" gr:x="0" gr:y="0" entity="ent7" fieldOrder="mov3#hym32#page57#enu42#fld111 mov3#hym32#page57#enu42#fld112 mov3#hym32#page57#enu42#fld113">
+      <Link id="mov3#hym32#page57#enu42#ln134" name="Conferma" to="mov3#hym32#dlu8" type="normal" validate="true">
+        <LinkParameter id="mov3#hym32#page57#enu42#ln134#par544" name="Username_KeyCondition12 [oid_user]" sourceLinkParameter="mov3#hym32#icu34#oln128#par543" target="mov3#hym32#dlu8#su47#kcond40.userOID"/>
+      </Link>
+      <Field id="mov3#hym32#page57#enu42#fld111" name="Username" type="string" preloaded="true"/>
+      <Field id="mov3#hym32#page57#enu42#fld113" name="Cognome" type="string" preloaded="true"/>
+      <Field id="mov3#hym32#page57#enu42#fld112" name="Nome" type="string" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov3#hym32#page57#enu42">
+          <layout:Link link="mov3#hym32#page57#enu42#ln134"/>
+          <layout:Field field="mov3#hym32#page57#enu42#fld111"/>
+          <layout:Field field="mov3#hym32#page57#enu42#fld112"/>
+          <layout:Field field="mov3#hym32#page57#enu42#fld113"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov3#hym32#page57#ln144" name="Annulla" to="mov3#hym32#kocu34" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

@@ -1,0 +1,23 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov3#hym17" name="Elimina menucarta" gr:x="1285" gr:y="340">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#hym17#icu19" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov3#hym17#icu19#icp98" name="Key Condition [oid]"/>
+      <OKLink id="mov3#hym17#icu19#oln93" name="OKFlow30" to="mov3#hym17#page47#enu32">
+        <LinkParameter id="mov3#hym17#icu19#oln93#par582" name="Key Condition [oid]_PASSING" source="mov3#hym17#icu19#icp98" passing="true"/>
+        <LinkParameter id="mov3#hym17#icu19#oln93#par583" name="nome_Nome" source="mov3#hym17#icu19#icp108" target="mov3#hym17#page47#enu32#fld117_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#hym17#icu19#icp110" name="prezzo"/>
+      <InputCollectorParameter id="mov3#hym17#icu19#icp109" name="tipologia"/>
+      <InputCollectorParameter id="mov3#hym17#icu19#icp108" name="nome"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov3#hym17#kocu19" name="KO Port20" gr:x="800" gr:y="200"/>
+    <OKCollectorUnit id="mov3#hym17#okcu19" name="OK Port22" gr:x="800" gr:y="100"/>
+    <DeleteUnit id="mov3#hym17#dlu5" name="Delete1" gr:x="460" gr:y="310" entity="ent37">
+      <Selector id="mov3#hym17#dlu5#su41" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#hym17#dlu5#su41#kcond34" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#hym17#dlu5#oln94" name="OKFlow31" to="mov3#hym17#okcu19" automaticCoupling="true"/>
+      <KOLink id="mov3#hym17#dlu5#kln66" name="KOFlow22" to="mov3#hym17#kocu19" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</HybridModule>

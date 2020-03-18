@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym1#page15" name=" " gr:x="255" gr:y="25" linkOrder="mov1#hym1#page15#ln15">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym1#page15#enu4" name="Inseirsci nuovo indirizzo mail" linkOrder="mov1#hym1#page15#enu4#ln14" gr:x="0" gr:y="0" entity="ent7" fieldOrder="mov1#hym1#page15#enu4#fld13">
+      <Field id="mov1#hym1#page15#enu4#fld13" name="E-mail" type="string" modifiable="true" attribute="email" preloaded="true">
+        <VRules>
+          <EMailValidationRule id="mov1#hym1#page15#enu4#fld13#email1" name="EMail2"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym1#page15#enu4#ln14" name="Conferma" to="mov1#hym1#mfu1" type="normal" validate="true">
+        <LinkParameter id="mov1#hym1#page15#enu4#ln14#par60" name="email_email" source="mov1#hym1#page15#enu4#fld13" target="mov1#hym1#mfu1.email"/>
+        <LinkParameter id="mov1#hym1#page15#enu4#ln14#par61" name="Key [oid]_KeyCondition19 [oid]" source="key.userOID" target="mov1#hym1#mfu1#su7#kcond6.userOID"/>
+        <LinkParameter id="mov1#hym1#page15#enu4#ln14#par62" name="User Object_User Object" source="entityBean" target="mov1#hym1#mfu1.entityBeans"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym1#page15#enu4">
+          <layout:Field field="mov1#hym1#page15#enu4#fld13"/>
+          <layout:Link link="mov1#hym1#page15#enu4#ln14"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov1#hym1#page15#ln15" name="Annulla" to="mov1#hym1#kocu3" type="normal" automaticCoupling="true" validate="true"/>
+</Page>
