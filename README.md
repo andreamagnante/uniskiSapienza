@@ -4,6 +4,9 @@ Project for the Advanced Software Engineering course - La Sapienza Università d
 
 Designing Web Applications with Webratio to manage and organize a ski resort. 
 
+For more details look at:
+[Uniski-report.pdf](https://github.com/andreamagnante/uniskiSapienza/blob/master/Uniski.pdf)
+
 <h1>Screenshots from the app</h1>
 <h3>User Area</h3>
 
